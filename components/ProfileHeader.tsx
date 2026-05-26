@@ -6,14 +6,19 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import {
   Check,
   MapPin,
-  Eye,
   CalendarDays,
   Sun,
   Moon,
   Download,
-  Briefcase,
   VerifiedIcon,
 } from "lucide-react";
+
+// Last updated date
+const lastUpdated = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+}).format(new Date(process.env.BUILD_TIME || new Date()));
 
 export default function ProfileHeader() {
   const { theme, setTheme } = useTheme();
@@ -22,9 +27,9 @@ export default function ProfileHeader() {
   if (!isMounted) return <div className="h-40" />;
 
   return (
-    <header className="flex flex-col md:flex-row gap-8">
-      {/* Avatar */}
-      <div className="shrink-0">
+    <section className="mb-8 animate-fade-in">
+      <div className="flex flex-col sm:flex-row md:items-center items-start gap-6">
+        {/* Avatar */}
         <Image
           src="/images/Pfp.png"
           alt="Christian James Abendan"
@@ -33,14 +38,13 @@ export default function ProfileHeader() {
           loading="eager"
           className="rounded-sm object-cover bg-gray-200 dark:bg-gray-800"
         />
-      </div>
-
-      {/* Content */}
-      <div className="flex-1 space-y-4">
-        <div className="flex items-start justify-between">
-          <div className="flex flex-col gap-1.5">
-            <h1 className="flex items-center gap-2 text-lg md:text-2xl font-bold text-black dark:text-white mb-0 md:mt-5">
-              Christian James A. Abendan
+        <div className="flex-1 min-w-0">
+          {/* Content */}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <h1 className="text-xl sm:text-2xl font-bold truncate">
+                Christian James A. Abendan
+              </h1>
               <div className="relative">
                 <VerifiedIcon
                   className="w-5 h-5 text-blue-500 fill-blue-500"
@@ -51,55 +55,57 @@ export default function ProfileHeader() {
                   strokeWidth={3}
                 />
               </div>
-            </h1>
-
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 dark:text-gray-400  mb-0">
-              <span className="flex items-center gap-1 font-semibold text-black dark:text-white">
-                <MapPin size={14} /> Minglanilla, Cebu, Philippines
-              </span>
-              <span className="flex items-center gap-1">
-                | <Eye size={14} /> 100 Views
-              </span>
-              <span className="flex items-center gap-1">
-                | <CalendarDays size={14} /> May 26, 2026
-              </span>
             </div>
-
-            <p className="font-semibold text-lg text-black dark:text-gray-200 mb-0">
-              Aspiring Software Engineer / UI & UX Designer
+            {/* Theme Toggle */}
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="relative flex items-center w-16 h-8 bg-gray-200 dark:bg-gray-700 p-1 transition-colors duration-300 focus:outline-none shrink-0"
+              aria-label="Toggle Theme"
+            >
+              <div
+                className={`absolute w-6 h-6 bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center ${
+                  theme === "dark" ? "translate-x-8" : "translate-x-0"
+                }`}
+              >
+                {theme === "dark" ? (
+                  <Moon size={14} className="fill-gray-800 text-gray-800" />
+                ) : (
+                  <Sun size={14} className="fill-gray-500 text-gray-500" />
+                )}
+              </div>
+            </button>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-4 mb-0">
+            <p className="text-xs text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+              <MapPin size={14} className="mr-1" /> Minglanilla, Cebu,
+              Philippines
+            </p>
+            <span className="text-gray-300 hidden md:block">|</span>
+            <span className="text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+              <CalendarDays size={14} className="mr-1" />
+              Last updated: {lastUpdated}
+            </span>
+          </div>
+          <div className="flex items-center justify-between mt-4 md:mt-2">
+            <p className="text-base sm:text-lg font-semibold truncate">
+              Aspiring Software Engineer
+              <span className="text-gray-400"> \ </span>
+              UI & UX Designer
             </p>
           </div>
-
-          {/* Theme Toggle */}
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="relative flex items-center w-16 h-8 bg-gray-200 dark:bg-gray-700 p-1 transition-colors duration-300 focus:outline-none shrink-0"
-            aria-label="Toggle Theme"
-          >
-            <div
-              className={`absolute w-6 h-6 bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center ${
-                theme === "dark" ? "translate-x-8" : "translate-x-0"
-              }`}
-            >
-              {theme === "dark" ? (
-                <Moon size={14} className="fill-gray-800 text-gray-800" />
-              ) : (
-                <Sun size={14} className="fill-gray-500 text-gray-500" />
-              )}
+          {/* Action Buttons */}
+          <div className="space-y-2 mt-3 md:mt-4">
+            <div className="flex gap-3">
+              <button className="flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-sm text-sm font-semibold hover:opacity-90 transition">
+                <CalendarDays size={16} /> Schedule a Call
+              </button>
+              <button className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 py-2 rounded-sm text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition text-black dark:text-white">
+                <Download size={16} /> Download CV
+              </button>
             </div>
-          </button>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-3">
-          <button className="flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-sm text-sm font-semibold hover:opacity-90 transition">
-            <Briefcase size={16} /> Schedule a Call
-          </button>
-          <button className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 py-2 rounded-sm text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition text-black dark:text-white">
-            <Download size={16} /> Download CV
-          </button>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 }
