@@ -30,6 +30,7 @@ export default function ProfileHeader() {
           alt="Christian James Abendan"
           width={170}
           height={170}
+          loading="eager"
           className="rounded-sm object-cover bg-gray-200 dark:bg-gray-800"
         />
       </div>
@@ -53,8 +54,8 @@ export default function ProfileHeader() {
             </h1>
 
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 dark:text-gray-400  mb-0">
-              <span className="flex items-center gap-1">
-                <MapPin size={14} /> Minglanilla, Cebu
+              <span className="flex items-center gap-1 font-semibold text-black dark:text-white">
+                <MapPin size={14} /> Minglanilla, Cebu, Philippines
               </span>
               <span className="flex items-center gap-1">
                 | <Eye size={14} /> 100 Views
