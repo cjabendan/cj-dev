@@ -89,22 +89,23 @@ export default function ProfileHeader() {
               Updated: {lastUpdated}
             </span>
           </div>
-          <div className="flex items-center mt-4">
-            <p className="flex max-[440px]:text-sm text-base md:text-lg font-semibold gap-x-1 truncate">
-              <span className="hidden sm:block">Aspiring</span>
+          <div className="flex items-center mt-4 max-[445px]:mt-2">
+            <p className="flex max-[445px]:text-sm text-base md:text-lg font-semibold gap-x-1 truncate">
+              <span className="max-[445px]:hidden block">Aspiring</span>
               <span>Software Engineer</span>
             </p>
           </div>
-          {/* Action Buttons */}
-          <div className="md:mt-4 mt-6">
-            <div className="flex gap-2">
-              <button className="inline-flex h-7 md:h-9 items-center rounded bg-black dark:bg-white text-white dark:text-black px-2.5 md:px-4 text-[10px] md:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0">
-                <CalendarDays size={12} className="shrink-0" />
-                Schedule<span className="hidden md:inline">a Call</span>
+          {/* Action Buttons Container */}
+          <div className="md:mt-4 mt-6 max-[445px]:mt-2">
+            <div className="flex max-[445px]:flex-col flex-row gap-2">
+              <button className="inline-flex h-7 md:h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black px-2.5 md:px-4 text-[10px] md:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 md:gap-2.5 whitespace-nowrap min-h-0 max-[445px]:w-full">
+                <CalendarDays size={12} className="shrink-0 mr-1" />
+                Schedule<span>a Call</span>
               </button>
-              <button className="inline-flex h-7 md:h-9 items-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-2.5 md:px-4 text-[10px] md:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0">
+
+              <button className="inline-flex h-7 md:h-9 items-center justify-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-2.5 md:px-4 text-[10px] md:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-2 md:gap-2.5 whitespace-nowrap min-h-0 max-[445px]:w-full">
                 <Download size={12} className="shrink-0" />
-                <span className="hidden md:inline">Download </span>CV
+                <span>Download </span>CV
               </button>
             </div>
           </div>
