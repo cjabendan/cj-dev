@@ -28,7 +28,7 @@ export default function ProfileHeader() {
 
   return (
     <section className="mb-8 animate-fade-in">
-      <div className="flex  md:items-center gap-4 sm:gap-6">
+      <div className="flex sm:items-center gap-4 sm:gap-6">
         {/* Avatar */}
         <Image
           src="/images/Pfp.png"
@@ -42,10 +42,10 @@ export default function ProfileHeader() {
           {/* Content */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <h1 className="max-[630px]:block hidden text-base font-bold truncate">
+              <h1 className="max-[630px]:block hidden max-[510px]:text-base text-xl font-bold truncate">
                 Dev. CJ
               </h1>
-              <h1 className="max-[630px]:hidden block max-[600px]:text-base text-xl font-bold truncate">
+              <h1 className="max-[630px]:hidden block max-[630px]:text-base text-xl font-bold truncate">
                 Dev. Christian James A. Abendan
               </h1>
               <div className="relative">
@@ -78,32 +78,33 @@ export default function ProfileHeader() {
               </div>
             </button>
           </div>
-          <div className="flex flex-col md:flex-row gap-x-4">
-            <p className=" max-[506px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+          <div className="flex flex-col sm:flex-row gap-x-4 max-[445px]:text-[10px] text-xs sm:text-sm ">
+            <p className="text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
               <MapPin size={12} className="mr-1 shrink-0" />
               Cebu, Philippines
             </p>
-            <span className="text-gray-300 hidden md:block">|</span>
-            <span className="max-[506px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+            <span className="text-gray-300 hidden sm:block">|</span>
+            <span className="text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
               <CalendarDays size={12} className="mr-1" />
               Updated: {lastUpdated}
             </span>
           </div>
-          <div className="flex items-center mt-4 max-[445px]:mt-2">
-            <p className="flex max-[445px]:text-sm text-base md:text-lg font-semibold gap-x-1 truncate">
-              <span className="max-[445px]:hidden block">Aspiring</span>
+          <div className="flex items-center max-[445px]:mt-1.2 mt-3 sm:mt-2">
+            <p className="flex max-[445px]:text-sm text-base sm:text-lg font-semibold gap-x-1 truncate">
+              <span>PM</span>
+              <span className="text-gray-400">\</span>
+              <span className="max-[510px]:hidden block">Aspiring</span>
               <span>Software Engineer</span>
             </p>
           </div>
           {/* Action Buttons Container */}
-          <div className="md:mt-4 mt-6 max-[445px]:mt-2">
+          <div className="mt-4 max-[445px]:mt-2">
             <div className="flex max-[445px]:flex-col flex-row gap-2">
-              <button className="inline-flex h-7 md:h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black px-2.5 md:px-4 text-[10px] md:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 md:gap-2.5 whitespace-nowrap min-h-0 max-[445px]:w-full">
+              <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
                 <CalendarDays size={12} className="shrink-0 mr-1" />
                 Schedule<span>a Call</span>
               </button>
-
-              <button className="inline-flex h-7 md:h-9 items-center justify-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-2.5 md:px-4 text-[10px] md:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-2 md:gap-2.5 whitespace-nowrap min-h-0 max-[445px]:w-full">
+              <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
                 <Download size={12} className="shrink-0" />
                 <span>Download </span>CV
               </button>
