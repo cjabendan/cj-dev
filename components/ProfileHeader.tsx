@@ -28,13 +28,13 @@ export default function ProfileHeader() {
 
   return (
     <section className="mb-8 animate-fade-in">
-      <div className="flex flex-col sm:flex-row md:items-center items-start gap-6">
+      <div className="flex  md:items-center max-[600px]:gap-4 gap-6">
         {/* Avatar */}
         <Image
           src="/images/Pfp.png"
           alt="Christian James Abendan"
-          width={170}
-          height={170}
+          width={160}
+          height={160}
           loading="eager"
           className="rounded-sm object-cover bg-gray-200 dark:bg-gray-800"
         />
@@ -42,7 +42,10 @@ export default function ProfileHeader() {
           {/* Content */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <h1 className="text-xl sm:text-2xl font-bold truncate">
+              <h1 className="max-[600px]:block hidden text-lg font-bold truncate">
+                CJ Abendan
+              </h1>
+              <h1 className="max-[600px]:hidden block text-xl font-bold truncate">
                 Christian James A. Abendan
               </h1>
               <div className="relative">
@@ -59,12 +62,12 @@ export default function ProfileHeader() {
             {/* Theme Toggle */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="relative flex items-center w-16 h-8 bg-gray-200 dark:bg-gray-700 p-1 transition-colors duration-300 focus:outline-none shrink-0"
+              className="relative inline-flex h-6 w-12 items-center transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700"
               aria-label="Toggle Theme"
             >
               <div
-                className={`absolute w-6 h-6 bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center ${
-                  theme === "dark" ? "translate-x-8" : "translate-x-0"
+                className={`absolute w-6 h-6 bg-white shadow-md transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
+                  theme === "dark" ? "translate-x-6" : "translate-x-0"
                 }`}
               >
                 {theme === "dark" ? (
@@ -75,32 +78,34 @@ export default function ProfileHeader() {
               </div>
             </button>
           </div>
-          <div className="flex flex-wrap items-center gap-x-4 mb-0">
-            <p className="text-xs text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
-              <MapPin size={14} className="mr-1" /> Minglanilla, Cebu,
-              Philippines
+          <div className="flex flex-col md:flex-row gap-x-4 mb-0">
+            <p className=" max-[600px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+              <MapPin size={12} className="mr-1 shrink-0" />
+              Minglanilla, Cebu, Philippines
             </p>
             <span className="text-gray-300 hidden md:block">|</span>
-            <span className="text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
-              <CalendarDays size={14} className="mr-1" />
-              Last updated: {lastUpdated}
+            <span className="max-[600px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+              <CalendarDays size={12} className="mr-1" />
+              Updated: {lastUpdated}
             </span>
           </div>
-          <div className="flex items-center justify-between mt-4 md:mt-2">
-            <p className="text-base sm:text-lg font-semibold truncate">
+          <div className="flex items-center justify-between max-[600px]:mt-4 mt-2">
+            <p className="max-[600px]:text-sm text-lg font-semibold truncate">
               Aspiring Software Engineer
               <span className="text-gray-400"> \ </span>
-              UI & UX Designer
+              Developer
             </p>
           </div>
           {/* Action Buttons */}
-          <div className="space-y-2 mt-3 md:mt-4">
-            <div className="flex gap-3">
-              <button className="flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-sm text-sm font-semibold hover:opacity-90 transition">
-                <CalendarDays size={16} /> Schedule a Call
+          <div className="space-y-2 mt-3 max-[500px]:mt-4">
+            <div className="flex gap-2">
+              <button className="flex items-center gap-1 bg-black dark:bg-white text-white dark:text-black px-3 max-[460px]:px-6 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5">
+                <CalendarDays size={12} className="mr-1" />
+                Schedule<span className="block max-[460px]:hidden">a Call</span>
               </button>
-              <button className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 py-2 rounded-sm text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition text-black dark:text-white">
-                <Download size={16} /> Download CV
+              <button className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 max-[460px]:px-6 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:-translate-y-0.5 text-black dark:text-white">
+                <Download size={12} />
+                <span className="block max-[505px]:hidden">Download </span>CV
               </button>
             </div>
           </div>
