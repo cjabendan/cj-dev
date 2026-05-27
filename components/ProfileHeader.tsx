@@ -28,7 +28,7 @@ export default function ProfileHeader() {
 
   return (
     <section className="mb-8 animate-fade-in">
-      <div className="flex  md:items-center max-[600px]:gap-4 gap-6">
+      <div className="flex  md:items-center gap-4 sm:gap-6">
         {/* Avatar */}
         <Image
           src="/images/Pfp.png"
@@ -42,11 +42,11 @@ export default function ProfileHeader() {
           {/* Content */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <h1 className="max-[600px]:block hidden text-lg font-bold truncate">
-                CJ Abendan
+              <h1 className="max-[630px]:block hidden text-base font-bold truncate">
+                Dev. CJ
               </h1>
-              <h1 className="max-[600px]:hidden block text-xl font-bold truncate">
-                Christian James A. Abendan
+              <h1 className="max-[630px]:hidden block max-[600px]:text-base text-xl font-bold truncate">
+                Dev. Christian James A. Abendan
               </h1>
               <div className="relative">
                 <VerifiedIcon
@@ -78,34 +78,36 @@ export default function ProfileHeader() {
               </div>
             </button>
           </div>
-          <div className="flex flex-col md:flex-row gap-x-4 mb-0">
-            <p className=" max-[600px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+          <div className="flex flex-col md:flex-row gap-x-4">
+            <p className=" max-[506px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
               <MapPin size={12} className="mr-1 shrink-0" />
-              Minglanilla, Cebu, Philippines
+              Cebu, Philippines
             </p>
             <span className="text-gray-300 hidden md:block">|</span>
-            <span className="max-[600px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+            <span className="max-[506px]:text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
               <CalendarDays size={12} className="mr-1" />
               Updated: {lastUpdated}
             </span>
           </div>
-          <div className="flex items-center justify-between max-[600px]:mt-4 mt-2">
-            <p className="max-[600px]:text-sm text-lg font-semibold truncate">
-              Aspiring Software Engineer
-              <span className="text-gray-400"> \ </span>
-              Developer
+          <div className="flex items-center mt-4">
+            <p className="flex max-[440px]:text-sm text-base md:text-lg font-semibold gap-x-1 truncate">
+              <span>Aspiring Software Engineer</span>
+              <span className="max-[506px]:hidden flex items-center gap-x-1">
+                <span className="text-gray-400">\</span>
+                <span>PM</span>
+              </span>
             </p>
           </div>
           {/* Action Buttons */}
-          <div className="space-y-2 mt-3 max-[500px]:mt-4">
+          <div className="max-[460px]:mt-4 mt-2">
             <div className="flex gap-2">
-              <button className="flex items-center gap-1 bg-black dark:bg-white text-white dark:text-black px-3 max-[460px]:px-6 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5">
+              <button className="flex items-center gap-1 bg-black dark:bg-white text-white dark:text-black px-6 max-[460px]:px-3 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5">
                 <CalendarDays size={12} className="mr-1" />
-                Schedule<span className="block max-[460px]:hidden">a Call</span>
+                Schedule<span className="block max-[480px]:hidden">a Call</span>
               </button>
-              <button className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 max-[460px]:px-6 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:-translate-y-0.5 text-black dark:text-white">
+              <button className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 max-[460px]:px-3 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:-translate-y-0.5 text-black dark:text-white">
                 <Download size={12} />
-                <span className="block max-[505px]:hidden">Download </span>CV
+                <span className="block max-[554px]:hidden">Download </span>CV
               </button>
             </div>
           </div>
