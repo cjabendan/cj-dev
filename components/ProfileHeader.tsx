@@ -91,23 +91,20 @@ export default function ProfileHeader() {
           </div>
           <div className="flex items-center mt-4">
             <p className="flex max-[440px]:text-sm text-base md:text-lg font-semibold gap-x-1 truncate">
-              <span>Aspiring Software Engineer</span>
-              <span className="max-[506px]:hidden flex items-center gap-x-1">
-                <span className="text-gray-400">\</span>
-                <span>PM</span>
-              </span>
+              <span className="hidden sm:block">Aspiring</span>
+              <span>Software Engineer</span>
             </p>
           </div>
           {/* Action Buttons */}
-          <div className="max-[460px]:mt-4 mt-2">
+          <div className="md:mt-4 mt-6">
             <div className="flex gap-2">
-              <button className="flex items-center gap-1 bg-black dark:bg-white text-white dark:text-black px-6 max-[460px]:px-3 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5">
-                <CalendarDays size={12} className="mr-1" />
-                Schedule<span className="block max-[480px]:hidden">a Call</span>
+              <button className="inline-flex h-7 md:h-9 items-center rounded bg-black dark:bg-white text-white dark:text-black px-2.5 md:px-4 text-[10px] md:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0">
+                <CalendarDays size={12} className="shrink-0" />
+                Schedule<span className="hidden md:inline">a Call</span>
               </button>
-              <button className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 max-[460px]:px-3 py-2 rounded-sm max-[430px]:text-xs text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:-translate-y-0.5 text-black dark:text-white">
-                <Download size={12} />
-                <span className="block max-[554px]:hidden">Download </span>CV
+              <button className="inline-flex h-7 md:h-9 items-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-2.5 md:px-4 text-[10px] md:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0">
+                <Download size={12} className="shrink-0" />
+                <span className="hidden md:inline">Download </span>CV
               </button>
             </div>
           </div>
