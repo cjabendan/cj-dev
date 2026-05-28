@@ -42,10 +42,15 @@ export default function ProfileHeader() {
           {/* Content */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <h1 className="max-[630px]:block hidden max-[510px]:text-base text-xl font-bold truncate">
+              <h1 className="block min-[470px]:hidden max-[445px]:text-base text-xl font-bold truncate">
                 Dev. CJ
               </h1>
-              <h1 className="max-[630px]:hidden block max-[630px]:text-base text-xl font-bold truncate">
+
+              <h1 className="hidden min-[470px]:block min-[620px]:hidden text-xl font-bold truncate">
+                Dev. CJ Abendan
+              </h1>
+
+              <h1 className="hidden min-[620px]:block text-xl font-bold truncate">
                 Dev. Christian James A. Abendan
               </h1>
               <div className="relative">
@@ -78,22 +83,22 @@ export default function ProfileHeader() {
               </div>
             </button>
           </div>
-          <div className="flex flex-col sm:flex-row gap-x-4 max-[445px]:text-[10px] text-xs sm:text-sm ">
-            <p className="text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+          <div className="flex flex-col sm:flex-row gap-x-4 max-[445px]:gap-y-1 max-[445px]:text-[10px] text-sm truncate">
+            <p className="text-foreground/70 mt-0.5 flex items-center gap-1 font-meduim">
               <MapPin size={12} className="mr-1 shrink-0" />
               Cebu, Philippines
             </p>
             <span className="text-gray-300 hidden sm:block">|</span>
-            <span className="text-foreground/70 mt-0.5 flex items-center gap-1 truncate">
+            <span className="text-foreground/70 mt-0.5 flex items-center gap-1">
               <CalendarDays size={12} className="mr-1" />
               Updated: {lastUpdated}
             </span>
           </div>
-          <div className="flex items-center max-[445px]:mt-1.2 mt-3 sm:mt-2">
-            <p className="flex max-[445px]:text-sm text-base sm:text-lg font-semibold gap-x-1 truncate">
+          <div className="flex items-center justify-between mt-1.5 sm:mt-2">
+            <p className="flex max-[445px]:text-[11px] text-base gap-x-1 truncate">
               <span>PM</span>
               <span className="text-gray-400">\</span>
-              <span className="max-[510px]:hidden block">Aspiring</span>
+              <span className="max-[445px]:hidden block">Aspiring</span>
               <span>Software Engineer</span>
             </p>
           </div>
@@ -105,7 +110,7 @@ export default function ProfileHeader() {
                 Schedule<span>a Call</span>
               </button>
               <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
-                <Download size={12} className="shrink-0" />
+                <Download size={12} className="shrink-0 mr-1" />
                 <span>Download </span>CV
               </button>
             </div>
