@@ -29,9 +29,7 @@ export default function About() {
         </p>
       </div>
       <div className="col-span-1 md:col-span-2 md:row-span-3 space-y-2 animate-fade-in animation-delay-200">
-        <div className="flex justify-center mb-2">
-          <AccessCard />
-        </div>
+        <AccessCard />
         <Experience />
       </div>
       <TechStack />
