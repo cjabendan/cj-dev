@@ -39,7 +39,7 @@ const EXPERIENCES = [
     role: "Full Stack Developer",
     type: "Freelance",
     company: "Freelance",
-    year: "2026",
+    year: "Present",
   },
 ];
 
