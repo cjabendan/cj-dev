@@ -1,23 +1,23 @@
 const EXPERIENCES = [
   {
     id: 1,
-    role: "BS Inforamtion Tech",
+    role: "BS Information Technology",
     type: "Student",
-    company: "SSC",
+     company: "St. Cecilia's College",
     year: "2022",
   },
   {
     id: 2,
     role: "Full Stack Developer",
     type: "Student",
-    company: "JMS One IT",
+     company: "St. Cecilia's College",
     year: "2023",
   },
   {
     id: 3,
     role: "Project Manager",
     type: "Student",
-    company: "CFAI",
+    company: "St. Cecilia's College",
     year: "2025",
   },
    {
@@ -32,6 +32,13 @@ const EXPERIENCES = [
     role: "Application Developer",
     type: "Intern",
     company: "JMS One IT",
+    year: "2026",
+  },
+  {
+    id: 6,
+    role: "Full Stack Developer",
+    type: "Freelance",
+    company: "Freelance",
     year: "2026",
   },
 ];
