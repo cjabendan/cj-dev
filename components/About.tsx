@@ -1,5 +1,7 @@
 import React from "react";
 import AccessCard from "./AccessCard";
+import TechStack from "./TechStack";
+import Experience from "./Experience";
 
 export default function About() {
   return (
@@ -30,7 +32,9 @@ export default function About() {
         <div className="flex justify-center mb-2">
           <AccessCard />
         </div>
+        <Experience />
       </div>
+      <TechStack />
     </section>
   );
 }

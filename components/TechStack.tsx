@@ -1,17 +1,11 @@
-// components/TechStack.tsx
-const skills = ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"];
-
 export default function TechStack() {
   return (
-    <div>
-      <h2 className="font-bold mb-4">Tech Stack</h2>
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill) => (
-          <span key={skill} className="px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-sm">
-            {skill}
-          </span>
-        ))}
+    <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in animation-delay-200">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-bold">Tech Stack</h2>
+        <a className="text-xs text-foreground/70 hover:text-foreground flex items-center gap-1 transition-colors"  href="">View All</a>
       </div>
+     
     </div>
   );
 }
