@@ -1,30 +1,59 @@
+"use client";
+import { useRef } from "react";
 import { FaCode, FaReact } from "react-icons/fa";
 
 export default function AccessCard() {
-  return (
-    <div className="group relative flex min-h-[360px] cursor-pointer flex-col justify-between overflow-hidden rounded-[16px] border border-white/10 bg-gradient-to-br from-[#636466] via-[#3c3d3f] via-[#222325] to-[#121212] p-10 text-white transition-transform duration-300 [perspective:1000px] [transform-style:preserve-3d]">
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_120px_84px,_rgba(255,255,255,0.15),_transparent_80%)]" />
+  const cardRef = useRef<HTMLDivElement>(null);
 
-      <div className="z-10 flex h-full flex-col justify-between [transform:translateZ(30px)] [transform-style:preserve-3d]">
-        <div className="text-[3rem] text-gray-200 opacity-80">
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!cardRef.current) return;
+    const { left, top, width, height } =
+      cardRef.current.getBoundingClientRect();
+
+    const x = (e.clientX - left) / width - 0.5;
+    const y = (e.clientY - top) / height - 0.5;
+
+    cardRef.current.style.setProperty("--rx", `${y * -25}deg`);
+    cardRef.current.style.setProperty("--ry", `${x * 25}deg`);
+  };
+
+  const handleMouseLeave = () => {
+    if (!cardRef.current) return;
+    cardRef.current.style.setProperty("--rx", "0deg");
+    cardRef.current.style.setProperty("--ry", "0deg");
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="group relative flex min-h-[340px] w-full max-w-[250px] cursor-pointer flex-col justify-between overflow-hidden rounded-[16px] border border-white/10 bg-gradient-to-br from-[#2a2a2a] via-[#1a1a1a] to-[#0a0a0a] px-8 pt-12 pb-8 text-white transition-transform duration-150 ease-out [perspective:1000px] [transform-style:preserve-3d] shadow-2xl shadow-black/60 will-change-transform"
+      style={{
+        transform: "rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
+      }}
+    >
+      {/* Texture Layers */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)] opacity-80" />
+      <div className="absolute inset-0 z-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_120px_84px,_rgba(255,255,255,0.08),_transparent_60%)]" />
+
+      {/* Content */}
+      <div className="relative z-10 flex h-full flex-col justify-between [transform:translateZ(30px)]">
+        <div className="text-[2.3rem] text-gray-200 opacity-80">
           <FaCode />
         </div>
 
-        {/* Bottom Section */}
         <div className="mt-auto flex items-end justify-between gap-6">
           <div className="min-w-0">
-            {" "}
-            {/* min-w-0 allows truncation if the name gets too long */}
-            <div className="truncate text-base font-black uppercase tracking-[2px] text-white">
+            <div className="truncate text-xs font-black uppercase tracking-[2px] text-white">
               Cj Abendan
             </div>
-            <div className="mt-1 flex items-center whitespace-nowrap text-[10px] uppercase text-gray-300 opacity-80">
-              SOFTWARE ENGINEER
+            <div className="my-1.5 flex items-center whitespace-nowrap text-[8px] uppercase text-gray-300 opacity-80">
+              ASPIRING SOFTWARE ENGINEER
             </div>
           </div>
-
-          {/* Large React Icon positioned on the right */}
-          <div className="flex-shrink-0 text-[3rem] text-gray-300 opacity-20 [transform:translateZ(20px)]">
+          <div className="flex-shrink-0 text-[3.2rem] text-gray-300 opacity-20 [transform:translateZ(20px)]">
             <FaReact />
           </div>
         </div>
