@@ -1,16 +1,73 @@
-import React from "react";
+const EXPERIENCES = [
+  {
+    id: 1,
+    role: "BS Inforamtion Tech",
+    type: "Student",
+    company: "SSC",
+    year: "2022",
+  },
+  {
+    id: 2,
+    role: "Full Stack Developer",
+    type: "Student",
+    company: "JMS One IT",
+    year: "2023",
+  },
+  {
+    id: 3,
+    role: "Project Manager",
+    type: "Student",
+    company: "CFAI",
+    year: "2025",
+  },
+   {
+    id: 4,
+    role: "Technical IT Support",
+    type: "Intern",
+    company: "CFAI",
+    year: "2026",
+  },
+  {
+    id: 5,
+    role: "Application Developer",
+    type: "Intern",
+    company: "JMS One IT",
+    year: "2026",
+  },
+];
 
 export default function Experience() {
+  const sortedExperiences = [...EXPERIENCES].sort((a, b) => b.id - a.id);
+
   return (
-    <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in animation-delay-200">
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-bold">Experience</h2>
-        <a
-          className="text-xs text-foreground/70 hover:text-foreground flex items-center gap-1 transition-colors"
-          href=""
-        >
-          View All
-        </a>
+    <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-200">
+      <h2 className="mt-6 text-lg font-bold">Experience</h2>
+      <div className="flex flex-col relative gap-6">
+        <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-500 z-0"></div>
+
+        {sortedExperiences.map((exp, index) => (
+          <div key={exp.id} className="relative pl-7 z-10">
+            <div
+              className={`absolute left-0 top-1.5 w-3 h-3 border-1 border-accent transition-colors ${
+                index === 0
+                  ? "bg-[var(--foreground)]"
+                  : "bg-[var(--background)]"
+              }`}
+            ></div>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-bold text-accent">{exp.role}</h3>
+                <span className="text-[8px] font-medium py-0.5 px-2 border border-border-primary bg-bg-card rounded uppercase">
+                  {exp.type}
+                </span>
+              </div>
+              <div className="flex justify-between items-center text-xs text-muted-foreground">
+                <p>{exp.company}</p>
+                <p>{exp.year}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
