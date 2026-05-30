@@ -1,50 +1,7 @@
-const EXPERIENCES = [
-  {
-    id: 1,
-    role: "BS Information Technology",
-    type: "Student",
-     company: "St. Cecilia's College",
-    year: "2022",
-  },
-  {
-    id: 2,
-    role: "Full Stack Developer",
-    type: "Student",
-     company: "St. Cecilia's College",
-    year: "2023",
-  },
-  {
-    id: 3,
-    role: "Project Manager",
-    type: "Student",
-    company: "St. Cecilia's College",
-    year: "2025",
-  },
-   {
-    id: 4,
-    role: "Technical IT Support",
-    type: "Intern",
-    company: "CFAI",
-    year: "2026",
-  },
-  {
-    id: 5,
-    role: "Application Developer",
-    type: "Intern",
-    company: "JMS One IT",
-    year: "2026",
-  },
-  {
-    id: 6,
-    role: "Full Stack Developer",
-    type: "Freelance",
-    company: "Freelance",
-    year: "Present",
-  },
-];
+import experiences from "@/data/experiences.json";
 
 export default function Experience() {
-  const sortedExperiences = [...EXPERIENCES].sort((a, b) => b.id - a.id);
+  const sortedExperiences = [...experiences].sort((a, b) => b.id - a.id);
 
   return (
     <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-200">
