@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-6 gap-2">
       <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in">
-        <h2 className="text-lg font-bold">About</h2>
+        <h2 className="text-lg sm:text-xl font-bold">About</h2>
         <p className="text-sm text-foreground/70 leading-relaxed">
           I am a full-stack software engineer focused on building robust web and
           mobile applications. My core expertise centers on modern frameworks
