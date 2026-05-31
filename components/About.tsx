@@ -30,6 +30,7 @@ export default function About() {
       </div>
       <div className="col-span-1 md:col-span-2 md:row-span-3 space-y-2 animate-fade-in animation-delay-200">
         <AccessCard />
+       
         <Experience />
       </div>
       <TechStack />
