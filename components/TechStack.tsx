@@ -30,6 +30,7 @@ export default function TechStack() {
                     alt={skill.name}
                     width={16}
                     height={16}
+                    style={{ width: "16px", height: "16px" }}
                     className="opacity-80 hover:opacity-100"
                   />
                    <p className="text-xs">{skill.name}</p>

@@ -15,10 +15,10 @@ export default function About() {
           high-performance digital solutions.
           <br />
           <br />
-          Beyond development, I have experience leading the full software
-          lifecycle as a Project Manager. I guide projects from initial planning
-          and architectural design to final execution, ensuring all technical
-          deliverables remain strictly aligned with business objectives.
+          I am driven by a passion for solving complex technical challenges and
+          turning intricate logic into smooth user experiences. I thrive on
+          diving deep into system architectures to build clean, maintainable,
+          and highly efficient code bases.
           <br />
           <br />
           Currently, I am expanding my data architecture expertise. While I have

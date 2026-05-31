@@ -52,7 +52,7 @@ export default function AccessCard() {
                 ASPIRING SOFTWARE ENGINEER
               </div>
             </div>
-            <div className="flex-shrink-0 text-[3.2rem] text-gray-300 opacity-20 [transform:translateZ(20px)]">
+            <div className="flex-shrink-0 text-[3.2rem] text-gray-300 opacity-30 [transform:translateZ(20px)]">
               <FaReact />
             </div>
           </div>
