@@ -3,20 +3,26 @@
     "category": "Frontend",
     "skills": [
       { "name": "React", "icon": "/icons/reactjs.svg" },
+      { "name": "Vue.js", "icon": "/icons/vuejs.svg" },
       { "name": "Next.js", "icon": "/icons/nextjs.svg" },
       { "name": "Tailwind", "icon": "/icons/tailwindcss.svg" },
       { "name": "CSS", "icon": "/icons/css.svg" },
-      { "name": "HTML5", "icon": "/icons/html5.svg" }
+      { "name": "HTML5", "icon": "/icons/html5.svg" },
+      { "name": "JavaScript", "icon": "/icons/javascript.svg" }
     ]
   },
   {
     "category": "Backend",
     "skills": [
-      { "name": "Node.js", "icon": "/icons/nodejs.svg" },
+    { "name": "TypeScript", "icon": "/icons/typescript.svg" },
       { "name": "PHP", "icon": "/icons/php.svg" },
       { "name": "Laravel", "icon": "/icons/laravel.svg" },
+      { "name": "Node.js", "icon": "/icons/nodejs.svg" },
+      { "name": "C", "icon": "/icons/c.svg" },
+      { "name": "C#", "icon": "/icons/c-sharp.svg" },
+      { "name": "C++", "icon": "/icons/c-plus-plus.svg" },
       { "name": "MySQL", "icon": "/icons/mysql.svg" },
-      { "name": "Firebase", "icon": "/icons/firebase.svg" },
+      { "name": "Firebase", "icon": "/icons/firebase.svg" },  
       { "name": "Convex", "icon": "/icons/convex.svg" },
       { "name": "Clerk", "icon": "/icons/clerk.svg" }
     ]
