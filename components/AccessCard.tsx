@@ -15,6 +15,11 @@ export default function AccessCard() {
 
     cardRef.current.style.setProperty("--rx", `${y * -25}deg`);
     cardRef.current.style.setProperty("--ry", `${x * 25}deg`);
+
+    cardRef.current.style.setProperty(
+      "--mx",
+      `${((e.clientX - left) / width) * 100}%`,
+    );
   };
 
   const handleMouseLeave = () => {
@@ -29,20 +34,29 @@ export default function AccessCard() {
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="group relative flex min-h-[340px] w-full max-w-[250px] cursor-pointer flex-col justify-between overflow-hidden rounded-[16px] border border-white/10 bg-gradient-to-br from-[#2a2a2a] via-[#1a1a1a] to-[#0a0a0a] px-8 pt-12 pb-8 text-white transition-transform duration-150 ease-out [perspective:1000px] [transform-style:preserve-3d] shadow-2xl shadow-black/60 will-change-transform"
+        className="group relative flex min-h-[340px] w-full max-w-[250px] cursor-pointer flex-col justify-between overflow-hidden rounded-[16px] border border-white/10 bg-gradient-to-br from-[#2a2a2a] via-[#1a1a1a] to-[#0a0a0a] px-8 pt-12 pb-8 text-white transition-transform duration-150 ease-out [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
         style={{
           transform: "rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
         }}
       >
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)] opacity-80" />
+        {/* Laser Shine Effect */}
+        <div
+          className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            backgroundImage:
+              "linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%)",
+            backgroundPosition: "var(--mx, 50%) 0",
+            backgroundSize: "200% 100%",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+
         <div className="absolute inset-0 z-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]" />
-        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_120px_84px,_rgba(255,255,255,0.08),_transparent_60%)]" />
 
         <div className="relative z-10 flex h-full flex-col justify-between [transform:translateZ(30px)]">
           <div className="text-[2.3rem] text-gray-200 opacity-80">
             <FaCode />
           </div>
-
           <div className="mt-auto flex items-end justify-between gap-6">
             <div className="min-w-0">
               <div className="truncate text-xs font-black uppercase tracking-[2px] text-white">
@@ -52,7 +66,7 @@ export default function AccessCard() {
                 ASPIRING SOFTWARE ENGINEER
               </div>
             </div>
-            <div className="flex-shrink-0 text-[3.2rem] text-gray-300 opacity-30 [transform:translateZ(20px)]">
+            <div className="flex-shrink-0 text-[3.2rem] text-gray-300 opacity-20 [transform:translateZ(20px)]">
               <FaReact />
             </div>
           </div>

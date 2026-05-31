@@ -19,13 +19,6 @@ export default function About() {
           turning intricate logic into smooth user experiences. I thrive on
           diving deep into system architectures to build clean, maintainable,
           and highly efficient code bases.
-          <br />
-          <br />
-          Currently, I am expanding my data architecture expertise. While I have
-          a solid background in relational databases like MySQL, I am now
-          mastering Cypher for graph database management to better bridge the
-          gap between complex backend systems and scalable, user-centric
-          applications.
         </p>
       </div>
       <div className="col-span-1 md:col-span-2 md:row-span-3 space-y-2 animate-fade-in animation-delay-200">
