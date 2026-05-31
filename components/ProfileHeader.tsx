@@ -94,16 +94,15 @@ export default function ProfileHeader() {
               Updated: {lastUpdated}
             </span>
           </div>
-          <div className="flex items-center justify-between mt-1.5 sm:mt-2">
-            <p className="flex max-[445px]:text-[11px] text-base gap-x-1 truncate">
-              <span>PM</span>
-              <span className="text-gray-400">\</span>
-              <span className="max-[445px]:hidden block">Aspiring</span>
+          <div className="flex items-center justify-between mt-1.5 sm:mt-3">
+            <p className="flex max-[445px]:text-[11px] text-base font-medium gap-x-1 truncate">
               <span>Software Engineer</span>
+              <span className="text-gray-400">\</span>
+              <span>Full-Stack Developer</span>
             </p>
           </div>
           {/* Action Buttons Container */}
-          <div className="mt-4 max-[445px]:mt-2">
+          <div className="mt-3 max-[445px]:mt-2">
             <div className="flex max-[445px]:flex-col flex-row gap-2">
               <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
                 <CalendarDays size={12} className="shrink-0 mr-1" />
