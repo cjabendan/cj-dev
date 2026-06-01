@@ -1,29 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import techData from "@/data/tech-stack.json";
 
 export default function TechStack() {
-  const [showAll, setShowAll] = useState(false);
+  const displayData = techData.slice(0, 2).map((group, index) => ({
+    ...group,
+    skills: group.skills.slice(0, index === 0 ? 3 : 4),
+  }));
 
-  const displayData = showAll
-    ? techData
-    : techData.slice(0, 2).map((group, index) => ({
-        ...group,
-        skills: group.skills.slice(0, index === 0 ? 3 : 4),
-      }));
-      
   return (
     <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-4 group">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-bold">Tech Stack</h2>
-        <button
-          onClick={() => setShowAll(!showAll)}
+        <Link
+          href="/tech-stack"
           className="text-xs text-foreground/70 hover:text-foreground transition-colors"
         >
-          {showAll ? "Show Less" : "View All"}
-        </button>
+          View All
+        </Link>
       </div>
 
       <div className="flex flex-col gap-6">
@@ -36,7 +32,7 @@ export default function TechStack() {
               {group.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-2 px-3 py-2 border rounded-sm hover:bg-bg-card transition-all"
+                  className="flex items-center gap-2 px-3 py-2 border border-gray-200 dark:border-gray-800 rounded-sm hover:bg-bg-card transition-all"
                 >
                   <Image
                     src={skill.icon}
