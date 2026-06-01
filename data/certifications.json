@@ -1,0 +1,39 @@
+[
+    {
+    "id": 1,
+    "title": "Basic Fiber Optic Installation Seminar",
+    "issuer": "St. Cecilia's College",
+    "url": "https://example.com/certifications/2"
+  },
+  {
+    "id": 2,
+    "title": "Cebu ICT Student Congress 2024",
+    "issuer": "PSITE Central Visayas",
+    "url": "https://example.com/certifications/1"
+  },
+  {
+    "id": 3,
+    "title": "Distinction in Project Management in Software Development",
+    "issuer": "St. Cecilia's College",
+    "url": "https://example.com/certifications/1"
+  },
+  {
+    "id": 4,
+    "title": "Distinction in Computer Programming & Software Development",
+    "issuer": "St. Cecilia's College",
+    "url": "https://example.com/certifications/1"
+  }
+  ,
+  {
+    "id": 5,
+    "title": "Cebu ICT Student Congress 2026",
+    "issuer": "PSITE Central Visayas",
+    "url": "https://example.com/certifications/1"
+  },
+  {
+    "id": 6,
+    "title": "HTML Fundamentals",
+    "issuer": "Codecred",
+    "url": "https://example.com/certifications/1"
+  }
+]
