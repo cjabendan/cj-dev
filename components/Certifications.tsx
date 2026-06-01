@@ -1,7 +1,6 @@
 import certData from "@/data/certifications.json";
 
 export default function Certifications() {
-  
   const sortedCertifications = [...certData]
     .sort((a, b) => b.id - a.id)
     .slice(0, 4);
@@ -17,8 +16,11 @@ export default function Certifications() {
 
       <div className="flex flex-col gap-3">
         {sortedCertifications.map((cert) => (
-          <div
+          <a
             key={cert.id}
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-col gap-1 border border-gray-200 dark:border-gray-800 rounded-sm py-3 px-3 hover:bg-bg-card transition-colors"
           >
             <span className="text-sm font-medium leading-tight">
@@ -29,7 +31,7 @@ export default function Certifications() {
                 {cert.issuer}
               </span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
