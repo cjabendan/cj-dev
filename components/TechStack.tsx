@@ -28,11 +28,11 @@ export default function TechStack() {
             <h4 className="text-xs font-semibold text-muted-foreground uppercase">
               {group.category}
             </h4>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {group.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-2 px-3 py-2 border border-gray-200 dark:border-gray-800 rounded-sm hover:bg-bg-card transition-all"
+                  className="flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-gray-800 rounded-sm hover:bg-bg-card transition-all"
                 >
                   <Image
                     src={skill.icon}
