@@ -21,6 +21,7 @@
       { "name": "C", "icon": "/icons/c.svg" },
       { "name": "C#", "icon": "/icons/c-sharp.svg" },
       { "name": "C++", "icon": "/icons/c-plus-plus.svg" },
+      { "name": "Java", "icon": "/icons/java.svg" },
       { "name": "MySQL", "icon": "/icons/mysql.svg" },
       { "name": "Firebase", "icon": "/icons/firebase.svg" },  
       { "name": "Convex", "icon": "/icons/convex.svg" },
