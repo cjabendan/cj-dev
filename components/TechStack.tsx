@@ -41,7 +41,9 @@ export default function TechStack() {
                     height={16}
                     style={{ width: "16px", height: "16px" }}
                     className={`opacity-80 hover:opacity-100 object-contain ${
-                      skill.name === "GitHub" ? "dark:invert" : ""
+                      skill.name === "GitHub" || skill.name === "Expo"
+                        ? "dark:invert"
+                        : ""
                     }`}
                   />
                   <p className="text-xs">{skill.name}</p>

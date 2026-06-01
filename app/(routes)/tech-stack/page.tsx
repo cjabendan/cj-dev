@@ -26,7 +26,9 @@ export default function TechStackPage() {
                     height={24}
                     style={{ width: "24px", height: "24px" }}
                     className={`opacity-80 hover:opacity-100 object-contain ${
-                      skill.name === "GitHub" ? "dark:invert" : ""
+                      skill.name === "GitHub" || skill.name === "Expo"
+                        ? "dark:invert"
+                        : ""
                     }`}
                   />
                   <span className="text-sm font-medium">{skill.name}</span>

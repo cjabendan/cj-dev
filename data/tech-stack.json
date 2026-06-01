@@ -3,6 +3,7 @@
     "category": "Frontend",
     "skills": [
       { "name": "React", "icon": "/icons/reactjs.svg" },
+      { "name": "Expo", "icon": "/icons/expo-svgrepo-com.svg"},
       { "name": "Vue.js", "icon": "/icons/vuejs.svg" },
       { "name": "Next.js", "icon": "/icons/nextjs.svg" },
       { "name": "Tailwind", "icon": "/icons/tailwindcss.svg" },
