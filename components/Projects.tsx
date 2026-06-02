@@ -33,7 +33,7 @@ export default function Projects() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 pb-2">
         {displayedProjects.map((project) => (
           <div
             key={project.id}
