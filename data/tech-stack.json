@@ -17,8 +17,8 @@
     "skills": [
       { "name": "PHP", "icon": "/icons/php.svg" },
       { "name": "Laravel", "icon": "/icons/laravel.svg" },
-      { "name": "TypeScript", "icon": "/icons/typescript.svg" },
       { "name": "Node.js", "icon": "/icons/nodejs.svg" },
+      { "name": "TypeScript", "icon": "/icons/typescript.svg" },
       { "name": "C", "icon": "/icons/c.svg" },
       { "name": "C#", "icon": "/icons/c-sharp.svg" },
       { "name": "C++", "icon": "/icons/c-plus-plus.svg" },
@@ -36,6 +36,8 @@
       { "name": "GitHub", "icon": "/icons/github-dark.svg" },
       { "name": "Discord", "icon": "/icons/discord.svg" },
       { "name": "VS Code", "icon": "/icons/vscode.svg" },
+      { "name": "ViteJs", "icon": "/icons/vitejs.svg" },
+      { "name": "Livewire", "icon": "/icons/Livewire.svg" },
       { "name": "Trello", "icon": "/icons/trello-icon.svg" },
       { "name": "Figma", "icon": "/icons/figma.svg" },
       { "name": "Canva", "icon": "/icons/canva.svg" }

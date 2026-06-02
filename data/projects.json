@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "title": "ARQUSTAT | PMS",
+    "description": "An application for purok data management system.",
+    "image": "/images/purok-sync.png",
+    "type": "Web Application",
+    "tech": ["Java", "MySQL"],
+    "url": "null"
+  },
+
+  {
+    "id": 2,
+    "title": "Truelife Social App",
+    "description": "An application to connect people, anywhere.",
+    "image": "/images/truelife-mob.png",
+    "type": "Mobile Application",
+    "tech": ["TypeScript", "Expo", "Clerk", "Convex"],
+    "url": "null"
+  },
+
+  {
+    "id": 3,
+    "title": "School Guidance (RMS)",
+    "description": "A comprehensive system for tracking student guidance records and counseling history.",
+    "image": "/images/thesis.png",
+    "type": "Web Application",
+    "tech": ["PHP", "Laravel", "Node.js", "MySQL"],
+    "url": "null"
+  },
+
+  {
+    "id": 4,
+    "title": "ITKonek Mobile App",
+    "description": "A comprehensive system for tracking student guidance records and counseling history.",
+    "image": "/images/itkonek-mob.png",
+    "type": "Web Application",
+  "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
+    "url": "null"
+  },
+
+  {
+    "id": 5,
+    "title": "ITKonek Admin Management",
+    "description": "A tool to help manage projects and tasks efficiently.",
+    "image": "/images/itkonek.png",
+    "type": "Web Application",
+    "tech": ["React", "Tailwind", "Node.js", "Firebase"],
+    "url": "null"
+  },
+  {
+    "id": 6,
+    "title": "Tutela Marinee (JMS)",
+    "description": "A specialized tool for managing internal task workflows and reporting.",
+    "image": "/images/tmi.png",
+    "type": "Web Application",
+    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "url": "https://mti-project.vercel.app/"
+  }
+]

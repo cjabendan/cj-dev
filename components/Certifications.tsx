@@ -18,7 +18,7 @@ export default function Certifications() {
         </Link>
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
         {sortedCertifications.map((cert) => (
           <a
             key={cert.id}
