@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "ARQUSTAT | PMS",
-    "description": "An application for purok data management system.",
+    "description": "A software application for purok data management system.",
     "image": "/images/purok-sync.png",
     "type": "Web Application",
     "tech": ["Java", "MySQL"],
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "Truelife Social App",
-    "description": "An application to connect people, anywhere.",
+    "description": "A mobile application to connect people, anywhere.",
     "image": "/images/truelife-mob.png",
     "type": "Mobile Application",
     "tech": ["TypeScript", "Expo", "Clerk", "Convex"],
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "School Guidance (RMS)",
-    "description": "A comprehensive system for tracking student guidance records and counseling history.",
+    "description": "A comprehensive system for managing student guidance records.",
     "image": "/images/thesis.png",
     "type": "Web Application",
     "tech": ["PHP", "Laravel", "Node.js", "MySQL"],
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "ITKonek Mobile App",
-    "description": "A comprehensive system for tracking student guidance records and counseling history.",
+    "description": "An application to browse and book IT services online.",
     "image": "/images/itkonek-mob.png",
     "type": "Web Application",
   "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "ITKonek Admin Management",
-    "description": "A tool to help manage projects and tasks efficiently.",
+    "description": "A tool to help manage the mobile app and its services.",
     "image": "/images/itkonek.png",
     "type": "Web Application",
     "tech": ["React", "Tailwind", "Node.js", "Firebase"],
