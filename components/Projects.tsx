@@ -1,75 +1,94 @@
-"use client";
-
-import Link from "next/link";
+"use client"; // Required for useState in Next.js App Router
+import { useState } from "react";
 import Image from "next/image";
+import projects from "@/data/projects.json";
+import techStack from "@/data/tech-stack.json";
 
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const getTechIcon = (techName: string) => {
+    for (const category of techStack) {
+      const skill = category.skills.find((s) => s.name === techName);
+      if (skill) return skill.icon;
+    }
+    return null;
+  };
+
+  const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
+
+  const displayedProjects = showAll
+    ? sortedProjects
+    : sortedProjects.slice(0, 3);
+
   return (
-    <section className="flex flex-col mt-4 gap-4">
+    <section className="flex flex-col mt-6 gap-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-bold">Projects</h2>
-        <Link
-          href="/certifications"
-          className="text-xs text-foreground/70 hover:text-foreground transition-colors"
+        <h2 className="text-lg font-bold">Recent Projects</h2>
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="text-xs text-foreground/70 hover:text-foreground transition-colors cursor-pointer "
         >
-          View All
-        </Link>
+          {showAll ? "Show Less" : "View All"}
+        </button>
       </div>
-      <div className="flex gap-2">
-        <div className="max-w-[260px] min-h-[160px] border border-gray-100 dark:border-gray-900 rounded-xs">
-          <div>
-            <Image
-              src="/images/thesis.png"
-              alt="School Guidance Record Management System"
-              width={260}
-              height={260}
-              loading="eager"
-              style={{ width: "auto", height: "160px" }}
-              className="rounded-t-xs object-cover bg-gray-200 dark:bg-gray-800"
-            />
-          </div>
-          <div className="p-4">
-            <div className="flex flex-col gap-2">
-              <h3 className="font-semibold text-muted-foreground">
-                School Guidance Record Management System
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-                exercitationem?
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-2">
+        {displayedProjects.map((project) => (
+          <div
+            key={project.id}
+            className="flex flex-col w-full border border-gray-100 dark:border-gray-900 rounded-xs"
+          >
+            <div className="relative w-full h-[180px]">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="rounded-t-xs object-cover bg-muted"
+              />
+            </div>
+
+            <a
+              key={project.id}
+              href={project.url}
+              target="_blank"
+              className="border-t border-gray-100 dark:border-gray-900 rounded-xs p-4 space-y-2"
+            >
+              <h3 className="font-semibold text-foreground">{project.title}</h3>
+              <p className="text-sm text-muted-foreground line-clamp-2">
+                {project.description}
               </p>
-            </div>
-            <div>
-              <h3>Tech Stack</h3>
-            </div>
+
+              <div className="pt-2">
+                <div className="flex flex-wrap gap-2 mt-1">
+                  {project.tech.map((t) => {
+                    const icon = getTechIcon(t);
+                    return (
+                      <span
+                        key={t}
+                        className="flex items-center gap-1 text-[10px] px-3 py-2 border border-gray-100 dark:border-gray-900 rounded-sm hover:bg-bg-card transition-all"
+                      >
+                        {icon && (
+                          <Image
+                            src={icon}
+                            alt={t}
+                            width={16}
+                            height={16}
+                            style={{ width: "16px", height: "16px" }}
+                            className={`opacity-80 hover:opacity-100 object-contain ${
+                              t === "Expo" ? "dark:invert" : ""
+                            }`}
+                          />
+                        )}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
-       <div className="max-w-[260px] border border-gray-100 dark:border-gray-900 rounded-xs">
-          <div>
-            <Image
-              src="/images/tmi.png"
-              alt="School Guidance Record Management System"
-              width={260}
-              height={260}
-              loading="eager"
-              style={{ width: "auto", height: "160px" }}
-              className="rounded-t-xs object-cover bg-gray-200 dark:bg-gray-800"
-            />
-          </div>
-          <div className="p-4">
-            <div className="flex flex-col gap-2">
-              <h3 className="font-semibold text-muted-foreground">
-                School Guidance Record Management System
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-                exercitationem?
-              </p>
-            </div>
-            <div>
-              <h3>Tech Stack</h3>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
