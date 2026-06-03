@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "Vince Michael Bacarisas",
+    "name": "David Sailas Villondo",
     "title": "Full-Stack Developer",
-    "avatar": "/images/reviewer/Bacarisas.png",
-    "content": "Working with Mr. Christian transformed our entire brand identity. The attention to detail was exceptional."
+    "avatar": "/images/reviewer/Villondo.png",
+    "content": "The collaboration with Mr. Christian was seamless. His insights into backend architecture were invaluable."
   },
   {
     "id": 2,
@@ -15,9 +15,9 @@
   },
   {
     "id": 3,
-    "name": "David Sailas Villondo",
-    "title": "Backend Developer",
-    "avatar": "/images/reviewer/Villondo.png",
-    "content": "The collaboration with Mr. Christian was seamless. His insights into backend architecture were invaluable."
+    "name": "Vince Michael Bacarisas",
+    "title": "AVANTECH - Developer",
+    "avatar": "/images/reviewer/Bacarisas.png",
+    "content": "Working with Mr. Christian transformed our entire brand identity. The attention to detail was exceptional."
   }
 ]

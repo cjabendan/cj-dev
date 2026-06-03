@@ -5,7 +5,8 @@ import Image from "next/image";
 import reviews from "@/data/reviews.json";
 
 export default function Recommendations() {
-  const [selectedReview, setSelectedReview] = useState(reviews[0]);
+  const sortedReviews = [...reviews].sort((a, b) => b.id - a.id).slice(0, 3);
+  const [selectedReview, setSelectedReview] = useState(sortedReviews[0]);
 
   return (
     <section className="flex flex-col mt-4 gap-6 p-4">
@@ -28,7 +29,7 @@ export default function Recommendations() {
 
         <div className="flex items-center gap-5 ">
           <div className="flex -space-x-2">
-            {reviews.map((r) => (
+            {sortedReviews.map((r) => (
               <button
                 key={r.id}
                 onClick={() => setSelectedReview(r)}
