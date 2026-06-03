@@ -21,8 +21,8 @@ export default function Recommendations() {
       </div>
 
       <div className="flex flex-col items-start gap-8 max-w-4xl">
-        <div className="max-w-2xl">
-          <p className="text-xl text-foreground/90 leading-relaxed">
+        <div className="pt-6 pb-2 max-w-3xl">
+          <p className="text-xl font-regular leading-relaxed">
             &quot;{selectedReview.content}&quot;
           </p>
         </div>
@@ -42,8 +42,8 @@ export default function Recommendations() {
                 <Image
                   src={r.avatar}
                   alt={r.name}
-                  width={36}
-                  height={36}
+                  width={38}
+                  height={38}
                   loading="lazy"
                   className="rounded-full object-cover w-9 h-9"
                 />
