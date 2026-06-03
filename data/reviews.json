@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Vince Michael Bacarisas",
+    "title": "Full-Stack Developer",
+    "avatar": "/images/reviewer/Bacarisas.png",
+    "content": "Working with Mr. Christian transformed our entire brand identity. The attention to detail was exceptional."
+  },
+  {
+    "id": 2,
+    "name": "John Bert Plameran",
+    "title": "Frontend Developer",
+    "avatar": "/images/reviewer/Plameran.png",
+    "content": "Mr. Christian's expertise in design and development helped us create a user-friendly platform that exceeded our expectations."
+  },
+  {
+    "id": 3,
+    "name": "David Sailas Villondo",
+    "title": "Backend Developer",
+    "avatar": "/images/reviewer/Villondo.png",
+    "content": "The collaboration with Mr. Christian was seamless. His insights into backend architecture were invaluable."
+  }
+]

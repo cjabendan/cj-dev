@@ -48,6 +48,7 @@ export default function Projects() {
                 src={project.image}
                 alt={project.title}
                 fill
+                loading="lazy"
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="rounded-t-xs object-cover bg-muted"
               />
