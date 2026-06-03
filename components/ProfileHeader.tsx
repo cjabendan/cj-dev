@@ -64,6 +64,7 @@ export default function ProfileHeader() {
                 />
               </div>
             </div>
+
             {/* Theme Toggle */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -83,6 +84,7 @@ export default function ProfileHeader() {
               </div>
             </button>
           </div>
+
           <div className="flex flex-col sm:flex-row gap-x-4 max-[445px]:gap-y-1 max-[445px]:text-[10px] text-sm truncate">
             <p className="text-foreground/70 mt-0.5 flex items-center gap-1 font-meduim">
               <MapPin size={12} className="mr-1 shrink-0" />
@@ -101,6 +103,7 @@ export default function ProfileHeader() {
               <span>Full-Stack Developer</span>
             </p>
           </div>
+
           {/* Action Buttons Container */}
           <div className="mt-3 max-[445px]:mt-2">
             <div className="flex max-[445px]:flex-col flex-row gap-2">

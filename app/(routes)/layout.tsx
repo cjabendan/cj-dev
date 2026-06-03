@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export default function PagesLayout({
@@ -9,9 +10,10 @@ export default function PagesLayout({
     <main className="max-w-4xl mx-auto px-4 py-16 animate-fade-in">
       <Link
         href="/"
-        className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
+        className="group inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
       >
-        <span className="mr-2">←</span> Back to Portfolio
+        <ArrowLeft className="w-4 h-4 mr-2" />
+        Back to Portfolio
       </Link>
       {children}
     </main>
