@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import techData from "@/data/tech-stack.json";
@@ -11,14 +12,15 @@ export default function TechStack() {
   }));
 
   return (
-    <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-4 group">
+    <div className="p-4 col-span-1 md:col-span-4 space-y-4 group">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-bold">Tech Stack</h2>
         <Link
           href="/tech-stack"
-          className="text-xs text-foreground/70 hover:text-foreground transition-colors"
+          className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors"
         >
           View All
+          <ArrowRight className="w-4 h-3" />
         </Link>
       </div>
 
