@@ -43,7 +43,7 @@
     "id": 5,
     "title": "ITKonek Admin Management",
     "description": "A tool to help manage the mobile app and its services.",
-    "image": "/images/itkonek.png",
+    "image": "/images/itkonek-admin.png",
     "type": "Web Application",
     "tech": ["React", "Tailwind", "Node.js", "Firebase"],
     "url": "null"
