@@ -26,7 +26,7 @@ export default function Projects() {
   return (
     <section className="flex flex-col mt-4 gap-10 p-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-bold">Recent Projects</h2>
+        <h2 className="text-lg sm:text-xl font-bold">Recent Projects</h2>
         <button
           onClick={() => setShowAll(!showAll)}
           className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors cursor-pointer"

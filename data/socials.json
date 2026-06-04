@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "platform": "GitHub",
+    "link": "https://github.com/your-profile",
+    "svgPath": "/icons/github-dark.svg"
+  },
+  {
+    "id": 2,
+    "platform": "LinkedIn",
+    "link": "https://linkedin.com/in/your-profile",
+    "svgPath": "/icons/linkedin.svg"
+  },
+  {
+    "id": 3,
+    "platform": "Instagram",
+    "link": "https://instagram.com/your-profile",
+    "svgPath": "/icons/instagram.svg"
+  },
+  {
+    "id": 4,
+    "platform": "Facebook",
+    "link": "https://facebook.com/your-profile",
+    "svgPath": "/icons/facebook.svg"
+  }
+]
