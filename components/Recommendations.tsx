@@ -21,7 +21,7 @@ export default function Recommendations() {
       </div>
 
       <div className="flex flex-col items-start gap-8 max-w-4xl">
-        <div className="pt-6 pb-2 max-w-3xl">
+        <div className="pt-6 pb-3">
           <p className="text-xl font-regular leading-relaxed">
             &quot;{selectedReview.content}&quot;
           </p>
