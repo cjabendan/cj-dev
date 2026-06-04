@@ -11,7 +11,7 @@ export default function Recommendations() {
   return (
     <section className="flex flex-col mt-4 gap-6 p-4">
       <div className="flex items-center justify-between pb-6 border-b border-gray-200 dark:border-gray-700">
-        <h2 className="text-lg font-bold">Recommendations</h2>
+        <h2 className="text-lg sm:text-xl font-bold">Recommendations</h2>
         <button
           className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black 
         px-4 text-xs font-semibold gap-1 cursor-pointer"
