@@ -6,7 +6,6 @@ import Image from "next/image";
 import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
 
-
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
@@ -25,15 +24,19 @@ export default function Projects() {
     : sortedProjects.slice(0, 3);
 
   return (
-    <section className="flex flex-col mt-4 gap-6 p-4">
+    <section className="flex flex-col mt-4 gap-10 p-4">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-bold">Recent Projects</h2>
         <button
           onClick={() => setShowAll(!showAll)}
-          className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors cursor-pointer "
+          className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
         >
-          {showAll ? "Show Less" : "View All"}
-          <ArrowRight className="w-4 h-3" />
+          {showAll ? "Show Less" : "Show All"}
+          <ArrowRight
+            className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
+              showAll ? "rotate-90" : "rotate-0"
+            }`}
+          />
         </button>
       </div>
 

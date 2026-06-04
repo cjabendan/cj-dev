@@ -20,7 +20,7 @@ export default function TechStack() {
           className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors"
         >
           View All
-          <ArrowRight className="w-4 h-3" />
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
 
