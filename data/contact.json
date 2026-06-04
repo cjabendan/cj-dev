@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "platform": "Email",
+    "link": "mailto:cjamesabendan@gmail.com",
+    "icon": "Mail",
+    "isSocial": false
+  },
+  {
+    "id": 2,
+    "platform": "Let's talk",
+    "link": "#",
+    "icon": "Calendar",
+    "isSocial": false
+  },
+  {
+    "id": 3,
+    "platform": "GitHub",
+    "link": "https://github.com/your-profile",
+    "icon": "Github",
+    "isSocial": true
+  },
+  {
+    "id": 4,
+    "platform": "LinkedIn",
+    "link": "https://linkedin.com/in/your-profile",
+    "icon": "Linkedin",
+    "isSocial": true
+  }
+]
