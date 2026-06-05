@@ -11,6 +11,16 @@
 
   {
     "id": 2,
+    "title": "Arqulus | Split Bill",
+    "description": "A web application help people split bills and manage expenses together.",
+    "image": "/images/arqulus.png",
+    "type": "Web Application",
+    "tech": ["PHP", "Laravel", "JavaScript", "MySQL"],
+    "url": "null"
+  },
+
+  {
+    "id": 3,
     "title": "Truelife Social App",
     "description": "A mobile application to connect people, anywhere.",
     "image": "/images/truelife-mob.png",
@@ -20,22 +30,12 @@
   },
 
   {
-    "id": 3,
+    "id": 4,
     "title": "School Guidance (RMS)",
     "description": "A comprehensive system for managing student guidance records.",
     "image": "/images/thesis.png",
     "type": "Web Application",
     "tech": ["PHP", "Laravel", "Node.js", "MySQL"],
-    "url": "null"
-  },
-
-  {
-    "id": 4,
-    "title": "ITKonek Mobile App",
-    "description": "An application to browse and book IT services online.",
-    "image": "/images/itkonek-mob.png",
-    "type": "Web Application",
-  "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
     "url": "null"
   },
 
@@ -48,8 +48,19 @@
     "tech": ["React", "Tailwind", "Node.js", "Firebase"],
     "url": "null"
   },
-  {
+
+   {
     "id": 6,
+    "title": "ITKonek Mobile App",
+    "description": "An application to browse and book IT services online.",
+    "image": "/images/itkonek-mob.png",
+    "type": "Web Application",
+    "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
+    "url": "null"
+  },
+
+  {
+    "id": 7,
     "title": "Tutela Marinee (JMS)",
     "description": "A specialized tool for managing internal task workflows and reporting.",
     "image": "/images/tmi.png",
