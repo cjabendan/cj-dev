@@ -30,12 +30,12 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
 export default function CTA() {
   return (
     <section className="mt-10 p-4">
-      <h2 className="text-lg sm:text-xl font-bold">Let&apos;s work together</h2>
+       <h2 className="text-lg sm:text-xl font-bold">Let&apos;s Work Together</h2>
 
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mt-4">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
         <div className="md:col-span-2 flex flex-col gap-6">
           <p className="text-sm text-foreground/70 leading-relaxed">
-            I&apos;m always looking for new opportunities and collaborations.
+            I&apos;m always looking for new opportunities and collaborations to build clean, efficient, and scalable applications.
             <br />
             <br />
             Feel free to reach out if you need help with consulting, web

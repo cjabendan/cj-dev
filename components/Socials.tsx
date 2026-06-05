@@ -13,7 +13,7 @@ export default function Socials() {
         <a
           key={social.id}
           href={social.link}
-          className="opacity-90 border border-gray-100 dark:border-gray-900 rounded-xs p-2 hover:opacity-100 transition-opacity"
+          className="border border-gray-100 dark:border-gray-900 rounded-xs p-2"
           target="_blank"
           rel="noreferrer"
         >
@@ -23,7 +23,7 @@ export default function Socials() {
             width={24}
             height={24}
             style={{ filter: social.platform === "GitHub" ? "invert(1)" : "none", width: "18px", height: "18px" }}
-            className={`opacity-90 hover:opacity-100 object-contain `}
+            className={`opacity-80 hover:opacity-100 object-contain `}
           />
         </a>
       ))}
