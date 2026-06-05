@@ -2,25 +2,25 @@
   {
     "id": 1,
     "platform": "GitHub",
-    "link": "https://github.com/your-profile",
+    "link": "https://github.com/cjabendan",
     "svgPath": "/icons/github-dark.svg"
   },
   {
     "id": 2,
     "platform": "LinkedIn",
-    "link": "https://linkedin.com/in/your-profile",
+    "link": "https://linkedin.com/in/christian-james-abendan-2218a640a",
     "svgPath": "/icons/linkedin.svg"
   },
   {
     "id": 3,
     "platform": "Instagram",
-    "link": "https://instagram.com/your-profile",
+    "link": "https://www.instagram.com/mesjah.cj",
     "svgPath": "/icons/instagram.svg"
   },
   {
     "id": 4,
     "platform": "Facebook",
-    "link": "https://facebook.com/your-profile",
+    "link": "https://www.facebook.com/cjamesbendan",
     "svgPath": "/icons/facebook.svg"
   }
 ]
