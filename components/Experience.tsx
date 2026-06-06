@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-200">
       <h2 className="text-lg sm:text-xl font-bold">Experience</h2>
-      <div className="flex flex-col relative gap-6">
+      <div className="flex flex-col relative gap-6 mt-6">
         <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-500 z-0"></div>
 
         {sortedExperiences.map((exp, index) => (
