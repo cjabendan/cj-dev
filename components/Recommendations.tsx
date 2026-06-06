@@ -21,7 +21,7 @@ export default function Recommendations() {
         </button>
       </div>
 
-      <div className="flex flex-col items-start gap-8 max-w-4xl pb-16 border-b border-gray-200 dark:border-gray-700">
+      <div className="flex flex-col items-start gap-8 max-w-4xl pb-14 border-b border-gray-200 dark:border-gray-700">
         <div className="pt-6 pb-3">
           <p className="text-xl font-regular leading-relaxed">
             &quot;{selectedReview.content}&quot;
