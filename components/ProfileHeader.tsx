@@ -1,17 +1,9 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import Image from "next/image";
 
-import {
-  Check,
-  MapPin,
-  Calendar,
-  Sun,
-  Moon,
-  Download,
-  VerifiedIcon,
-} from "lucide-react";
+import { Check, MapPin, Calendar, Download, VerifiedIcon } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 /* Last updated date
 const lastUpdated = new Intl.DateTimeFormat("en-US", {
@@ -19,18 +11,13 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
   day: "numeric",
   year: "numeric",
 }).format(new Date(process.env.BUILD_TIME || new Date()));
-  if (!isMounted) return <div className="h-40" />;
   
-import { useIsMounted } from "@/hooks/useIsMounted";
-    const isMounted = useIsMounted();
 */
 
 export default function ProfileHeader() {
-  const { theme, setTheme } = useTheme();
-
   return (
     <section className="mb-8 animate-fade-in">
-      <div className="flex sm:items-center gap-4 sm:gap-6">
+      <div className="flex items-center gap-4 sm:gap-6">
         {/* Avatar */}
         <Image
           src="/images/gallery/Pfp.png"
@@ -44,17 +31,18 @@ export default function ProfileHeader() {
           {/* Content */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <h1 className="block min-[470px]:hidden text-base font-bold truncate">
-                Dev. CJ
-              </h1>
-
-              <h1 className="hidden min-[470px]:block min-[620px]:hidden text-xl font-bold truncate">
-                Dev. CJ Abendan
-              </h1>
-
-              <h1 className="hidden min-[620px]:block text-xl font-bold truncate">
-                Dev. Christian James A. Abendan
-              </h1>
+              <p className="text-base sm:text-xl font-bold truncate">
+                <span className="inline min-[470px]:hidden">Dev. CJ</span>
+                <span className="hidden min-[470px]:inline min-[530px]:hidden">
+                  Dev. CJ Abendan
+                </span>
+                <span className="hidden min-[530px]:inline sm:hidden">
+                  Dev. Christian Abendan
+                </span>
+                <span className="hidden sm:inline">
+                  Dev. Christian James A. Abendan
+                </span>
+              </p>
               <div className="relative">
                 <VerifiedIcon
                   className="w-5 h-5 text-blue-500 fill-blue-500"
@@ -66,38 +54,20 @@ export default function ProfileHeader() {
                 />
               </div>
             </div>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="relative inline-flex h-6 w-12 items-center transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700"
-              aria-label="Toggle Theme"
-            >
-              <div
-                className={`absolute w-6 h-6 bg-white shadow-md transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
-                  theme === "dark" ? "translate-x-6" : "translate-x-0"
-                }`}
-              >
-                {theme === "dark" ? (
-                  <Moon size={14} className="fill-gray-800 text-gray-800" />
-                ) : (
-                  <Sun size={14} className="fill-gray-500 text-gray-500" />
-                )}
-              </div>
-            </button>
+            <ThemeToggle />
           </div>
 
-          <div className="flex gap-x-4 text-sm truncate">
-            <p className="max-[460px]:text-[11px] text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 font-meduim">
+          <div className="flex gap-x-4 text-sm">
+            <p className="max-[460px]:text-[11px] text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 font-medium">
               <MapPin size={12} className="mr-1 shrink-0" />
-              <span className="hidden sm:block">Minglanilla, </span>
+              <span className="block max-[485px]:hidden">Minglanilla, </span>
               Cebu, Philippines
             </p>
           </div>
           <div className="flex items-center flex-wrap mt-1.5 sm:mt-3">
-            <p className="max-[460px]:text-sm text-base">
+            <p className="max-[485px]:text-xs max-[530px]:text-sm text-base">
               <span>Software Engineer</span>
-              <span className="text-gray-400">\</span>
+              <span className="text-gray-400 mx-2">\</span>
               <span>Full-Stack Developer</span>
             </p>
           </div>
