@@ -16,7 +16,8 @@ export default function Recommendations() {
           className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black 
         px-4 text-xs font-semibold gap-1 cursor-pointer"
         >
-          Leave A Recommendation
+          <span className="hidden sm:block">Leave A Recommendation</span>
+          <span className="block sm:hidden">Recommend</span>
         </button>
       </div>
 
