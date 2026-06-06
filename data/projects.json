@@ -3,7 +3,7 @@
     "id": 1,
     "title": "ARQUSTAT | PMS",
     "description": "A software application for purok data management system.",
-    "image": "/images/purok-sync-v1.png",
+    "image": "/images/projects/purok-sync-v1.png",
     "type": "Web Application",
     "tech": ["Java", "MySQL"],
     "url": "null"
@@ -13,7 +13,7 @@
     "id": 2,
     "title": "Arqulus | Split Bill",
     "description": "A web application help people split bills and manage expenses together.",
-    "image": "/images/arqulus-v1.png",
+    "image": "/images/projects/arqulus-v1.png",
     "type": "Web Application",
     "tech": ["PHP", "Laravel", "JavaScript", "MySQL"],
     "url": "null"
@@ -23,7 +23,7 @@
     "id": 3,
     "title": "Truelife Social App",
     "description": "A mobile application to connect people, anywhere.",
-    "image": "/images/truelife-mob.png",
+    "image": "/images/projects/truelife-mob.png",
     "type": "Mobile Application",
     "tech": ["TypeScript", "Expo", "Clerk", "Convex"],
     "url": "null"
@@ -33,7 +33,7 @@
     "id": 4,
     "title": "School Guidance (RMS)",
     "description": "A comprehensive system for managing student guidance records.",
-    "image": "/images/thesis-v1.png",
+    "image": "/images/projects/thesis-v1.png",
     "type": "Web Application",
     "tech": ["PHP", "Laravel", "Node.js", "MySQL"],
     "url": "null"
@@ -43,7 +43,7 @@
     "id": 5,
     "title": "ITKonek Admin Management",
     "description": "A tool to help manage the mobile app and its services.",
-    "image": "/images/itkonek-admin-v1.png",
+    "image": "/images/projects/itkonek-admin-v1.png",
     "type": "Web Application",
     "tech": ["React", "Tailwind", "Node.js", "Firebase"],
     "url": "null"
@@ -53,7 +53,7 @@
     "id": 6,
     "title": "ITKonek Mobile App",
     "description": "An application to browse and book IT services online.",
-    "image": "/images/itkonek-mob.png",
+    "image": "/images/projects/itkonek-mob.png",
     "type": "Web Application",
     "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
     "url": "null"
@@ -63,7 +63,7 @@
     "id": 7,
     "title": "Tutela Marinee (JMS)",
     "description": "A specialized tool for managing internal task workflows and reporting.",
-    "image": "/images/tmi-v1.png",
+    "image": "/images/projects/tmi-v1.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind"],
     "url": "https://mti-project.vercel.app/"
