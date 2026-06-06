@@ -6,7 +6,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import {
   Check,
   MapPin,
-  CalendarDays,
+  Calendar,
   Sun,
   Moon,
   Download,
@@ -92,7 +92,7 @@ export default function ProfileHeader() {
             </p>
             <span className="text-gray-300 hidden sm:block">|</span>
             <span className="text-foreground/70 mt-0.5 flex items-center gap-1">
-              <CalendarDays size={12} className="mr-1" />
+              <Calendar size={12} className="mr-1" />
               Updated: {lastUpdated}
             </span>
           </div>
@@ -108,7 +108,7 @@ export default function ProfileHeader() {
           <div className="mt-3 max-[445px]:mt-2">
             <div className="flex max-[445px]:flex-col flex-row gap-2">
               <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
-                <CalendarDays size={12} className="shrink-0 mr-1" />
+                <Calendar size={12} className="shrink-0 mr-1" />
                 Schedule<span>a Call</span>
               </button>
               <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
