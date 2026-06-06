@@ -10,7 +10,7 @@ export default function Recommendations() {
 
   return (
     <section className="flex flex-col mt-4 gap-6 p-4">
-      <div className="flex items-center justify-between pb-6 border-b border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pb-8 border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-lg sm:text-xl font-bold">Recommendations</h2>
         <button
           className="inline-flex max-[490px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black 
@@ -21,14 +21,14 @@ export default function Recommendations() {
         </button>
       </div>
 
-      <div className="flex flex-col items-start gap-8 max-w-4xl">
+      <div className="flex flex-col items-start gap-8 max-w-4xl pb-16 border-b border-gray-200 dark:border-gray-700">
         <div className="pt-6 pb-3">
           <p className="text-xl font-regular leading-relaxed">
             &quot;{selectedReview.content}&quot;
           </p>
         </div>
 
-        <div className="flex items-center gap-5 ">
+        <div className="flex items-center gap-5">
           <div className="flex -space-x-2">
             {sortedReviews.map((r) => (
               <button
