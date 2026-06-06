@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "platform": "Email",
+    "link": "mailto:cjamesabendan@gmail.com",
+    "icon": "Mail"
+  
+  },
+  {
+    "id": 2,
+    "platform": "Let's talk",
+    "link": "#",
+    "icon": "Calendar"
+  }
+]
