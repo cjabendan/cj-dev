@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { useIsMounted } from "@/hooks/useIsMounted";
+
 import {
   Check,
   MapPin,
@@ -13,25 +13,27 @@ import {
   VerifiedIcon,
 } from "lucide-react";
 
-// Last updated date
+/* Last updated date
 const lastUpdated = new Intl.DateTimeFormat("en-US", {
   month: "short",
   day: "numeric",
   year: "numeric",
 }).format(new Date(process.env.BUILD_TIME || new Date()));
+  if (!isMounted) return <div className="h-40" />;
+  
+import { useIsMounted } from "@/hooks/useIsMounted";
+    const isMounted = useIsMounted();
+*/
 
 export default function ProfileHeader() {
   const { theme, setTheme } = useTheme();
-  const isMounted = useIsMounted();
-
-  if (!isMounted) return <div className="h-40" />;
 
   return (
     <section className="mb-8 animate-fade-in">
       <div className="flex sm:items-center gap-4 sm:gap-6">
         {/* Avatar */}
         <Image
-          src="/images/Pfp.png"
+          src="/images/gallery/Pfp.png"
           alt="Christian James Abendan"
           width={160}
           height={160}
@@ -42,7 +44,7 @@ export default function ProfileHeader() {
           {/* Content */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <h1 className="block min-[470px]:hidden max-[445px]:text-base text-xl font-bold truncate">
+              <h1 className="block min-[470px]:hidden text-base font-bold truncate">
                 Dev. CJ
               </h1>
 
@@ -85,19 +87,15 @@ export default function ProfileHeader() {
             </button>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-x-4 max-[445px]:gap-y-1 max-[445px]:text-[10px] text-sm truncate">
-            <p className="text-foreground/70 mt-0.5 flex items-center gap-1 font-meduim">
+          <div className="flex gap-x-4 text-sm truncate">
+            <p className="max-[460px]:text-[11px] text-xs text-sm text-foreground/70 mt-0.5 flex items-center gap-1 font-meduim">
               <MapPin size={12} className="mr-1 shrink-0" />
+              <span className="hidden sm:block">Minglanilla, </span>
               Cebu, Philippines
             </p>
-            <span className="text-gray-300 hidden sm:block">|</span>
-            <span className="text-foreground/70 mt-0.5 flex items-center gap-1">
-              <Calendar size={12} className="mr-1" />
-              Updated: {lastUpdated}
-            </span>
           </div>
-          <div className="flex items-center justify-between mt-1.5 sm:mt-3">
-            <p className="flex max-[445px]:text-[11px] text-base font-medium gap-x-1 truncate">
+          <div className="flex items-center flex-wrap mt-1.5 sm:mt-3">
+            <p className="max-[460px]:text-sm text-base">
               <span>Software Engineer</span>
               <span className="text-gray-400">\</span>
               <span>Full-Stack Developer</span>
@@ -105,13 +103,13 @@ export default function ProfileHeader() {
           </div>
 
           {/* Action Buttons Container */}
-          <div className="mt-3 max-[445px]:mt-2">
-            <div className="flex max-[445px]:flex-col flex-row gap-2">
-              <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
+          <div className="mt-3 max-[460px]:mt-2">
+            <div className="flex max-[460px]:flex-col flex-row gap-2">
+              <button className="inline-flex max-[460px]:h-7 h-9 items-center justify-center rounded bg-black dark:bg-white text-white dark:text-black max-[460px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
                 <Calendar size={12} className="shrink-0 mr-1" />
                 Schedule<span>a Call</span>
               </button>
-              <button className="inline-flex max-[445px]:h-7 h-9 items-center justify-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 max-[445px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
+              <button className="inline-flex max-[460px]:h-7 h-9 items-center justify-center rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 max-[460px]:px-2.5 px-4 text-[10px] sm:text-xs font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 gap-1 whitespace-nowrap min-h-0 max-[445px]:w-full">
                 <Download size={12} className="shrink-0 mr-1" />
                 <span>Download </span>CV
               </button>
