@@ -1,11 +1,8 @@
 import Image from "next/image";
 import socialsData from "@/data/socials.json";
 
-
-
 export default function Socials() {
-
-    const sortedSocials = [...socialsData].sort((a, b) => b.id - a.id);
+  const sortedSocials = [...socialsData].sort((a, b) => b.id - a.id);
 
   return (
     <div className="flex items-center gap-2">
@@ -22,8 +19,10 @@ export default function Socials() {
             alt={social.platform}
             width={24}
             height={24}
-            style={{ filter: social.platform === "GitHub" ? "invert(1)" : "none", width: "18px", height: "18px" }}
-            className={`opacity-80 hover:opacity-100 object-contain `}
+            style={{ width: "16px", height: "16px" }}
+            className={`opacity-80 hover:opacity-100 object-contain ${
+              social.platform === "GitHub" ? "dark:invert" : ""
+            }`}
           />
         </a>
       ))}
