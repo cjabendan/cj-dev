@@ -16,7 +16,7 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
   return (
     <a
       href={item.link}
-      className="flex items-center justify-between group p-3 border border-gray-100 dark:border-gray-900 rounded-sm hover:bg-zinc-900/4 transition-all duration-200"
+      className="flex items-center justify-between group transition-all duration-200"
     >
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2 text-sm font-medium">
@@ -52,7 +52,7 @@ export default function CTA() {
           <Socials />
         </div>
 
-        <div className="md:col-span-2 flex flex-col gap-2 md:pt-14">
+        <div className="md:col-span-2 flex flex-col gap-8 md:pt-14">
           {contactData.map((item) => (
             <ContactItem key={item.id} item={item} />
           ))}
