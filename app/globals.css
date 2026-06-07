@@ -19,3 +19,24 @@
 body {
   background: var(--background);
 }
+
+@theme {
+  /* Define the keyframes movement */
+  --keyframes-shake: {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20%,
+    60% {
+      transform: translateX(-4px);
+    }
+    40%,
+    80% {
+      transform: translateX(4px);
+    }
+  };
+
+  /* Bind the keyframes to an animation utility utility name */
+  --animate-shake: shake 0.4s ease-in-out;
+}
