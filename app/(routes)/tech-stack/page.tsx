@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function TechStackPage() {
   return (
-    <div className="space-y-6 animate-fade-in">
-      <h1 className="text-2xl font-bold">Full Tech Stack</h1>
+    <div className="space-y-6 animate-fade-in mb-auto">
+      <h1 className="text-xl sm:text-2xl font-bold">Full Tech Stack</h1>
 
       <div className="space-y-8">
         {techData.map((group) => (

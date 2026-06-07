@@ -6,11 +6,14 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
 
 export default function FooterSection() {
   return (
-    <footer className="mt-12 border-t border-gray-200 dark:border-gray-700">
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 pt-10 pb-4">
-        <p className="text-sm text-foreground/70">© 2026 Christian Abendan</p>
-        <span className="text-sm text-foreground/70">|</span>
-        <p className="text-sm text-foreground/70">Updated: {lastUpdated}</p>
+    <footer className="border-t border-gray-200 dark:border-gray-800 w-full">
+      <div
+        className="max-w-4xl mx-auto px-4 flex flex-row items-center justify-center gap-2 sm:gap-4 pt-6
+      text-xs sm:text-sm  "
+      >
+        <p className="text-foreground/70">© 2026 Christian Abendan</p>
+        <span className="text-foreground/40">|</span>
+        <p className="text-foreground/70">Updated: {lastUpdated}</p>
       </div>
     </footer>
   );
