@@ -1,9 +1,10 @@
-import About from "@/components/About";
-import CTA from "@/components/CTA";
-import PersonalGallery from "@/components/PersonalGallery";
-import ProfileHeader from "@/components/ProfileHeader";
-import Projects from "@/components/Projects";
-import Recommendations from "@/components/Recommendations";
+import About from "@/components/sections/About";
+import CTA from "@/components/sections/CTA";
+import FooterSection from "@/components/sections/FooterSection";
+import PersonalGallery from "@/components/sections/PersonalGallery";
+import ProfileHeader from "@/components/sections/ProfileHeader";
+import Projects from "@/components/sections/Projects";
+import Recommendations from "@/components/sections/Recommendations";
 
 export default function Portfolio() {
   return (
@@ -15,6 +16,7 @@ export default function Portfolio() {
         <Recommendations />
         <PersonalGallery />
         <CTA />
+        <FooterSection />
       </div>
     </main>
   );

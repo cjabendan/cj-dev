@@ -1,7 +1,7 @@
 "use client";
 
 import contactData from "@/data/contact.json";
-import Socials from "./Socials";
+import Socials from "../ui/Socials";
 import { ArrowRight, LucideProps } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 

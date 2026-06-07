@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "ARQUSTAT | PMS",
+    "title": "ARQUSTAT (DMS)",
     "description": "A software application for purok data management system.",
     "image": "/images/projects/purok-sync-v1.png",
     "type": "Web Application",
@@ -11,7 +11,7 @@
 
   {
     "id": 2,
-    "title": "Arqulus | Split Bill",
+    "title": "Arqulus (Split Bill)",
     "description": "A web application help people split bills and manage expenses together.",
     "image": "/images/projects/arqulus-v1.png",
     "type": "Web Application",

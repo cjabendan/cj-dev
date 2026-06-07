@@ -1,5 +1,5 @@
 import React from "react";
-import AccessCard from "./AccessCard";
+import AccessCard from "../ui/AccessCard";
 import TechStack from "./TechStack";
 import Experience from "./Experience";
 import Certifications from "./Certifications";
