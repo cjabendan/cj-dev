@@ -33,7 +33,7 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
 export default function CTA() {
   return (
     
-    <section className="flex mt-2 gap-6 p-4">
+    <section className="flex mt-2 gap-6 p-4 mb-14">
       
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
        
