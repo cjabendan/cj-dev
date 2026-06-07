@@ -24,7 +24,7 @@ export default function Projects() {
     : sortedProjects.slice(0, 3);
 
   return (
-    <section className="flex flex-col mt-4 gap-10 p-4">
+    <section className="flex flex-col gap-6 p-4">
       <div className="flex items-center justify-between">
         <h2 className="text-lg sm:text-xl font-bold">Recent Projects</h2>
         <button
@@ -40,7 +40,7 @@ export default function Projects() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 pb-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {displayedProjects.map((project) => (
           <div
             key={project.id}
@@ -68,8 +68,8 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="pt-2">
-                <div className="flex flex-wrap gap-2 mt-1">
+              <div className="pt-8">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => {
                     const icon = getTechIcon(t);
                     return (
