@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
@@ -32,7 +32,7 @@ export default function Projects() {
           className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
         >
           {showAll ? "Show Less" : "Show All"}
-          <ArrowRight
+          <ChevronRight
             className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
               showAll ? "rotate-90" : "rotate-0"
             }`}
@@ -40,7 +40,7 @@ export default function Projects() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {displayedProjects.map((project) => (
           <div
             key={project.id}

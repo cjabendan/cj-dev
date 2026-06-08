@@ -1,17 +1,12 @@
 [
   { "id": 1, "src": "Pfp.png", "alt": "Formal Attire Pictorial" },
-  { "id": 2, "src": "bgrad-solo.jpg", "alt": "Graduation Pictorial" },
-  { "id": 3, "src": "bgrad-solo3.jpg", "alt": "Graduation Pictorial" },
-  { "id": 4, "src": "capstone.jpg", "alt": "Capstone Project Expo" },
-  { "id": 5, "src": "cfai-cert.jpg", "alt": "CFAI Certification" },
-  { "id": 6, "src": "software-check-sirabner.jpg", "alt": "ITKonek Mobile Presentation" },
-  { "id": 7, "src": "ringhop-gr1.jpg", "alt": "Ringhop with buddies" },
-  { "id": 8, "src": "ringhop-fam2.jpg", "alt": "Ringhop with family" },
-  { "id": 9, "src": "ringhop-famv1.jpg", "alt": "Ringhop Awarding with family" },
-  { "id": 10, "src": "ringhop-fam.jpg", "alt": "Ringhop with family" },
-  { "id": 11, "src": "ringhop1.jpg", "alt": "After a Successful Ringhop" },
-  { "id": 12, "src": "grad-gr3.jpg", "alt": "Graduation Day" },
-  { "id": 13, "src": "grad-gr.jpg", "alt": "After Graduation Pic with Buddies" },
-  { "id": 14, "src": "grad-fam.jpg", "alt": "After Graduation Pic with Family" },
-  { "id": 15, "src": "grad.jpg", "alt": "Graduation Day" }
+  { "id": 2, "src": "bgrad-solo3.jpg", "alt": "Graduation Pictorial" },
+  { "id": 3, "src": "capstone.jpg", "alt": "Capstone Project Expo" },
+  { "id": 4, "src": "ringhop-fam2.jpg", "alt": "Ringhop with family" },
+  { "id": 5, "src": "ringhop-famv1.jpg", "alt": "Ringhop Awarding with family" },
+  { "id": 6, "src": "ringhop-fam.jpg", "alt": "Ringhop with family" },
+  { "id": 7, "src": "ringhop1.jpg", "alt": "After a Successful Ringhop" },
+  { "id": 8, "src": "grad-gr3.jpg", "alt": "Graduation Day" },
+  { "id": 9, "src": "grad-fam.jpg", "alt": "After Graduation Pic with Family" },
+  { "id": 10, "src": "grad.jpg", "alt": "Graduation Day" }
 ]

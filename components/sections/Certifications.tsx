@@ -1,6 +1,6 @@
 import certData from "@/data/certifications.json";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function Certifications() {
   const sortedCertifications = [...certData]
@@ -16,7 +16,7 @@ export default function Certifications() {
           className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors"
         >
           View All
-          <ArrowRight className="w-4 h-4" />
+          <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
 

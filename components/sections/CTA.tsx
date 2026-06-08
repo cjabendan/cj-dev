@@ -2,7 +2,7 @@
 
 import contactData from "@/data/contact.json";
 import Socials from "../ui/Socials";
-import { ArrowRight, LucideProps } from "lucide-react";
+import { LucideProps } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 
 const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
@@ -25,7 +25,7 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
         </div>
         <span className="text-xs text-gray-400 pl-6">{subLabel}</span>
       </div>
-      <ArrowRight className="h-4 w-4 text-gray-400 group-hover:translate-x-1 transition-all" />
+      <LucideIcons.ChevronRight className="h-4 w-4 text-gray-400 group-hover:translate-x-1 transition-all" />
     </a>
   );
 };
