@@ -41,7 +41,7 @@
 
   {
     "id": 5,
-    "title": "ITKonek Admin Management",
+    "title": "ITKonek Admin (Web)",
     "description": "A tool to help manage the mobile app and its services.",
     "image": "/images/projects/itkonek-admin-v1.png",
     "type": "Web Application",

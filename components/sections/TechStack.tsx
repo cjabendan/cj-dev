@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import techData from "@/data/tech-stack.json";
@@ -20,7 +20,7 @@ export default function TechStack() {
           className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors"
         >
           View All
-          <ArrowRight className="w-4 h-4" />
+          <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
 
