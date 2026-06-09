@@ -12,7 +12,7 @@
 
 /* Dark mode */
 .dark {
-  --background: #0a0a0a;
+  --background: #000000;
   --foreground: #ededed;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 @theme {
-  /* Define the keyframes movement */
+  
   --keyframes-shake: {
     0%,
     100% {
@@ -37,6 +37,5 @@ body {
     }
   };
 
-  /* Bind the keyframes to an animation utility utility name */
   --animate-shake: shake 0.4s ease-in-out;
 }
