@@ -2,11 +2,8 @@
   { "id": 1, "src": "Pfp.png", "alt": "Formal Attire Pictorial" },
   { "id": 2, "src": "bgrad-solo3.jpg", "alt": "Graduation Pictorial" },
   { "id": 3, "src": "capstone.jpg", "alt": "Capstone Project Expo" },
-  { "id": 4, "src": "ringhop-fam2.jpg", "alt": "Ringhop with family" },
-  { "id": 5, "src": "ringhop-famv1.jpg", "alt": "Ringhop Awarding with family" },
-  { "id": 6, "src": "ringhop-fam.jpg", "alt": "Ringhop with family" },
-  { "id": 7, "src": "ringhop1.jpg", "alt": "After a Successful Ringhop" },
-  { "id": 8, "src": "grad-gr3.jpg", "alt": "Graduation Day" },
-  { "id": 9, "src": "grad-fam.jpg", "alt": "After Graduation Pic with Family" },
-  { "id": 10, "src": "grad.jpg", "alt": "Graduation Day" }
+  { "id": 4, "src": "ringhop-famv1.jpg", "alt": "Ringhop Awarding" },
+  { "id": 5, "src": "ringhop1.jpg", "alt": "After a Successful Ringhop" },
+  { "id": 6, "src": "grad-fam.jpg", "alt": "After Graduation Pic with Family" },
+  { "id": 7, "src": "grad.jpg", "alt": "Graduation Day" }
 ]

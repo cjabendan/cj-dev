@@ -5,13 +5,18 @@ import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-
   const isMounted = useIsMounted();
-  if (!isMounted) return <div className="h-40" />;
+
+  if (!isMounted) {
+    return (
+      <div className="h-6 w-12 bg-gray-200 dark:bg-gray-700 opacity-50 animate-pulse" />
+    );
+  }
+
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative inline-flex h-6 w-12 items-center transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700"
+      className="relative inline-flex h-6 w-12 items-center transition-colors duration-300 ease-in-out focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700"
       aria-label="Toggle Theme"
     >
       <div
