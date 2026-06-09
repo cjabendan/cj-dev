@@ -35,7 +35,7 @@ export default function PersonalGallery() {
           ref={scrollRef}
           className="flex gap-2 overflow-x-auto pb-3 scrollbar-none snap-x snap-mandatory scroll-smooth"
         >
-          {SORTED_GALLERY.map((img) => (
+          {SORTED_GALLERY.map((img, index) => (
             <div
               key={img.id}
               className="relative h-[162px] w-[162px] flex-shrink-0 overflow-hidden border border-gray-100 dark:border-gray-900 rounded-sm group snap-start"
@@ -44,7 +44,7 @@ export default function PersonalGallery() {
                 src={`/images/gallery/${img.src}`}
                 alt={img.alt}
                 fill
-                loading="eager"
+                priority={index < 5}
                 sizes="162px"
                 className="object-cover transition-all duration-500 ease-out group-hover:scale-[1.02]"
               />

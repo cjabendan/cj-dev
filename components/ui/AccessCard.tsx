@@ -66,8 +66,8 @@ export default function AccessCard() {
               <div className="truncate text-xs font-black uppercase tracking-[2px] text-white">
                 Cj Abendan
               </div>
-              <div className="my-1.5 flex items-center whitespace-nowrap text-[8px] uppercase text-gray-300 opacity-80">
-                ASPIRING SOFTWARE ENGINEER
+              <div className="my-1.5 flex items-center whitespace-nowrap text-[9px] uppercase text-gray-300 opacity-80">
+                SOFTWARE ENGINEER
               </div>
             </div>
             <div className="flex-shrink-0 text-[3.2rem] text-gray-300 opacity-20 [transform:translateZ(20px)]">

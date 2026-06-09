@@ -61,8 +61,8 @@
 
   {
     "id": 7,
-    "title": "Tutela Marinee (JMS)",
-    "description": "A specialized tool for managing internal task workflows and reporting.",
+    "title": "Tutela Marinee Inc.",
+    "description": "An initial landing page to showcase seaferer courses and job offers.",
     "image": "/images/projects/tmi-v1.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind"],

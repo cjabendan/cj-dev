@@ -96,14 +96,14 @@ export default function ChatUI() {
             >
               {msg.role === "model" && (
                 <span className="text-sm font-semibold text-black dark:text-white mb-1 pl-1">
-                  Dev. CJ
+                  Christian
                 </span>
               )}
               <div
                 className={`p-3 rounded-sm leading-relaxed text-[13px] ${
                   msg.role === "user"
                     ? "bg-black dark:bg-white max-w-[85%] text-white dark:text-black break-words"
-                    : "bg-white dark:bg-black border border-zinc-800 text-black dark:text-white"
+                    : "bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 text-black dark:text-white"
                 }`}
               >
                 {msg.text}
@@ -142,14 +142,14 @@ export default function ChatUI() {
             maxLength={MAX_CHAR_LIMIT}
             placeholder="Type a message..."
             disabled={isLoading}
-            className="flex-1 bg-transparent border border-zinc-800 text-sm px-3 py-2.5 focus:outline-hidden focus:border-zinc-600 transition-colors disabled:opacity-40 rounded-xs placeholder-zinc-600"
+            className="flex-1 bg-transparent text-black dark:text-white border border-zinc-800 text-sm px-3 py-2.5 focus:outline-hidden focus:border-zinc-600 transition-colors disabled:opacity-40 rounded-xs placeholder-zinc-600"
           />
           <button
             type="submit"
             disabled={
               isLoading || !input.trim() || input.length > MAX_CHAR_LIMIT
             }
-            className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-600  flex items-center justify-center px-4 rounded-xs disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer transition-colors"
+            className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-600 flex items-center justify-center px-4 rounded-xs disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer transition-colors"
             aria-label="Send message"
           >
             <SendIcon size={14} />

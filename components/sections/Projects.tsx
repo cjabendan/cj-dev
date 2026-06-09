@@ -41,7 +41,7 @@ export default function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        {displayedProjects.map((project) => (
+        {displayedProjects.map((project, index) => (
           <div
             key={project.id}
             className="flex flex-col w-full border border-gray-100 dark:border-gray-900 rounded-xs"
@@ -51,7 +51,7 @@ export default function Projects() {
                 src={project.image}
                 alt={project.title}
                 fill
-                loading="eager"
+                priority={index < 3}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="rounded-t-xs object-cover bg-muted"
               />
@@ -59,9 +59,14 @@ export default function Projects() {
 
             <a
               key={project.id}
-              href={project.url}
+              href={project.url === "null" ? undefined : project.url}
+              rel="noopener noreferrer"
               target="_blank"
-              className="border-t border-gray-100 dark:border-gray-900 rounded-xs p-4 space-y-2"
+              className={`border-t border-gray-100 dark:border-gray-900 rounded-xs p-4 space-y-2 ${
+                project.url === "null"
+                  ? "pointer-events-none"
+                  : "cursor-pointer"
+              }`}
             >
               <h3 className="font-semibold text-foreground">{project.title}</h3>
               <p className="text-sm text-muted-foreground line-clamp-2">
