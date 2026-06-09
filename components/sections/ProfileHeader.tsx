@@ -14,14 +14,11 @@ import Button from "../ui/Button";
 
 export default function ProfileHeader() {
   const handleScheduleCall = () => {
-    window.open("https://cal.com/your-profile", "_blank");
+    window.open("https://zcal.co/cjamesabendan", "_blank");
   };
 
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/assets/Christian_Abendan_CV.pdf";
-    link.download = "Christian_Abendan_Software_Developer_CV.pdf";
-    link.click();
+  const handleViewResume = () => {
+    window.open("/assets/resume.pdf", "_blank");
   };
 
   return (
@@ -92,9 +89,9 @@ export default function ProfileHeader() {
               <Button
                 variant="default"
                 icon={<ChevronRight size={16} />}
-                onClick={handleDownloadCV}
+                onClick={handleViewResume}
               >
-              <span className="max-[430px]:hidden">View</span> Resume
+                <span className="max-[430px]:hidden">View</span> Resume
               </Button>
             </div>
           </div>

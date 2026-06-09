@@ -16,6 +16,7 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
   return (
     <a
       href={item.link}
+      target="_blank"
       className="flex items-center justify-between group transition-all duration-200"
     >
       <div className="flex flex-col gap-1">
@@ -32,11 +33,8 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
 
 export default function CTA() {
   return (
-    
     <section className="flex mt-2 gap-6 p-4 mb-14">
-      
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
-       
         <div className="md:col-span-3 flex flex-col gap-6">
           <h2 className="text-lg sm:text-xl font-bold tracking-tight">
             Let&apos;s Work Together
