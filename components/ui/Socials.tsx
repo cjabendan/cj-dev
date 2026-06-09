@@ -21,7 +21,9 @@ export default function Socials() {
             height={24}
             style={{ width: "16px", height: "16px" }}
             className={`opacity-80 hover:opacity-100 object-contain ${
-              social.platform === "GitHub" ? "dark:invert" : ""
+              social.platform === "GitHub" || social.platform === "X"
+                ? "dark:invert"
+                : ""
             }`}
           />
         </a>

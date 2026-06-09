@@ -1,24 +1,30 @@
 [
   {
     "id": 1,
-    "platform": "GitHub",
-    "link": "https://github.com/cjabendan",
-    "svgPath": "/icons/github-dark.svg"
-  },
-  {
-    "id": 2,
-    "platform": "LinkedIn",
-    "link": "https://linkedin.com/in/christian-james-abendan-2218a640a",
-    "svgPath": "/icons/linkedin.svg"
-  },
-  {
-    "id": 3,
     "platform": "Whatsapp",
     "link": "https://wa.me/639611433429",
     "svgPath": "/icons/whatsapp.svg"
   },
   {
+    "id": 2,
+    "platform": "GitHub",
+    "link": "https://github.com/cjabendan",
+    "svgPath": "/icons/github-dark.svg"
+  },
+  {
+    "id": 3,
+    "platform": "LinkedIn",
+    "link": "https://linkedin.com/in/christian-james-abendan-2218a640a",
+    "svgPath": "/icons/linkedin.svg"
+  },
+  {
     "id": 4,
+    "platform": "X",
+    "link": "https://x.com/cjamesabendan",
+    "svgPath": "/icons/x.svg"
+  },
+  {
+    "id": 5,
     "platform": "Facebook",
     "link": "https://www.facebook.com/cjamesbendan",
     "svgPath": "/icons/facebook.svg"
