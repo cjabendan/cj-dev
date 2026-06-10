@@ -1,7 +1,16 @@
 "use client";
 
+/**
+ * TODO: FUTURE PHASE FEATURE
+ * This form is currently benched during the startup launch phase to prevent spam.
+ * Future integration plan: Secure this with Clerk OAuth (Google/GitHub) or
+ * a single-use invitation token system before uncommenting.
+ */
+
 import { useState, FormEvent } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
+import { useMutation } from "convex/react";
+import { api } from "../../convex/_generated/api";
 import Button from "@/components/ui/Button";
 import AvatarUpload from "@/components/ui/AvatarUpload";
 import { InputField, TextareaField } from "@/components/ui/FormFields";
@@ -15,11 +24,16 @@ export default function RecommendationForm() {
     email: "",
     content: "",
   });
+  
   const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
+  const [avatarFile, setAvatarFile] = useState<File | null>(null); // Track the raw file binary
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  // 1. INITIALIZE CONVEX MUTATION HOOKS
+  const generateUploadUrl = useMutation(api.reviews.generateUploadUrl);
+  const submitReview = useMutation(api.reviews.submitReview);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -27,14 +41,17 @@ export default function RecommendationForm() {
     const trimmedEmail = formData.email.trim();
     const newErrors: { [key: string]: string } = {};
 
+    // Form field validations
+    if (!formData.name.trim()) newErrors.name = "Full name is required";
+    if (!formData.title.trim()) newErrors.title = "Professional title is required";
+    if (!formData.content.trim()) newErrors.content = "A recommendation message is required";
     if (!trimmedEmail) {
-      
+      newErrors.email = "Email address is required";
     } else if (!EMAIL_REGEX.test(trimmedEmail)) {
       newErrors.email = "Invalid email address";
     }
 
     setErrors(newErrors);
-
     const hasErrors = Object.keys(newErrors).length > 0;
     if (hasErrors) return;
 
@@ -44,24 +61,48 @@ export default function RecommendationForm() {
     }
 
     setIsSubmitting(true);
+    let avatarStorageId: string | undefined = undefined;
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // 2. IF A USER UPLOADED AN AVATAR FILE, STREAM IT TO CONVEX STORAGE FIRST
+      if (avatarFile) {
+        // Step A: Request a unique single-use upload endpoint destination
+        const postUrl = await generateUploadUrl();
 
-      console.log("Data package ready for database entry:", {
-        ...formData,
-        avatar: avatarPreview,
-        turnstileToken: captchaToken,
+        // Step B: Post the raw binary data packet directly to Convex
+        const uploadResult = await fetch(postUrl, {
+          method: "POST",
+          headers: { "Content-Type": avatarFile.type },
+          body: avatarFile,
+        });
+
+        if (!uploadResult.ok) throw new Error("Avatar upload failed");
+
+        // Step C: Retrieve the saved file identifier token reference
+        const { storageId } = await uploadResult.json();
+        avatarStorageId = storageId;
+      }
+
+      // 3. SUBMIT THE COMPLETE PROFILE PACKAGE TO THE LIVE REVIEWS TABLE
+      await submitReview({
+        name: formData.name.trim(),
+        title: formData.title.trim(),
+        email: trimmedEmail,
+        content: formData.content.trim(),
+        avatarStorageId, // Pass along the storageId reference string
       });
 
       alert("Recommendation sent successfully! Thank you.");
 
+      // Reset form states completely
       setFormData({ name: "", title: "", email: "", content: "" });
       setAvatarPreview(null);
+      setAvatarFile(null);
       setCaptchaToken(null);
       setErrors({});
     } catch (err) {
       console.error("Submission failed:", err);
+      alert("Something went wrong while saving your recommendation. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -73,10 +114,14 @@ export default function RecommendationForm() {
       noValidate
       className="flex flex-col gap-4 sm:gap-6 w-full dark:bg-zinc-900/10 p-4 sm:p-6 rounded-sm border border-zinc-400/30 dark:border-zinc-800/40"
     >
+      {/* Ensure your AvatarUpload component exposes the raw file inside its callback hook argument list. 
+        Example: onImageChange={(url, file) => { ... }}
+      */}
       <AvatarUpload
         preview={avatarPreview}
-        onImageChange={(url) => {
+        onImageChange={(url, file) => {
           setAvatarPreview(url);
+          setAvatarFile(file || null);
           if (url) setErrors((prev) => ({ ...prev, avatar: "" }));
         }}
         isError={!!errors.avatar}

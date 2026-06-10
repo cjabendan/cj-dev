@@ -1,6 +1,7 @@
 "use client";
 
 import FooterSection from "@/components/sections/FooterSection";
+import BotWidget from "@/components/ui/BotWidget";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -21,6 +22,7 @@ export default function PagesLayout({
 
   return (
     <main className="min-h-screen flex flex-col max-w-4xl mx-auto px-4 py-6 sm:pt-10 animate-fade-in">
+      <BotWidget />
       <div className="flex items-center gap-2 mb-8 text-sm text-muted-foreground">
         <Link
           href="/"
