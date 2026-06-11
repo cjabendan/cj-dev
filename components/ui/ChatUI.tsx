@@ -83,7 +83,7 @@ export default function ChatUI() {
             {/* Show CJ avatar icon */}
             {msg.role === "model" && (
               <Image
-                src="/images/gallery/Pfp.png"
+                src="/images/gallery/cb.jpg"
                 alt="CJ"
                 width={36}
                 height={36}

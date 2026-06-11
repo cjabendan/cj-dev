@@ -1,5 +1,12 @@
 import RecommendationForm from "@/components/ui/RecommendationForm";
 
+/**
+ * TODO: FUTURE PHASE FEATURE
+ * This form is currently benched during the startup launch phase to prevent spam.
+ * Future integration plan: Secure this with Clerk OAuth (Google/GitHub) or
+ * a single-use invitation token system before uncommenting.
+ */
+
 export default function LeaveRecommendationPage() {
   return (
     <div className="space-y-4 animate-fade-in max-w-xl mb-auto">

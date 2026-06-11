@@ -6,7 +6,7 @@ export default function TechStackPage() {
     <div className="space-y-6 animate-fade-in mb-auto">
       <h1 className="text-xl sm:text-2xl font-bold">Full Tech Stack</h1>
 
-      <div className="space-y-8">
+      <div className="space-y-8 mb-14">
         {techData.map((group) => (
           <div key={group.category} className="space-y-4">
             <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">

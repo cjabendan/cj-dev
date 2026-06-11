@@ -1,5 +1,12 @@
 "use client";
 
+/**
+ * TODO: FUTURE PHASE FEATURE
+ * This form is currently benched during the startup launch phase to prevent spam.
+ * Future integration plan: Secure this with Clerk OAuth (Google/GitHub) or
+ * a single-use invitation token system before uncommenting.
+ */
+
 import { ChangeEvent, useRef } from "react";
 import Image from "next/image";
 import { Camera, Upload, X } from "lucide-react";

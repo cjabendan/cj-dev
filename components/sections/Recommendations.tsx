@@ -44,7 +44,7 @@ export default function Recommendations() {
               : "opacity-100 translate-y-0 scale-100"
           }`}
         >
-          <p className="text-xl font-regular leading-relaxed">
+          <p className="text-lg sm:text-xl leading-relaxed line-clamp-4 sm:line-clamp-none">
             &quot;{selectedItem.content}&quot;
           </p>
         </div>
