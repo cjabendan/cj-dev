@@ -15,8 +15,13 @@ export default function BotWidget() {
         shadow-[0_2px_6px_rgba(0,0,0,0.1)] hover:opacity-90 transition-all flex items-center gap-2 group cursor-pointer"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <MessageSquareMoreIcon size={16} className="font-medium animate-wiggle" />
-        <span className="text-sm sm:text-base font-medium">Chat with Christian</span>
+        <MessageSquareMoreIcon
+          size={16}
+          className="font-medium animate-wiggle"
+        />
+        <span className="text-sm sm:text-base font-medium">
+          Chat with Christian
+        </span>
       </button>
 
       {isOpen && (
@@ -28,13 +33,11 @@ export default function BotWidget() {
                 alt="Christian James Abendan"
                 width={42}
                 height={42}
-                loading="lazy"
+                priority
                 className="h-9 w-9 rounded-xs object-cover bg-gray-200 dark:bg-gray-800"
               />
               <div className="flex flex-col">
-                <h3 className="font-bold tracking-wide">
-                  Chat with Christian
-                </h3>
+                <h3 className="font-bold tracking-wide">Chat with Christian</h3>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2 h-2 bg-green-500 rounded-full" />
                   <span className="text-xs tracking-wider text-green-500">

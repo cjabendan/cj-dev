@@ -87,7 +87,7 @@ export default function ChatUI() {
                 alt="CJ"
                 width={36}
                 height={36}
-                loading="lazy"
+                priority
                 className="w-7 h-7 rounded-sm object-cover bg-zinc-800 shrink-0"
               />
             )}
@@ -115,10 +115,11 @@ export default function ChatUI() {
         {isLoading && (
           <div className="flex items-center gap-2.5 pl-1">
             <Image
-              src="/images/gallery/Pfp.png"
+              src="/images/gallery/cb.jpg"
               alt="CJ"
               width={32}
               height={32}
+              loading="lazy"
               className="w-7 h-7 rounded-sm object-cover shrink-0 opacity-50"
             />
             <span className="text-xs text-zinc-500 animate-pulse">

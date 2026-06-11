@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "small-lion-476.convex.cloud",
+        hostname: "lovable-buffalo-390.convex.cloud",
         pathname: "/api/storage/**",
       },
     ],

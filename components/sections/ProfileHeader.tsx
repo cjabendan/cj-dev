@@ -30,7 +30,7 @@ export default function ProfileHeader() {
           alt="Christian James Abendan"
           width={160}
           height={160}
-          loading="eager"
+          priority
           className="rounded-sm object-cover bg-gray-200 dark:bg-gray-800"
         />
         <div className="flex-1 min-w-0">
@@ -73,10 +73,10 @@ export default function ProfileHeader() {
                 <span>UI & UX Designer</span>
               </p>
             </div>
-            <div className="flex flex-row items-center gap-2">
+            <div className="flex flex-row items-center gap-1 sm:gap-2">
               <Button
                 variant="primary"
-                icon={<Calendar size={12} />}
+                icon={<Calendar className="w-2 h-2 sm:w-3 sm:h-3" />}
                 onClick={handleScheduleCall}
               >
                 Schedule a Call
