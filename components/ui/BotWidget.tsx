@@ -16,7 +16,7 @@ export default function BotWidget() {
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <MessageSquareMoreIcon size={16} className="font-medium animate-wiggle" />
-        <span className="text-base sm:text-lg font-medium">Chat with Christian</span>
+        <span className="text-sm sm:text-base font-medium">Chat with Christian</span>
       </button>
 
       {isOpen && (
