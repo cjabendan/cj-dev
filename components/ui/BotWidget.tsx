@@ -16,7 +16,7 @@ export default function BotWidget() {
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <MessageSquareMoreIcon size={16} className="font-medium animate-wiggle" />
-        <span className="font-medium">Chat with Christian</span>
+        <span className="text-base sm:text-lg font-medium">Chat with Christian</span>
       </button>
 
       {isOpen && (
@@ -24,7 +24,7 @@ export default function BotWidget() {
           <div className="flex justify-between gap-3 p-4 items-center bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 text-zinc-800 dark:text-zinc-200">
             <div className="flex items-center gap-2.5">
               <Image
-                src="/images/gallery/Pfp.png"
+                src="/images/gallery/cb.jpg"
                 alt="Christian James Abendan"
                 width={42}
                 height={42}

@@ -5,7 +5,6 @@
       { "name": "React", "icon": "/icons/reactjs.svg" },
       { "name": "Expo", "icon": "/icons/expo-svgrepo-com.svg" },
       { "name": "Next.js", "icon": "/icons/nextjs.svg" },
-      { "name": "Vue.js", "icon": "/icons/vuejs.svg" },
       { "name": "Tailwind", "icon": "/icons/tailwindcss.svg" },
       { "name": "CSS", "icon": "/icons/css.svg" },
       { "name": "HTML5", "icon": "/icons/html5.svg" },
