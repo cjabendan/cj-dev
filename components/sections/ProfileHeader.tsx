@@ -24,7 +24,6 @@ export default function ProfileHeader() {
   return (
     <section className="mb-8 animate-fade-in">
       <div className="flex items-center gap-4 sm:gap-6">
-        {/* Avatar */}
         <Image
           src="/images/gallery/Pfp.png"
           alt="Christian James Abendan"
@@ -34,10 +33,9 @@ export default function ProfileHeader() {
           className="rounded-sm object-cover bg-gray-200 dark:bg-gray-800"
         />
         <div className="flex-1 min-w-0">
-          {/* Content */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <p className="text-lg sm:text-xl font-bold truncate">
+              <p className="text-base sm:text-lg font-bold truncate">
                 <span className="min-[510px]:hidden">Dev. CJ</span>
                 <span className="hidden min-[510px]:inline min-[580px]:hidden">
                   Dev. Christian Abendan
@@ -60,38 +58,38 @@ export default function ProfileHeader() {
             <ThemeToggle />
           </div>
 
-          <div className="flex flex-col gap-2 text-sm">
-            <p className="text-[11px] sm:text-sm text-zinc-800 dark:text-zinc-400 mt-0.5 flex items-center gap-1">
+          <div className="flex flex-col gap-1 sm:gap-2">
+            <p className="text-[10px] sm:text-sm text-zinc-800 dark:text-zinc-400 mt-0.5 flex items-center gap-1">
               <MapPin size={12} className="mr-0 sm:mr-1 shrink-0" />
               <span className="block max-[510px]:hidden">Minglanilla, </span>
               Cebu, Philippines
             </p>
             <div className="flex items-center flex-wrap py-1 sm:py-2">
-              <p className="text-xs sm:text-sm">
+              <p className="text-[11px] sm:text-sm">
                 <span>Software Engineer</span>
                 <span className="text-gray-400 mx-1">\</span>
-                <span>UI & UX Designer</span>
+                <span>Web & Mobile Developer</span>
               </p>
             </div>
-            <div className="flex flex-row items-center gap-1 sm:gap-2">
+            <div className="flex flex-col items-start min-[450px]:flex-row gap-1 sm:gap-2">
               <Button
                 variant="primary"
-                icon={<Calendar className="w-2 h-2 sm:w-3 sm:h-3" />}
+                icon={<Calendar className="w-2 h-2 sm:w-4 sm:h-4" />}
                 onClick={handleScheduleCall}
               >
                 Schedule a Call
               </Button>
               <div className="hidden sm:block">
-                <Button variant="secondary" icon={<Mail size={12} />}>
+                <Button variant="secondary" icon={<Mail  className="w-4 sm:h-4"  />}>
                   Send Email
                 </Button>
               </div>
               <Button
                 variant="default"
-                icon={<ChevronRight size={16} />}
+                icon={<ChevronRight  className="w-4 sm:h-4"  />}
                 onClick={handleViewResume}
               >
-                <span className="max-[430px]:hidden">View</span> Resume
+                View Resume
               </Button>
             </div>
           </div>

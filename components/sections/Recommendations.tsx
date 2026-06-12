@@ -133,7 +133,7 @@ export default function Recommendations() {
             </div>
 
             <div className="flex flex-col border-l border-gray-200 dark:border-gray-700 pl-4 transition-all duration-200 ease-out will-change-transform">
-              <p className="text-sm sm:text-base font-semibold text-foreground">
+              <p className="text-sm sm:text-base font-semibold text-foreground truncate">
                 {selectedItem.name}
               </p>
               <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">

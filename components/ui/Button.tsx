@@ -14,15 +14,15 @@ export default function Button({
 }: ButtonProps) {
   
   const baseClasses =
-    "inline-flex h-7 sm:h-8 items-center justify-center rounded-xs text-[8px] sm:text-xs font-semibold transition-all duration-200 gap-1 sm:gap-2 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none";
+    "inline-flex h-7 sm:h-8 items-center rounded-xs text-[10px] sm:text-xs font-semibold transition-all duration-200 gap-2 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none";
 
   const variantClasses = {
     primary:
-      "px-2.5 md:px-4 bg-black dark:bg-white text-white dark:text-black hover:opacity-90 shadow-xs px-2 sm:px-4",
+      "px-4 items-center bg-black dark:bg-white text-white dark:text-black hover:opacity-90 shadow-xs",
     secondary:
-      "px-2.5 md:px-4 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-600/10 text-black dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800  px-2 sm:px-4",
+      "px-4 items-center border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-600/10 text-black dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800",
     default:
-      "px-0  bg-transparenttext-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors px-1 ",
+      "px-2 items-center bg-transparenttext-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors",
   }[variant];
 
   return (
@@ -31,16 +31,16 @@ export default function Button({
       {...props}
     >
       {icon && variant !== "default" && (
-        <span className="shrink-0 flex items-center justify-center">
+        <span className="shrink-0 flex items-center">
           {icon}
         </span>
       )}
 
-      <span className="block truncate min-w-0 get-full-width flex-1">
+      <span className="block truncate items-center">
         {children}
       </span>
       {icon && variant === "default" && (
-        <span className="shrink-0 flex items-center justify-center">
+        <span className="shrink-0 flexWS">
           {icon}
         </span>
       )}
