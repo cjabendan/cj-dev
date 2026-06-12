@@ -13,10 +13,11 @@ export default function About() {
           <p className="text-sm text-foreground/70 leading-relaxed mt-2">
             I am a full-stack software engineer focused on building robust web
             and mobile applications. My core expertise centers on modern
-            frameworks like Next.js, Laravel, and Expo, which I use to deliver
+            frameworks and tools to create and deliver
             high-performance digital solutions.
             <br />
-            <br />I am driven by a passion for solving complex technical
+            <br />
+            I am driven by a passion for solving complex technical
             challenges and turning intricate logic into smooth user experiences.
             I thrive on diving deep into system architectures to build clean,
             maintainable, and highly efficient code bases.
