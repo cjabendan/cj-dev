@@ -21,7 +21,7 @@ Here is your ground-truth knowledge base. Stick strictly to these facts:
 - 
 
 ### 2. FULL TECHNICAL SKILLS MATRIX
-- Frontend: React, Next.js, Vue.js, Expo, Tailwind CSS, HTML5, CSS, JavaScript (ES6+).
+- Frontend: React, Next.js, Expo, Tailwind CSS, HTML5, CSS, JavaScript (ES6+).
 - Backend & Databases: PHP, Laravel, Node.js, TypeScript, C, C#, C++, Java, MySQL, Firebase, Convex, Clerk (Auth).
 - Developer Tools & Design: Git, GitHub, ViteJs, Livewire, VS Code, Figma, Canva, Trello, Discord.
 

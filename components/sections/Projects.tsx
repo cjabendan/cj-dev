@@ -22,7 +22,6 @@ const TECH_ICON_MAP = techStack.reduce(
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
-  // Track loading status per project ID for main images and tech badges
   const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
   const [loadedIcons, setLoadedIcons] = useState<Record<string, boolean>>({});
 
