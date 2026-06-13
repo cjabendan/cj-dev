@@ -36,11 +36,11 @@ export default function ProfileHeader() {
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <p className="text-base sm:text-lg font-bold truncate">
-                <span className="min-[510px]:hidden">Dev. CJ</span>
-                <span className="hidden min-[510px]:inline min-[580px]:hidden">
+                <span className="min-[490px]:hidden">Dev. CJ</span>
+                <span className="hidden min-[490px]:inline min-[560px]:hidden">
                   Dev. Christian Abendan
                 </span>
-                <span className="hidden min-[580px]:inline">
+                <span className="hidden min-[560px]:inline">
                   Dev. Christian James A. Abendan
                 </span>
               </p>
@@ -61,7 +61,7 @@ export default function ProfileHeader() {
           <div className="flex flex-col gap-1 sm:gap-2">
             <p className="text-[10px] sm:text-sm text-zinc-800 dark:text-zinc-400 mt-0.5 flex items-center gap-1">
               <MapPin size={12} className="mr-0 sm:mr-1 shrink-0" />
-              <span className="block max-[510px]:hidden">Minglanilla, </span>
+              <span className="block max-[490px]:hidden">Minglanilla, </span>
               Cebu, Philippines
             </p>
             <div className="flex items-center flex-wrap py-1 sm:py-2">
@@ -71,7 +71,7 @@ export default function ProfileHeader() {
                 <span>Web & Mobile Developer</span>
               </p>
             </div>
-            <div className="flex flex-col items-start min-[450px]:flex-row gap-1 sm:gap-2">
+            <div className="flex flex-col items-start min-[437px]:flex-row gap-1 sm:gap-2">
               <Button
                 variant="primary"
                 icon={<Calendar className="w-2 h-2 sm:w-4 sm:h-4" />}
@@ -80,13 +80,13 @@ export default function ProfileHeader() {
                 Schedule a Call
               </Button>
               <div className="hidden sm:block">
-                <Button variant="secondary" icon={<Mail  className="w-4 sm:h-4"  />}>
+                <Button variant="secondary" icon={<Mail  className="w-4 h-4" />}>
                   Send Email
                 </Button>
               </div>
               <Button
                 variant="default"
-                icon={<ChevronRight  className="w-4 sm:h-4"  />}
+                icon={<ChevronRight  className="w-3 h-3 sm:w-4 sm:h-4" />}
                 onClick={handleViewResume}
               >
                 View Resume

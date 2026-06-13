@@ -14,7 +14,11 @@ export default function CertificationsPage() {
             href={cert.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-2 p-3 sm:p-5 border border-gray-200 dark:border-gray-900 rounded-sm hover:bg-muted/50 transition-colors"
+           className={`flex flex-col gap-1 border border-gray-100 dark:border-gray-900 rounded-sm py-3 px-4 hover:bg-bg-card transition-colors ${
+              cert.url === "null" || !cert.url
+                ? "pointer-events-none"
+                : "cursor-pointer"
+            }`}
           >
             <div className="flex justify-between items-start">
               <span className="text-base sm:text-lg font-semibold leading-tight">{cert.title}</span>

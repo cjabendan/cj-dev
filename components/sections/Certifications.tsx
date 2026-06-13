@@ -24,10 +24,14 @@ export default function Certifications() {
         {sortedCertifications.map((cert) => (
           <a
             key={cert.id}
-            href={cert.url}
+            href={cert.url == "null" ? undefined : cert.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-1 border border-gray-100 dark:border-gray-900 rounded-sm py-3 px-4 hover:bg-bg-card transition-colors"
+            className={`flex flex-col gap-1 border border-gray-100 dark:border-gray-900 rounded-sm py-3 px-4 hover:bg-bg-card transition-colors ${
+              cert.url === "null" || !cert.url
+                ? "pointer-events-none"
+                : "cursor-pointer"
+            }`}
           >
             <span className="text-sm font-medium leading-tight">
               {cert.title}

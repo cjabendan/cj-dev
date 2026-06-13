@@ -17,9 +17,8 @@
 }
 
 body {
-  background: var(--background);
+  @apply bg-[var(--background)] text-[var(--foreground)] antialiased;
 }
-
 
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
@@ -31,7 +30,6 @@ body {
   0%, 100% { transform: rotate(-8deg); }
   50% { transform: rotate(8deg); }
 }
-
 
 @theme {
   --animate-shake: shake 0.4s ease-in-out;
