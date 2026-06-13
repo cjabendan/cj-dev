@@ -74,7 +74,7 @@ export default function ProfileHeader() {
             <div className="flex flex-col items-start min-[437px]:flex-row gap-1 sm:gap-2">
               <Button
                 variant="primary"
-                icon={<Calendar className="w-2 h-2 sm:w-4 sm:h-4" />}
+                icon={<Calendar className="w-3 h-3 sm:w-4 sm:h-4" />}
                 onClick={handleScheduleCall}
               >
                 Schedule a Call
