@@ -36,12 +36,15 @@ export default function ProfileHeader() {
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <p className="text-base sm:text-lg font-bold truncate">
-                <span className="min-[490px]:hidden">Dev. CJ</span>
-                <span className="hidden min-[490px]:inline min-[560px]:hidden">
-                  Dev. Christian Abendan
+                <span className="min-[360px]:hidden">CJ</span>
+                <span className="hidden min-[360px]:inline min-[430px]:hidden">
+                  Christian
+                </span>
+                <span className="hidden min-[430px]:inline min-[560px]:hidden">
+                  Christian Abendan
                 </span>
                 <span className="hidden min-[560px]:inline">
-                  Dev. Christian James A. Abendan
+                  Christian James A. Abendan
                 </span>
               </p>
               <div className="relative">
@@ -58,20 +61,20 @@ export default function ProfileHeader() {
             <ThemeToggle />
           </div>
 
-          <div className="flex flex-col gap-1 sm:gap-2">
+          <div className="flex flex-col">
             <p className="text-[10px] sm:text-sm text-zinc-800 dark:text-zinc-400 mt-0.5 flex items-center gap-1">
-              <MapPin size={12} className="mr-0 sm:mr-1 shrink-0" />
+              <MapPin  className="w-2.5 h-2.5 sm:w-3 sm:h-3 mr-0 sm:mr-1 shrink-0" />
               <span className="block max-[490px]:hidden">Minglanilla, </span>
               Cebu, Philippines
             </p>
             <div className="flex items-center flex-wrap py-1 sm:py-2">
-              <p className="text-[11px] sm:text-sm">
+              <p className="text-[10px] sm:text-base">
                 <span>Software Engineer</span>
                 <span className="text-gray-400 mx-1">\</span>
                 <span>Web & Mobile Developer</span>
               </p>
             </div>
-            <div className="flex flex-col items-start min-[437px]:flex-row gap-1 sm:gap-2">
+            <div className="flex flex-col items-start min-[437px]:flex-row gap-1 sm:gap-2 mt-1 md:mt-2">
               <Button
                 variant="primary"
                 icon={<Calendar className="w-3 h-3 sm:w-4 sm:h-4" />}

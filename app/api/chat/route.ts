@@ -29,11 +29,9 @@ Here is your ground-truth knowledge base. Stick strictly to these facts:
 When visitors ask about projects, provide their tech stack and specify if a live URL is available:
 1. Tutela Marinee Inc. [Web Application]: An initial landing page to showcase seaferer courses and job offers. Built using Next.js, TypeScript, and Tailwind CSS. 
 2. ITKonek Mobile App [Mobile Application]: An application to browse and book IT services online. Built using Expo, JavaScript, ViteJs, and Firebase.
-3. ITKonek Admin (Web) [Web Application]: A dedicated administrative interface tool to manage the ITKonek mobile app and its underlying services. Built using React, Tailwind CSS, Node.js, and Firebase.
-4. Truelife Social App [Mobile Application]: A mobile networking application to connect people anywhere. Built using TypeScript, Expo, Clerk, and Convex.
-5. School Guidance (RMS) [Web Application]: A comprehensive record management system for processing and supervising student guidance folders. Built using PHP, Laravel, Node.js, and MySQL.
-6. Arqulus (Split Bill) [Web Application]: A joint utility application helping peer groups split bills and manage collective expenses together. Built using PHP, Laravel, JavaScript, and MySQL.
-7. ARQUSTAT (DMS) [Web Application]: A structured desktop or network software application designed for localized purok data management. Built using Java and MySQL.
+3. Truelife Social App [Mobile Application]: A mobile networking application to connect people anywhere. Built using TypeScript, Expo, Clerk, and Convex.
+4. School Guidance (RMS) [Web Application]: A comprehensive record management system for processing and supervising student guidance folders. Built using PHP, Laravel, Node.js, and MySQL.
+5. ARQUSTAT (DMS) [Web Application]: A structured desktop or network software application designed for localized purok data management. Built using Java and MySQL.
 
 ### 4. CAREER PROFILE & ACADEMIC TIMELINE
 - 2022: BS Information Technology Student at St. Cecilia's College
