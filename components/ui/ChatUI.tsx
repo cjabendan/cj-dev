@@ -80,7 +80,6 @@ export default function ChatUI() {
       <div className="flex-1 overflow-y-auto p-4 space-y-4 text-sm custom-scrollbar">
         {messages.map((msg, idx) => (
           <div key={idx} className="flex items-start gap-2.5">
-            {/* Show CJ avatar icon */}
             {msg.role === "model" && (
               <Image
                 src="/images/gallery/cb.jpg"
@@ -95,7 +94,7 @@ export default function ChatUI() {
               className={`flex flex-col ${msg.role === "user" ? "w-full items-end" : "max-w-[85%]"}`}
             >
               {msg.role === "model" && (
-                <span className="text-sm font-semibold text-black dark:text-white mb-1 pl-1">
+                <span className="text-sm font-semibold text-black dark:text-white mb-2 pl-1">
                   Christian
                 </span>
               )}
@@ -103,7 +102,7 @@ export default function ChatUI() {
                 className={`p-3 rounded-sm leading-relaxed text-[13px] ${
                   msg.role === "user"
                     ? "bg-black dark:bg-white max-w-[85%] text-white dark:text-black break-words"
-                    : "bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 text-black dark:text-white"
+                    : "bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-black dark:text-white"
                 }`}
               >
                 {msg.text}
@@ -111,7 +110,7 @@ export default function ChatUI() {
             </div>
           </div>
         ))}
-
+        {/* Typing state */}
         {isLoading && (
           <div className="flex items-center gap-2.5 pl-1">
             <Image
@@ -130,7 +129,7 @@ export default function ChatUI() {
         <div ref={scrollRef} />
       </div>
 
-      {/* Styled Footer Input Action Block */}
+      {/* Form Input */}
       <form
         onSubmit={handleSendMessage}
         className="p-4 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-black flex flex-col gap-2"
@@ -157,7 +156,7 @@ export default function ChatUI() {
           </button>
         </div>
 
-        {/* Dynamic subtext helper and metrics layout bar */}
+        {/* Note for limits */}
         <div className="flex justify-between items-center text-[11px] tracking-wide text-zinc-500 px-0.5 mt-0.5 font-medium">
           <span>This chatbot is powered by Groq.</span>
           <span

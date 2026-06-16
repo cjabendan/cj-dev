@@ -39,7 +39,7 @@ export default function BotWidget() {
               <div className="flex flex-col">
                 <h3 className="font-bold tracking-wide">Chat with Christian</h3>
                 <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 bg-green-500 rounded-full" />
+                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                   <span className="text-xs tracking-wider text-green-500">
                     Acitve Now
                   </span>

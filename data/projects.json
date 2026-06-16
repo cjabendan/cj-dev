@@ -45,7 +45,7 @@
     "description": "An initial landing page to showcase seaferer courses and job offers.",
     "image": "/images/projects/tmi-v1.png",
     "type": "Web Application",
-    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "tech": ["React", "JavaScript", "CSS"],
     "url": "https://mti-project.vercel.app/"
   }
 ]
