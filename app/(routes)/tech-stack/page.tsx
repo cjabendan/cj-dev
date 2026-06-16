@@ -9,7 +9,7 @@ export default function TechStackPage() {
       <div className="space-y-8 mb-14">
         {techData.map((group) => (
           <div key={group.category} className="space-y-4">
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+            <h3 className="text-sm sm:text-base font-semibold text-muted-foreground uppercase tracking-wider">
               {group.category}
             </h3>
 
@@ -17,21 +17,23 @@ export default function TechStackPage() {
               {group.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-3 px-4 py-3 border border-gray-200 dark:border-gray-900 rounded-sm bg-card hover:bg-muted/50 transition-colors"
+                  className="flex items-center gap-3 p-2 sm:px-4 sm:py-3 border border-gray-200 dark:border-gray-900 rounded-sm bg-card hover:bg-muted/50 transition-colors"
                 >
                   <Image
                     src={skill.icon}
                     alt={skill.name}
                     width={24}
                     height={24}
-                    style={{ width: "24px", height: "24px" }}
-                    className={`opacity-80 hover:opacity-100 object-contain ${
-                      skill.name === "GitHub" || skill.name === "Expo"
-                        ? "dark:invert"
-                        : ""
-                    }`}
+                    className={`opacity-80 hover:opacity-100 object-contain 
+                     w-4 h-4 sm:w-6 sm:h-6 ${
+                       skill.name === "GitHub" || skill.name === "Expo"
+                         ? "dark:invert"
+                         : ""
+                     }`}
                   />
-                  <span className="text-sm font-medium">{skill.name}</span>
+                  <span className="text-xs sm:text-sm font-medium">
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>

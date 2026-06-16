@@ -21,7 +21,7 @@ export default function CertificationsPage() {
             }`}
           >
             <div className="flex justify-between items-start">
-              <span className="text-base sm:text-lg font-semibold leading-tight">{cert.title}</span>
+              <span className="text-sm sm:text-base font-semibold leading-tight">{cert.title}</span>
             </div>
             <p className="text-xs sm:text-sm text-muted-foreground">
               {cert.issuer}

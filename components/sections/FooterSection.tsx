@@ -9,7 +9,7 @@ export default function FooterSection() {
     <footer className="border-t border-gray-200 dark:border-gray-800 w-full">
       <div
         className="max-w-4xl mx-auto px-4 flex items-center justify-center gap-2 pt-6
-      text-xs sm:text-sm  "
+      text-[11px] sm:text-sm  "
       >
         <p className="text-foreground/70">© 2026 Christian Abendan.</p>
         <p className="text-foreground/70">Updated: {lastUpdated}</p>
