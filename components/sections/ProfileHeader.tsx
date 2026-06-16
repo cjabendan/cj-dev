@@ -62,8 +62,8 @@ export default function ProfileHeader() {
           </div>
 
           <div className="flex flex-col">
-            <p className="text-[10px] sm:text-sm text-zinc-800 dark:text-zinc-400 mt-0.5 flex items-center gap-1">
-              <MapPin  className="w-2.5 h-2.5 sm:w-3 sm:h-3 mr-0 sm:mr-1 shrink-0" />
+            <p className="text-[9px] sm:text-sm text-zinc-800 dark:text-zinc-400 mt-0.5 flex items-center gap-1">
+              <MapPin  className="w-2 h-2 sm:w-3 sm:h-3 mr-0 sm:mr-1 shrink-0" />
               <span className="block max-[490px]:hidden">Minglanilla, </span>
               Cebu, Philippines
             </p>
