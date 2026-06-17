@@ -87,7 +87,7 @@ export default function ChatUI() {
                 width={36}
                 height={36}
                 priority
-                className="w-7 h-7 rounded-sm object-cover bg-zinc-800 shrink-0"
+                className="w-7 h-7 rounded-xs object-cover bg-zinc-800 shrink-0"
               />
             )}
             <div
@@ -119,7 +119,7 @@ export default function ChatUI() {
               width={32}
               height={32}
               loading="lazy"
-              className="w-7 h-7 rounded-sm object-cover shrink-0 opacity-50"
+              className="w-7 h-7 rounded-xs object-cover shrink-0 opacity-50"
             />
             <span className="text-xs text-zinc-500 animate-pulse">
               Typing...
@@ -142,7 +142,7 @@ export default function ChatUI() {
             maxLength={MAX_CHAR_LIMIT}
             placeholder="Type a message..."
             disabled={isLoading}
-            className="flex-1 bg-transparent text-black dark:text-white border border-zinc-800 text-sm px-3 py-2.5 focus:outline-hidden focus:border-zinc-600 transition-colors disabled:opacity-40 rounded-xs placeholder-zinc-600"
+            className="flex-1 bg-transparent text-black dark:text-white border border-gray-800 text-sm px-3 py-2.5 focus:outline-hidden focus:border-gray-600 transition-colors disabled:opacity-40 rounded-xs placeholder-zinc-600"
           />
           <button
             type="submit"
