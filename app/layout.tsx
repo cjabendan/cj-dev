@@ -15,10 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// OPTIMIZED PRODUCTION-GRADE SEO METADATA
 export const metadata: Metadata = {
   title: {
-    default: "Christian Abendan | Full-Stack Software Developer",
+    default: "Christian Abendan | Software Engineer",
     template: "%s | Christian Abendan",
   },
   description: "Portfolio of Christian Abendan, a full-stack software developer specializing in React, Next.js, React Native, and reactive modern web applications.",
@@ -46,13 +45,13 @@ export const metadata: Metadata = {
         url: "/og-image.png", 
         width: 1200,
         height: 630,
-        alt: "Christian Abendan Portfolio Cover Preview Image",
+        alt: "Christian Abendan Preview Image",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christian Abendan | Engineer",
+    title: "Christian Abendan | Software Engineer",
     description: "Full-stack software developer portfolio showcasing scalable applications.",
     images: ["/og-image.png"],
   },

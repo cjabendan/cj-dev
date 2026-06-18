@@ -35,7 +35,7 @@ export default function ProfileHeader() {
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <p className="text-base sm:text-lg font-bold truncate">
+              <h1 className="text-base sm:text-lg font-bold truncate">
                 <span className="min-[360px]:hidden">CJ</span>
                 <span className="hidden min-[360px]:inline min-[430px]:hidden">
                   Christian
@@ -46,7 +46,7 @@ export default function ProfileHeader() {
                 <span className="hidden min-[560px]:inline">
                   Christian James A. Abendan
                 </span>
-              </p>
+              </h1>
               <div className="relative">
                 <VerifiedIcon
                   className="w-5 h-5 text-blue-500 fill-blue-500"
