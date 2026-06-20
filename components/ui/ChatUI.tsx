@@ -87,7 +87,7 @@ export default function ChatUI() {
                 width={36}
                 height={36}
                 priority
-                className="w-7 h-7 rounded-xs object-cover bg-zinc-800 shrink-0"
+                className="w-7 h-7 rounded-sm object-cover bg-zinc-800 shrink-0"
               />
             )}
             <div
@@ -119,7 +119,7 @@ export default function ChatUI() {
               width={32}
               height={32}
               loading="lazy"
-              className="w-7 h-7 rounded-xs object-cover shrink-0 opacity-50"
+              className="w-7 h-7 rounded-sm object-cover shrink-0 opacity-50"
             />
             <span className="text-xs text-zinc-500 animate-pulse">
               Typing...
@@ -142,14 +142,14 @@ export default function ChatUI() {
             maxLength={MAX_CHAR_LIMIT}
             placeholder="Type a message..."
             disabled={isLoading}
-            className="flex-1 bg-transparent text-black dark:text-white border border-gray-800 text-sm px-3 py-2.5 focus:outline-hidden focus:border-gray-600 transition-colors disabled:opacity-40 rounded-xs placeholder-zinc-600"
+            className="flex-1 bg-transparent text-black dark:text-white border border-gray-800 text-sm px-3 py-2.5 focus:outline-hidden focus:border-gray-600 transition-colors disabled:opacity-40 rounded-sm placeholder-zinc-600"
           />
           <button
             type="submit"
             disabled={
               isLoading || !input.trim() || input.length > MAX_CHAR_LIMIT
             }
-            className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-600 flex items-center justify-center px-4 rounded-xs disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer transition-colors"
+            className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-600 flex items-center justify-center px-4 rounded-sm disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer transition-colors"
             aria-label="Send message"
           >
             <SendIcon size={14} />

@@ -10,18 +10,18 @@ export default function ThemeToggle() {
 
   if (!isMounted) {
     return (
-      <div className="h-5 w-10 sm:h-6 sm:w-12 bg-gray-200 dark:bg-gray-700 opacity-50 animate-pulse rounded-xs" />
+      <div className="h-5 w-10 sm:h-6 sm:w-12 bg-gray-200 dark:bg-gray-700 opacity-50 animate-pulse rounded-sm" />
     );
   }
 
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative inline-flex h-5 w-10 sm:h-6 sm:w-12 items-center transition-colors duration-300 ease-in-out focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700 rounded-xs cursor-pointer"
+      className="relative inline-flex h-5 w-10 sm:h-6 sm:w-12 items-center transition-colors duration-300 ease-in-out focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700 rounded-sm cursor-pointer"
       aria-label="Toggle Theme"
     >
       <div
-        className={`absolute w-5 h-5 sm:w-6 sm:h-6 bg-white shadow-md rounded-xs transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
+        className={`absolute w-5 h-5 sm:w-6 sm:h-6 bg-white shadow-md rounded-sm transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
           theme === "dark" 
             ? "translate-x-5 sm:translate-x-6" 
             : "translate-x-0"

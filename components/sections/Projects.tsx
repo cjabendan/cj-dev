@@ -53,7 +53,7 @@ export default function Projects() {
           return (
             <div
               key={project.id}
-              className="flex flex-col w-full border border-gray-100 dark:border-gray-900 rounded-xs overflow-hidden"
+              className="flex flex-col w-full border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden"
             >
               {/* Main Image Block with Asset-Level Skeleton Overlay */}
               <div className="relative w-full h-[180px]">
@@ -79,7 +79,7 @@ export default function Projects() {
                 href={project.url === "null" ? undefined : project.url}
                 rel="noopener noreferrer"
                 target="_blank"
-                className={`border-t border-gray-100 dark:border-gray-900 rounded-xs p-4 space-y-2 flex-1 flex flex-col justify-between ${
+                className={`border-t border-gray-100 dark:border-gray-900 rounded-sm p-4 space-y-2 flex-1 flex flex-col justify-between ${
                   project.url === "null"
                     ? "pointer-events-none"
                     : "cursor-pointer"
@@ -108,7 +108,7 @@ export default function Projects() {
                           className="relative flex items-center gap-1 text-[10px] px-3 py-2 border border-gray-100 dark:border-gray-900 rounded-sm hover:bg-bg-card transition-all min-w-[32px] min-h-[34px]"
                         >
                           {isIconLoading && (
-                            <Skeleton className="absolute inset-1 rounded-xs" />
+                            <Skeleton className="absolute inset-1 rounded-sm" />
                           )}
 
                           {icon && (

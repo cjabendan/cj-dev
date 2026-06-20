@@ -14,7 +14,7 @@ export default function Button({
 }: ButtonProps) {
   
   const baseClasses =
-    "inline-flex h-7 sm:h-8 items-center rounded-xs text-[10px] sm:text-xs font-semibold transition-all duration-200 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none";
+    "inline-flex h-7 sm:h-8 items-center rounded-sm text-[10px] sm:text-xs font-semibold transition-all duration-200 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none";
 
   const variantClasses = {
     primary:

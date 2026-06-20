@@ -15,7 +15,7 @@ export default function Skeleton({
         animate-pulse 
         bg-zinc-100 
         dark:bg-zinc-900 
-        ${variant === "circle" ? "rounded-full" : "rounded-xs"} 
+        ${variant === "circle" ? "rounded-full" : "rounded-sm"} 
         ${className}
       `}
       {...props}

@@ -10,7 +10,7 @@ export default function Socials() {
         <a
           key={social.id}
           href={social.link}
-          className="border border-gray-100 dark:border-gray-900 rounded-xs p-2"
+          className="border border-gray-100 dark:border-gray-900 rounded-sm p-2"
           target="_blank"
           rel="noreferrer"
         >

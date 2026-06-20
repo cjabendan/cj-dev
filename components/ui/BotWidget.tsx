@@ -11,7 +11,7 @@ export default function BotWidget() {
   return (
     <>
       <button
-        className="fixed z-[100] bottom-4 right-4 bg-black dark:bg-white text-white dark:text-black px-4 sm:px-6 py-3 rounded-xs 
+        className="fixed z-[100] bottom-4 right-4 bg-black dark:bg-white text-white dark:text-black px-4 sm:px-6 py-3 rounded-sm 
         shadow-[0_2px_6px_rgba(0,0,0,0.1)] hover:opacity-90 transition-all flex items-center gap-2 group cursor-pointer"
         onClick={() => setIsOpen((prev) => !prev)}
       >
@@ -25,7 +25,7 @@ export default function BotWidget() {
       </button>
 
       {isOpen && (
-        <div className="fixed z-[100] bg-white dark:bg-black bottom-20 right-4 w-[calc(100vw-32px)] sm:w-96 h-[620px] max-h-[70vh] border border-gray-200 dark:border-gray-800 rounded-xs shadow-[0_8px_30px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden animate-fade-in">
+        <div className="fixed z-[100] bg-white dark:bg-black bottom-20 right-4 w-[calc(100vw-32px)] sm:w-96 h-[620px] max-h-[70vh] border border-gray-200 dark:border-gray-800 rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden animate-fade-in">
           <div className="flex justify-between gap-3 p-4 items-center bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 text-zinc-800 dark:text-zinc-200">
             <div className="flex items-center gap-2.5">
               <Image
@@ -34,7 +34,7 @@ export default function BotWidget() {
                 width={42}
                 height={42}
                 priority
-                className="h-9 w-9 rounded-xs object-cover bg-gray-200 dark:bg-gray-800"
+                className="h-9 w-9 rounded-sm object-cover bg-gray-200 dark:bg-gray-800"
               />
               <div className="flex flex-col">
                 <h3 className="font-bold tracking-wide">Chat with Christian</h3>
