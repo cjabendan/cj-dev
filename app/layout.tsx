@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: "Christian Abendan | Software Engineer",
     template: "%s | Christian Abendan",
   },
-  description: "Portfolio of Christian Abendan, a software engineer and a web/mobile developer specializing in React, Next.js, React Native, and reactive modern applications.",
+  description: "Portfolio of Christian Abendan, a software engineer and a web/mobile developer specializing in React, Next.js, React Native (EXPO), and reactive modern applications.",
   keywords: [
     "Christian Abendan",
     "Software Developer",
