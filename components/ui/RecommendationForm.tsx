@@ -42,11 +42,11 @@ export default function RecommendationForm() {
     const newErrors: { [key: string]: string } = {};
 
     // Form field validations
-    if (!formData.name.trim()) newErrors.name = "Full name is required";
-    if (!formData.title.trim()) newErrors.title = "Professional title is required";
-    if (!formData.content.trim()) newErrors.content = "A recommendation message is required";
+    if (!formData.name.trim()) newErrors.name = "*";
+    if (!formData.title.trim()) newErrors.title = "*";
+    if (!formData.content.trim()) newErrors.content = "*";
     if (!trimmedEmail) {
-      newErrors.email = "Email address is required";
+      newErrors.email = "*";
     } else if (!EMAIL_REGEX.test(trimmedEmail)) {
       newErrors.email = "Invalid email address";
     }

@@ -69,12 +69,12 @@ export default function Projects() {
                   onLoad={() =>
                     setLoadedImages((prev) => ({ ...prev, [project.id]: true }))
                   }
-                  className={`rounded-t-xs object-cover bg-muted transition-opacity duration-300 ${
+                  className={`rounded-t-xs object-contain bg-muted transition-opacity duration-300 ${
                     isMainImageLoading ? "opacity-0" : "opacity-100"
                   }`}
                 />
               </div>
-
+              {/* Project Anchor Tag */}
               <a
                 href={project.url === "null" ? undefined : project.url}
                 rel="noopener noreferrer"

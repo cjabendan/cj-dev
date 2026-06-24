@@ -12,27 +12,25 @@ export default function Recommendations() {
   const recentReviews = useQuery(api.reviews.getRecentReviews);
   const [maxItems, setMaxItems] = useState(10);
 
-  // Track window resizing to dynamically slice item allocations
+  // Track window resizing
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 640) {
-        setMaxItems(3); // below sm
+        setMaxItems(3); 
       } else if (width < 768) {
-        setMaxItems(5); // below md
+        setMaxItems(5); 
       } else {
-        setMaxItems(10); // default desktop view bounds
+        setMaxItems(10); 
       }
     };
 
-    // Run once on initialization mount to set immediate screen size
     handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Safe slice allocation out of your raw query array database stream
   const processedReviews = recentReviews
     ? recentReviews.slice(0, maxItems)
     : [];

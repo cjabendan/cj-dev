@@ -18,11 +18,11 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "px-4 gap-1 sm:gap-2 items-center bg-black dark:bg-white text-white dark:text-black hover:opacity-90 shadow-xs",
+      "px-2 sm:px-4 gap-1 sm:gap-2 items-center bg-black dark:bg-white text-white dark:text-black hover:opacity-90 shadow-xs",
     secondary:
-      "px-4 gap-1 sm:gap-2 items-center border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-600/10 text-black dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800",
+      "px-4 gap-1 sm:gap-2 items-center border border-gray-200 dark:border-gray-700/80 bg-transparent text-black dark:text-white dark:hover:bg-zinc-100/12",
     default:
-      "max-[437px]:px-0 px-2 gap-2 items-center bg-transparenttext-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors",
+      "max-[437px]:px-0 px-2 gap-2 items-center bg-transparent text-black dark:text-white hover:text-black dark:hover:text-white transition-colors dark:hover:bg-zinc-100/10",
   }[variant];
 
   return (
