@@ -23,9 +23,10 @@ export const metadata: Metadata = {
   description: "Portfolio of Christian Abendan, a software engineer and a web/mobile developer specializing in React, Next.js, React Native (EXPO), and reactive modern applications.",
   keywords: [
     "Christian Abendan",
-    "Software Developer",
-    "Full-Stack Web Developer",
-    "Full-Stack Mobile Developer",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Web Developer",
+    "Mobile Developer",
     "React Developer",
     "Next.js Developer",
     "React Native (EXPO) Developer",
