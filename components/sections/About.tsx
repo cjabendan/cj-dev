@@ -24,7 +24,7 @@ export default function About() {
   return (
     <section>
       {/* DESKTOP LAYOUT*/}
-      <div className="hidden lg:grid grid-cols-6 gap-2">
+      <div className="hidden md:grid grid-cols-6 gap-2">
         <div className="col-span-4 flex flex-col gap-2">
           {aboutText}
           <TechStack />
@@ -37,7 +37,7 @@ export default function About() {
       </div>
 
       {/* MOBILE LAYOUT */}
-      <div className="flex lg:hidden flex-col gap-2">
+      <div className="flex md:hidden flex-col gap-2">
         {aboutText}
         <div className="mt-2 animate-fade-in animation-delay-200">
           <AccessCard />

@@ -1,7 +1,9 @@
 import experiences from "@/data/experiences.json";
 
 export default function Experience() {
-  const sortedExperiences = [...experiences].sort((a, b) => b.id - a.id);
+  const sortedExperiences = [...experiences]
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 6);
 
   return (
     <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-200">

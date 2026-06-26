@@ -55,7 +55,7 @@ export default function Projects() {
               key={project.id}
               className="flex flex-col w-full border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden"
             >
-              {/* Main Image Block with Asset-Level Skeleton Overlay */}
+              {/* Main Image Block & Skeleton Overlay */}
               <div className="relative w-full h-[180px]">
                 {isMainImageLoading && (
                   <Skeleton className="absolute inset-0 w-full h-full rounded-none z-10" />
@@ -69,7 +69,7 @@ export default function Projects() {
                   onLoad={() =>
                     setLoadedImages((prev) => ({ ...prev, [project.id]: true }))
                   }
-                  className={`rounded-t-xs object-contain bg-muted transition-opacity duration-300 ${
+                  className={`rounded-t-xs object-contain bg-white transition-opacity duration-300 ${
                     isMainImageLoading ? "opacity-0" : "opacity-100"
                   }`}
                 />
@@ -93,7 +93,6 @@ export default function Projects() {
                     {project.description}
                   </p>
                 </div>
-
                 {/* Tech Badges Block */}
                 <div className="pt-8">
                   <div className="flex flex-wrap gap-2">
