@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "role": "BS Information Technology",
+    "role": "Developer",
     "type": "Student",
     "company": "St. Cecilia's College",
-    "year": "2022"
+    "year": "2023"
   },
   {
     "id": 2,
     "role": "Full Stack Developer",
     "type": "Student",
     "company": "St. Cecilia's College",
-    "year": "2023"
+    "year": "2025"
   },
   {
     "id": 3,
