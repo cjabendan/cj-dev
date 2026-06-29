@@ -71,7 +71,7 @@ export default function ProfileHeader() {
               <p className="text-[10px] sm:text-base font-medium">
                 <span>Software Engineer</span>
                 <span className="text-gray-400 mx-1">\</span>
-                <span>Full-Stack Developer</span>
+                <span>Web & Mobile Developer</span>
               </p>
             </div>
             <div className="flex flex-col items-start min-[437px]:flex-row gap-1 sm:gap-2 mt-1 md:mt-2">
