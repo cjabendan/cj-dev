@@ -45,11 +45,10 @@ export default function Projects() {
           />
         </button>
       </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+      {/* Project Container */}
+      <div className="grid grid-col-1 md:grid-cols-3 gap-3">
         {displayedProjects.map((project, index) => {
           const isMainImageLoading = !loadedImages[project.id];
-
           return (
             <div
               key={project.id}
