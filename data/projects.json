@@ -46,6 +46,6 @@
     "image": "/images/projects/tmi-v1.png",
     "type": "Web Application",
     "tech": ["React", "JavaScript", "CSS"],
-    "url": "null"
+    "url": "https://mti-project.vercel.app/"
   }
 ]
