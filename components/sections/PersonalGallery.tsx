@@ -59,11 +59,10 @@ export default function PersonalGallery() {
                 key={img.id}
                 className="relative w-full h-[80vw] max-h-[450px] md:h-[162px] md:w-[162px] flex-shrink-0 overflow-hidden border border-gray-100 dark:border-gray-900 rounded-sm group snap-center sm:snap-start bg-muted"
               >
-                {/* Active asset overlay template intercepting standard image paint timelines */}
+                {/* Skeleton Loader */}
                 {isImgLoading && (
                   <Skeleton className="absolute inset-0 w-full h-full rounded-none z-10" />
                 )}
-
                 <Image
                   src={`/images/gallery/${img.src}`}
                   alt={img.alt}
