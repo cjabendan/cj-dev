@@ -17,7 +17,7 @@ export default function TechStackPage() {
               {group.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-900 rounded-sm bg-card hover:bg-muted/50 transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 border border-gray-200 dark:border-gray-900 rounded-sm bg-card hover:bg-muted/50 transition-colors"
                 >
                   <Image
                     src={skill.icon}
