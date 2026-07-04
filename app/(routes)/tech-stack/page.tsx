@@ -17,7 +17,7 @@ export default function TechStackPage() {
               {group.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-3 p-2 sm:px-4 sm:py-3 border border-gray-200 dark:border-gray-900 rounded-sm bg-card hover:bg-muted/50 transition-colors"
+                  className="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-900 rounded-sm bg-card hover:bg-muted/50 transition-colors"
                 >
                   <Image
                     src={skill.icon}
@@ -25,7 +25,7 @@ export default function TechStackPage() {
                     width={24}
                     height={24}
                     className={`opacity-80 hover:opacity-100 object-contain 
-                     w-4 h-4 sm:w-6 sm:h-6 ${
+                     w-4 h-4 ${
                        skill.name === "GitHub" || skill.name === "Expo"
                          ? "dark:invert"
                          : ""
