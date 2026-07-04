@@ -46,6 +46,16 @@
     "image": "/images/projects/tmi-v1.png",
     "type": "Web Application",
     "tech": ["React", "JavaScript", "CSS"],
-    "url": "https://mti-project.vercel.app/"
+    "url": "null"
+  },
+
+  {
+    "id": 6,
+    "title": "Arculus - V2",
+    "description": "A finance tool for managing personal and group budgets.",
+    "image": "/images/projects/arculus.png",
+    "type": "Web Application",
+    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "url": "null"
   }
 ]
