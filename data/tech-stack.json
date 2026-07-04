@@ -38,6 +38,7 @@
       { "name": "VS Code", "icon": "/icons/vscode.svg" },
       { "name": "Trello", "icon": "/icons/trello-icon.svg" },
       { "name": "Discord", "icon": "/icons/discord.svg" },
+      { "name": "Gmail", "icon": "/icons/gmail.svg" },
       { "name": "Outlook", "icon": "/icons/outlook.svg" },
       { "name": "Figma", "icon": "/icons/figma.svg" },
       { "name": "Canva", "icon": "/icons/canva.svg" }
