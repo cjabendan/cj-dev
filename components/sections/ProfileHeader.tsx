@@ -69,7 +69,7 @@ export default function ProfileHeader() {
             </p>
             <div className="flex items-center flex-wrap py-1 sm:py-2">
               <p className="text-[10px] sm:text-base font-medium">
-                <span>Software Engineer</span>
+                <span>Aspiring Software Engineer</span>
                 <span className="text-gray-400 mx-1">\</span>
                 <span>Web & Mobile Developer</span>
               </p>
