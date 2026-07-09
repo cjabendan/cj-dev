@@ -9,14 +9,12 @@ export default function About() {
     <div className="p-4 group animate-fade-in">
       <h2 className="text-lg sm:text-xl font-bold">About</h2>
       <p className="text-sm text-foreground/70 leading-relaxed mt-2">
-        I am a full-stack software engineer focused on building robust web and
-        mobile applications. My core expertise centers on modern frameworks and
-        tools to create and deliver high-performance digital solutions.
+        I am an aspiring full-stack software engineer focused on building robust web and
+        mobile applications. My current expertise centers on modern frameworks and
+        tools, and I am actively expanding my capabilities into deep backend architectures.
         <br />
         <br />I am driven by a passion for solving complex technical challenges
-        and turning intricate logic into smooth user experiences. I thrive on
-        diving deep into system architectures to build clean, maintainable, and
-        highly efficient code bases.
+        and turning intricate logic into smooth user experiences and continuously learning best practices to build clean, efficient codebases.
       </p>
     </div>
   );
