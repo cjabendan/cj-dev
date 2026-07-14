@@ -27,7 +27,8 @@
       { "name": "MySQL", "icon": "/icons/mysql.svg" },
       { "name": "Firebase", "icon": "/icons/firebase.svg" },
       { "name": "Convex", "icon": "/icons/convex.svg" },
-      { "name": "Clerk", "icon": "/icons/clerk.svg" }
+      { "name": "Clerk", "icon": "/icons/clerk.svg" },
+      { "name": "Supabase", "icon": "/icons/supabase.svg" }
     ]
   },
   {

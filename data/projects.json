@@ -55,7 +55,7 @@
     "description": "A finance tool for managing personal and group budgets.",
     "image": "/images/projects/arculus.png",
     "type": "Web Application",
-    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "tech": ["Next.js", "TypeScript", "Tailwind", "Supabase"],
     "url": "null"
   }
 ]
