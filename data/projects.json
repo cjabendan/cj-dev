@@ -12,10 +12,10 @@
   {
     "id": 2,
     "title": "Truelife Social App",
-    "description": "A mobile application to connect people, anywhere.",
+    "description": "A mobile application to share stories and connect with others.",
     "image": "/images/projects/truelife-mob.png",
     "type": "Mobile Application",
-    "tech": ["TypeScript", "Expo", "Clerk", "Convex"],
+    "tech": ["Expo", "TypeScript", "Clerk", "Convex"],
     "url": "null"
   },
 
@@ -25,7 +25,7 @@
     "description": "A comprehensive system for managing student guidance records.",
     "image": "/images/projects/thesis-v1.png",
     "type": "Web Application",
-    "tech": ["PHP", "Laravel", "Node.js", "MySQL"],
+    "tech": ["Laravel", "PHP", "Node.js", "MySQL"],
     "url": "null"
   },
 
