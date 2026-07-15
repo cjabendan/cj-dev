@@ -41,11 +41,11 @@
 
   {
     "id": 5,
-    "title": "Tutela Marinee Inc.",
-    "description": "An initial landing page to showcase seaferer courses and job offers.",
+    "title": "Tutela Marine Inc.",
+    "description": "A landing page to showcase seaferer courses and job offers.",
     "image": "/images/projects/tmi-v1.png",
     "type": "Web Application",
-    "tech": ["React", "JavaScript", "CSS"],
+    "tech": ["Next.js", "TypeScript", "Tailwind"],
     "url": "null"
   },
 
