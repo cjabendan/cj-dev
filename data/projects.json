@@ -46,7 +46,7 @@
     "image": "/images/projects/tmi-v2.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind"],
-    "url": "null"
+    "url": "https://tutelamarineinc.vercel.app/"
   },
 
   {
