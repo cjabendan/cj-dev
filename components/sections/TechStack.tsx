@@ -12,7 +12,7 @@ export default function TechStack() {
   }));
 
   return (
-    <div className="p-4 col-span-1 md:col-span-4 space-y-4 group">
+    <div className="p-4 col-span-1 md:col-span-4 space-y-4 group" id="skills">
       <div className="flex items-center justify-between">
         <h2 className="text-lg sm:text-xl font-bold">Tech Stack</h2>
         <Link

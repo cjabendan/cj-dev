@@ -8,7 +8,7 @@ export default function Certifications() {
     .slice(0, 4);
 
   return (
-    <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-300">
+    <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-300" id="certs">
       <div className="flex items-center justify-between">
         <h2 className="text-lg sm:text-xl font-bold">Recent Certifications</h2>
         <Link
