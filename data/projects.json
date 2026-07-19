@@ -29,7 +29,7 @@
     "url": "null"
   },
 
-   {
+  {
     "id": 4,
     "title": "ITKonek Mobile App",
     "description": "An application to browse and book IT services online.",
@@ -41,9 +41,9 @@
 
   {
     "id": 5,
-    "title": "Tutela Marine Inc.",
-    "description": "A landing page to showcase seaferer courses and job offers.",
-    "image": "/images/projects/tmi-v1.png",
+    "title": "TMI - V2",
+    "description": "A modern maritime platform for seafarer training and crew careers.",
+    "image": "/images/projects/tmi-v2.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind"],
     "url": "null"
