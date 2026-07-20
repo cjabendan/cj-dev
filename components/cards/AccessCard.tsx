@@ -39,7 +39,7 @@ export default function AccessCard() {
           transform: "rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
         }}
       >
-        {/* Subtle Static Gray Glow (The "Fill Light") */}
+        {/* Subtle Static Glow */}
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_70%)]" />
 
         {/* Laser Shine Effect */}

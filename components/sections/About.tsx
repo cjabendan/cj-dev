@@ -1,8 +1,9 @@
 import React from "react";
-import AccessCard from "../ui/AccessCard";
+
 import TechStack from "./TechStack";
 import Experience from "./Experience";
 import Certifications from "./Certifications";
+import AccessCard from "../cards/AccessCard";
 
 export default function About() {
   const aboutText = (
