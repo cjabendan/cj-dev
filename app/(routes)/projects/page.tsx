@@ -20,30 +20,20 @@ const TECH_ICON_MAP = techStack.reduce(
 );
 
 export default function Projects() {
-
-
   const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
   const [loadedIcons, setLoadedIcons] = useState<Record<string, boolean>>({});
 
-
-
   return (
     <div className="space-y-6 animate-fade-in mb-auto">
-       <h1 className="text-xl sm:text-2xl font-bold">All Projects</h1>
-    
+      <h1 className="text-xl sm:text-2xl font-bold">All Projects</h1>
 
-      {/* Project Container:
-          - Mobile: Flex horizontal scroll container with snap points
-          - md: 2-column grid
-          - lg: 3-column grid
-      */}
-      <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 scrollbar-none">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24">
         {displayedProjects.map((project) => {
           const isMainImageLoading = !loadedImages[project.id];
           return (
             <div
               key={project.id}
-              className="flex flex-col w-[85vw] sm:w-[320px] md:w-full shrink-0 snap-center border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden"
+              className="flex flex-col border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden"
             >
               {/* Main Image Block & Skeleton Overlay */}
               <div className="relative w-full h-[180px]">
@@ -54,16 +44,19 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  loading="eager"
                   sizes="(max-width: 768px) 85vw, (max-width: 1024px) 50vw, 33vw"
                   onLoad={() =>
-                    setLoadedImages((prev) => ({ ...prev, [project.id]: true }))
+                    setLoadedImages((prev) => ({
+                      ...prev,
+                      [project.id]: true,
+                    }))
                   }
                   className={`rounded-t-xs object-contain bg-white transition-opacity duration-300 ${
                     isMainImageLoading ? "opacity-0" : "opacity-100"
                   }`}
                 />
               </div>
-
               {/* Project Anchor Tag */}
               <a
                 href={project.url === "null" ? undefined : project.url}
