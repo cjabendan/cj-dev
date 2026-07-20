@@ -1,12 +1,10 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import Skeleton from "../ui/Skeleton";
+
 import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
-import Link from "next/link";
+import ProjectCard from "../cards/ProjectCard";
+
 
 const SORTED_PROJECTS = [...projects].sort((a, b) => b.id - a.id);
 
@@ -17,13 +15,10 @@ const TECH_ICON_MAP = techStack.reduce(
     });
     return acc;
   },
-  {} as Record<string, string>,
+  {} as Record<string, string>
 );
 
 export default function Projects() {
-  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
-  const [loadedIcons, setLoadedIcons] = useState<Record<string, boolean>>({});
-
   const displayedProjects = SORTED_PROJECTS.slice(0, 3);
 
   return (
@@ -41,95 +36,15 @@ export default function Projects() {
 
       {/* Project Container */}
       <div className="flex xl:grid xl:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory pb-4 xl:pb-0 scrollbar-none">
-        {displayedProjects.map((project, index) => {
-          const isMainImageLoading = !loadedImages[project.id];
-          return (
-            <div
-              key={project.id}
-              className="flex flex-col w-full max-w-[340px] md:max-w-none md:w-[calc(50%-0.5rem)] xl:w-full shrink-0 snap-center border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden"
-            >
-              {/* Main Image Block & Skeleton Overlay */}
-              <div className="relative w-full h-[180px]">
-                {isMainImageLoading && (
-                  <Skeleton className="absolute inset-0 w-full h-full rounded-none z-10" />
-                )}
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  priority={index < 3}
-                  sizes="(max-width: 640px) 75vw, (max-width: 768px) 300px, (max-width: 1280px) 50vw, 33vw"
-                  onLoad={() =>
-                    setLoadedImages((prev) => ({ ...prev, [project.id]: true }))
-                  }
-                  className={`rounded-t-xs object-contain bg-white transition-opacity duration-300 ${
-                    isMainImageLoading ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-              </div>
-              {/* Project Anchor Tag */}
-              <a
-                href={project.url === "null" ? undefined : project.url}
-                rel="noopener noreferrer"
-                target="_blank"
-                className={`border-t border-gray-100 dark:border-gray-900 p-4 space-y-2 flex-1 flex flex-col justify-between ${
-                  project.url === "null"
-                    ? "pointer-events-none"
-                    : "cursor-pointer"
-                }`}
-              >
-                <div className="space-y-2">
-                  <h3 className="font-semibold text-foreground">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {project.description}
-                  </p>
-                </div>
-                {/* Tech Badges Block */}
-                <div className="pt-8">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => {
-                      const icon = TECH_ICON_MAP[t];
-                      const isIconLoading =
-                        icon && !loadedIcons[`${project.id}-${t}`];
-
-                      return (
-                        <span
-                          key={t}
-                          className="relative flex items-center gap-1 text-[10px] px-3 py-2 border border-gray-100 dark:border-gray-900 rounded-sm hover:bg-bg-card transition-all min-w-[32px] min-h-[34px]"
-                        >
-                          {isIconLoading && (
-                            <Skeleton className="absolute inset-1 rounded-sm" />
-                          )}
-
-                          {icon && (
-                            <Image
-                              src={icon}
-                              alt={t}
-                              width={16}
-                              height={16}
-                              loading="lazy"
-                              onLoad={() =>
-                                setLoadedIcons((prev) => ({
-                                  ...prev,
-                                  [`${project.id}-${t}`]: true,
-                                }))
-                              }
-                              className={`opacity-80 hover:opacity-100 object-contain w-4 h-4 transition-opacity duration-200 ${
-                                isIconLoading ? "opacity-0" : "opacity-100"
-                              } ${t === "Expo" ? "dark:invert" : ""}`}
-                            />
-                          )}
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-              </a>
-            </div>
-          );
-        })}
+        {displayedProjects.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            techIconMap={TECH_ICON_MAP}
+            priority={index < 3}
+            className="max-w-[340px] md:max-w-none md:w-[calc(50%-0.5rem)] xl:w-full shrink-0 snap-center"
+          />
+        ))}
       </div>
     </section>
   );
