@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Skeleton from "../ui/Skeleton";
+
 import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
-import Link from "next/link";
+import Skeleton from "@/components/ui/Skeleton";
 
-const SORTED_PROJECTS = [...projects].sort((a, b) => b.id - a.id);
+const displayedProjects = [...projects].sort((a, b) => b.id - a.id);
 
 const TECH_ICON_MAP = techStack.reduce(
   (acc, category) => {
@@ -21,32 +20,30 @@ const TECH_ICON_MAP = techStack.reduce(
 );
 
 export default function Projects() {
+
+
   const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
   const [loadedIcons, setLoadedIcons] = useState<Record<string, boolean>>({});
 
-  const displayedProjects = SORTED_PROJECTS.slice(0, 3);
+
 
   return (
-    <section className="flex flex-col gap-6 p-4" id="projects">
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg sm:text-xl font-bold">Recent Projects</h2>
-        <Link
-          href="/projects"
-          className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors"
-        >
-          View All
-          <ChevronRight className="w-4 h-4" />
-        </Link>
-      </div>
+    <div className="space-y-6 animate-fade-in mb-auto">
+       <h1 className="text-xl sm:text-2xl font-bold">All Projects</h1>
+    
 
-      {/* Project Container */}
-      <div className="flex xl:grid xl:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory pb-4 xl:pb-0 scrollbar-none">
-        {displayedProjects.map((project, index) => {
+      {/* Project Container:
+          - Mobile: Flex horizontal scroll container with snap points
+          - md: 2-column grid
+          - lg: 3-column grid
+      */}
+      <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 scrollbar-none">
+        {displayedProjects.map((project) => {
           const isMainImageLoading = !loadedImages[project.id];
           return (
             <div
               key={project.id}
-              className="flex flex-col w-full max-w-[340px] md:max-w-none md:w-[calc(50%-0.5rem)] xl:w-full shrink-0 snap-center border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden"
+              className="flex flex-col w-[85vw] sm:w-[320px] md:w-full shrink-0 snap-center border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden"
             >
               {/* Main Image Block & Skeleton Overlay */}
               <div className="relative w-full h-[180px]">
@@ -57,8 +54,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  priority={index < 3}
-                  sizes="(max-width: 640px) 75vw, (max-width: 768px) 300px, (max-width: 1280px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 85vw, (max-width: 1024px) 50vw, 33vw"
                   onLoad={() =>
                     setLoadedImages((prev) => ({ ...prev, [project.id]: true }))
                   }
@@ -67,6 +63,7 @@ export default function Projects() {
                   }`}
                 />
               </div>
+
               {/* Project Anchor Tag */}
               <a
                 href={project.url === "null" ? undefined : project.url}
@@ -86,6 +83,7 @@ export default function Projects() {
                     {project.description}
                   </p>
                 </div>
+
                 {/* Tech Badges Block */}
                 <div className="pt-8">
                   <div className="flex flex-wrap gap-2">
@@ -131,6 +129,6 @@ export default function Projects() {
           );
         })}
       </div>
-    </section>
+    </div>
   );
 }
