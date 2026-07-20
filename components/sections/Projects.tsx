@@ -78,7 +78,7 @@ export default function Projects() {
                 href={project.url === "null" ? undefined : project.url}
                 rel="noopener noreferrer"
                 target="_blank"
-                className={`border-t border-gray-100 dark:border-gray-900 rounded-sm p-4 space-y-2 flex-1 flex flex-col justify-between ${
+                className={`border-t border-gray-100 dark:border-gray-900 p-4 space-y-2 flex-1 flex flex-col justify-between ${
                   project.url === "null"
                     ? "pointer-events-none"
                     : "cursor-pointer"

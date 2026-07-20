@@ -47,7 +47,7 @@ export default function Recommendations() {
 
   return (
     <section className="flex flex-col gap-6 p-4">
-      <div className="flex items-center justify-between pb-7 border-b border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pb-7 border-b border-gray-200 dark:border-gray-900">
         <h2 className="text-lg sm:text-xl font-bold">Recommendations</h2>
         <a
           href="https://www.linkedin.com/in/christian-james-abendan-2218a640a/details/recommendations/"

@@ -9,7 +9,7 @@ export default function Experience() {
     <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-200">
       <h2 className="text-lg sm:text-xl font-bold">Experience</h2>
       <div className="flex flex-col relative gap-6">
-        <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-500 z-0"></div>
+        <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-100 dark:bg-gray-800 z-0"></div>
 
         {sortedExperiences.map((exp, index) => (
           <div key={exp.id} className="relative pl-7 z-10">
@@ -17,7 +17,7 @@ export default function Experience() {
               className={`absolute left-0 top-1.5 w-3 h-3 border-1 border-accent transition-colors ${
                 index === 0
                   ? "bg-[var(--foreground)]"
-                  : "bg-[var(--background)]"
+                  : "bg-[var(--background)] border-gray-300 dark:border-gray-800"
               }`}
             ></div>
             <div className="flex flex-col gap-1.5">
