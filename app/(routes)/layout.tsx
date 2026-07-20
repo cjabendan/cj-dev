@@ -1,6 +1,6 @@
 "use client";
 
-import FooterSection from "@/components/sections/FooterSection";
+import Footer from "@/components/layout/Footer";
 import { ChevronLeft } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -54,7 +54,7 @@ export default function PagesLayout({
         </span>
       </div>
       {children}
-      <FooterSection />
+      <Footer />
     </main>
   );
 }
