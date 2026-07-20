@@ -13,21 +13,23 @@ export default function PagesLayout({
   const router = useRouter();
 
   const getPageTitle = (path: string) => {
-    if (path.includes("/recommend")) return "Recommend";
     if (path.includes("/tech-stack")) return "Tech Stack";
     if (path.includes("/certifications")) return "Certifications";
+    if (path.includes("/projects")) return "Projects";
+    if (path.includes("/recommend")) return "Recommend";
     return "Page";
   };
 
   const getFallbackHref = (path: string) => {
     if (path.includes("/tech-stack")) return "/#skills";
     if (path.includes("/certifications")) return "/#certs";
+    if (path.includes("/projects")) return "/#projects";
     return "/";
   };
 
   const handleBack = (e: React.MouseEvent) => {
     e.preventDefault();
-    
+
     if (window.history.length > 1) {
       router.back();
     } else {
@@ -39,7 +41,7 @@ export default function PagesLayout({
     <main className="min-h-screen flex flex-col max-w-4xl mx-auto px-6 py-6 sm:pt-10 animate-fade-in">
       <div className="flex items-center gap-2 mb-8 text-sm text-muted-foreground">
         <a
-          href={getFallbackHref(pathname)} 
+          href={getFallbackHref(pathname)}
           onClick={handleBack}
           className="group inline-flex items-center hover:text-foreground transition-colors cursor-pointer"
         >
