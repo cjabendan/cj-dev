@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Skeleton from "@/components/ui/Skeleton";
+import { cn } from "@/lib/utils";
 
 interface Project {
   id: number;
@@ -17,21 +18,35 @@ interface ProjectCardProps {
   project: Project;
   techIconMap: Record<string, string>;
   priority?: boolean;
+  // Layout & Container
   className?: string;
+  contentClassName?: string;
+  // Text Style
+  titleClassName?: string;
+  descriptionClassName?: string;
+  // Badge & Icon
+  badgeClassName?: string;
+  iconClassName?: string;
 }
 
 export default function ProjectCard({
   project,
   techIconMap,
   priority = false,
-  className = "",
+  className,
+  titleClassName,
+  descriptionClassName,
+  iconClassName,
 }: ProjectCardProps) {
   const [isMainImageLoading, setIsMainImageLoading] = useState(true);
   const [loadedIcons, setLoadedIcons] = useState<Record<string, boolean>>({});
 
   return (
     <div
-      className={`flex flex-col w-full border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden ${className}`}
+      className={cn(
+        "flex flex-col w-full border border-gray-100 dark:border-gray-900 rounded-sm overflow-hidden",
+        className,
+      )}
     >
       {/* Main Image Block & Skeleton Overlay */}
       <div className="relative w-full h-[180px] bg-gray-50 dark:bg-gray-900">
@@ -62,14 +77,26 @@ export default function ProjectCard({
         }`}
       >
         <div className="space-y-2">
-          <h3 className="font-semibold text-foreground">{project.title}</h3>
-          <p className="text-sm text-muted-foreground line-clamp-2">
+          <h3
+            className={cn(
+              "text-foreground",
+              titleClassName,
+            )}
+          >
+            {project.title}
+          </h3>
+          <p
+            className={cn(
+              "text-muted-foreground line-clamp-2",
+              descriptionClassName,
+            )}
+          >
             {project.description}
           </p>
         </div>
 
         {/* Tech Badges Block */}
-        <div className="pt-8">
+        <div className="pt-4 sm:pt-8">
           <div className="flex flex-wrap gap-2">
             {project.tech.map((t) => {
               const icon = techIconMap[t];
@@ -78,7 +105,7 @@ export default function ProjectCard({
               return (
                 <span
                   key={t}
-                  className="relative flex items-center gap-1 text-[10px] px-3 py-2 border border-gray-100 dark:border-gray-900 rounded-sm hover:bg-bg-card transition-all min-w-[32px] min-h-[34px]"
+                  className="relative flex items-center justify-center p-2 border border-gray-100 dark:border-gray-900 rounded-sm hover:bg-bg-card transition-all"
                 >
                   {isIconLoading && (
                     <Skeleton className="absolute inset-1 rounded-sm" />
@@ -94,9 +121,12 @@ export default function ProjectCard({
                       onLoad={() =>
                         setLoadedIcons((prev) => ({ ...prev, [t]: true }))
                       }
-                      className={`opacity-80 hover:opacity-100 object-contain w-4 h-4 transition-opacity duration-200 ${
-                        isIconLoading ? "opacity-0" : "opacity-100"
-                      } ${t === "Expo" ? "dark:invert" : ""}`}
+                      className={cn(
+                        "opacity-80 hover:opacity-100 object-contain transition-opacity duration-200",
+                        t === "Expo" && "dark:invert",
+                        isIconLoading ? "opacity-0" : "opacity-100",
+                        iconClassName,
+                      )}
                     />
                   )}
                 </span>
