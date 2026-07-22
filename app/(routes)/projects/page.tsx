@@ -26,6 +26,9 @@ export default function Projects() {
             project={project}
             techIconMap={TECH_ICON_MAP}
             priority={index < 3}
+            titleClassName="font-bold text-base sm:text-lg"
+            descriptionClassName="text-sm sm:text-base"
+            iconClassName="w-4 h-4"
           />
         ))}
       </div>

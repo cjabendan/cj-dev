@@ -5,7 +5,6 @@ import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
 import ProjectCard from "../cards/ProjectCard";
 
-
 const SORTED_PROJECTS = [...projects].sort((a, b) => b.id - a.id);
 
 const TECH_ICON_MAP = techStack.reduce(
@@ -15,7 +14,7 @@ const TECH_ICON_MAP = techStack.reduce(
     });
     return acc;
   },
-  {} as Record<string, string>
+  {} as Record<string, string>,
 );
 
 export default function Projects() {
@@ -33,8 +32,6 @@ export default function Projects() {
           <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
-
-      {/* Project Container */}
       <div className="flex xl:grid xl:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory pb-4 xl:pb-0 scrollbar-none">
         {displayedProjects.map((project, index) => (
           <ProjectCard
@@ -43,6 +40,8 @@ export default function Projects() {
             techIconMap={TECH_ICON_MAP}
             priority={index < 3}
             className="max-w-[340px] md:max-w-none md:w-[calc(50%-0.5rem)] xl:w-full shrink-0 snap-center"
+            titleClassName="font-semibold text-base"
+            descriptionClassName="text-sm"
           />
         ))}
       </div>
