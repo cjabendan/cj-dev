@@ -34,7 +34,7 @@ export default function AccessCard() {
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="group relative flex min-h-[355px] w-full max-w-[250px] cursor-pointer flex-col justify-between overflow-hidden rounded-[16px] border border-white/10 bg-gradient-to-br from-[#3a3a3a] via-[#1a1a1a] to-[#0a0a0a] px-8 pt-12 pb-8 text-white transition-transform duration-150 ease-out [perspective:1000px] [transform-style:preserve-3d] shadow-2xl shadow-black/60 will-change-transform"
+        className="group relative flex min-h-[355px] w-full max-w-[250px] cursor-pointer flex-col justify-between overflow-hidden rounded-[16px] border border-white/10 bg-gradient-to-br from-[#3a3a3a] via-[#1a1a1a] to-[#0a0a0a] px-8 pt-12 pb-8 text-white transition-transform duration-150 ease-out [perspective:1000px] [transform-style:preserve-3d] shadow-lg shadow-black/60 will-change-transform"
         style={{
           transform: "rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
         }}
@@ -54,7 +54,6 @@ export default function AccessCard() {
           }}
         />
 
-        {/* Carbon Fibre Texture */}
         <div className="absolute inset-0 z-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]" />
 
         <div className="relative z-10 flex h-full flex-col justify-between [transform:translateZ(30px)]">

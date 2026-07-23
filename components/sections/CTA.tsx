@@ -26,14 +26,14 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
         </div>
         <span className="text-xs text-gray-400 pl-6">{subLabel}</span>
       </div>
-      <LucideIcons.ChevronRight className="h-4 w-4 text-gray-400 group-hover:translate-x-1 transition-all" />
+      <LucideIcons.ChevronRight className="h-4 w-4 text-gray-400" />
     </a>
   );
 };
 
 export default function CTA() {
   return (
-    <section className="flex mt-2 gap-6 p-4 mb-14">
+    <section className="flex mt-2 gap-6 p-4 mb-14" id="contact">
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
         <div className="md:col-span-3 flex flex-col gap-6">
           <h2 className="text-lg sm:text-xl font-bold tracking-tight">
