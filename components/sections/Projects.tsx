@@ -32,7 +32,7 @@ export default function Projects() {
           <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
-      <div className="flex xl:grid xl:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory pb-4 xl:pb-0 scrollbar-none">
+      <div className="flex xl:grid xl:grid-cols-3 gap-2 overflow-x-auto snap-x snap-mandatory pb-4 xl:pb-0 scrollbar-none">
         {displayedProjects.map((project, index) => (
           <ProjectCard
             key={project.id}

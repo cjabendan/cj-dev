@@ -34,11 +34,11 @@
     "company": "JMS One IT",
     "year": "2026"
   },
-  {
+    {
     "id": 6,
-    "role": "Software Engineer",
-    "type": "Freelance",
-    "company": "Freelance",
+    "role": "IT Instructor",
+    "type": "Part time",
+    "company": "St. Cecilia's College",
     "year": "Present"
   }
 ]
