@@ -14,7 +14,7 @@ import Button from "../ui/Button";
 
 export default function ProfileHeader() {
   const handleScheduleCall = () => {
-    window.open("https://zcal.co/cjamesabendan", "_blank");
+    window.open("https://zcal.co/cjabendan", "_blank");
   };
 
   const handleViewResume = () => {

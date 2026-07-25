@@ -133,7 +133,7 @@ export default function ProjectCard({
                 href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 sm:gap-1.5 border border-gray-100 dark:border-gray-900 rounded-sm px-2.5 py-1 text-xs"
+                className="flex items-center gap-1 sm:gap-1.5 border border-gray-100 dark:border-gray-900 rounded-sm px-2.5 py-1 text-sm"
               >
                 <CodeXml className="w-3.5 h-3.5" />
                 Code
@@ -144,7 +144,7 @@ export default function ProjectCard({
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 sm:gap-1.5 border border-gray-100 dark:border-gray-900 rounded-sm px-2.5 py-1 text-xs"
+                className="flex items-center gap-1 sm:gap-1.5 border border-gray-100 dark:border-gray-900 rounded-sm px-2.5 py-1 text-sm"
               >
                 <ExternalLink className="w-3 h-3" />
                 Live
