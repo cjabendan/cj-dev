@@ -6,6 +6,7 @@
     "image": "/images/projects/purok-sync-v1.png",
     "type": "Web Application",
     "tech": ["Java", "MySQL"],
+    "code": "https://github.com/cjabendan/PurokLink-BDMS",
     "url": "null"
   },
 
@@ -16,6 +17,7 @@
     "image": "/images/projects/truelife-mob.png",
     "type": "Mobile Application",
     "tech": ["Expo", "TypeScript", "Clerk", "Convex"],
+    "code": "https://github.com/cjabendan/TrueLife",
     "url": "null"
   },
   {
@@ -25,6 +27,7 @@
     "image": "/images/projects/arculus.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind", "Supabase"],
+     "code": "https://github.com/cjabendan/Arculus",
     "url": "null"
   },
   {
@@ -34,6 +37,7 @@
     "image": "/images/projects/thesis-v1.png",
     "type": "Web Application",
     "tech": ["Laravel", "PHP", "Node.js", "MySQL"],
+    "code": "https://github.com/cjabendan/School-Guidance-Record-Management-System-SGRMS-",
     "url": "null"
   },
   {
@@ -43,9 +47,9 @@
     "image": "/images/projects/itkonek-mob.png",
     "type": "Web Application",
     "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
+    "code": "https://github.com/DavidSailas/ITKonek",
     "url": "null"
   },
-
   {
     "id": 6,
     "title": "TMI - V2",
@@ -53,6 +57,7 @@
     "image": "/images/projects/tmi-v2.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "code": "https://github.com/cjabendan/tmi-v2",
     "url": "https://tutelamarineinc.vercel.app/"
   }
 ]

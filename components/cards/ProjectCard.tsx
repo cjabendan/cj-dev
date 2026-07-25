@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { CodeXml, ExternalLink } from "lucide-react";
 import Skeleton from "@/components/ui/Skeleton";
 import { cn } from "@/lib/utils";
 
-interface Project {
+export interface Project {
   id: number;
   title: string;
   description: string;
   image: string;
-  url: string;
+  type?: string;
+  code?: string;
+  url?: string;
   tech: string[];
 }
 
@@ -18,13 +21,10 @@ interface ProjectCardProps {
   project: Project;
   techIconMap: Record<string, string>;
   priority?: boolean;
-  // Layout & Container
   className?: string;
   contentClassName?: string;
-  // Text Style
   titleClassName?: string;
   descriptionClassName?: string;
-  // Badge & Icon
   badgeClassName?: string;
   iconClassName?: string;
 }
@@ -40,6 +40,10 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const [isMainImageLoading, setIsMainImageLoading] = useState(true);
   const [loadedIcons, setLoadedIcons] = useState<Record<string, boolean>>({});
+
+  const hasLinks =
+    (project.code && project.code !== "null") ||
+    (project.url && project.url !== "null");
 
   return (
     <div
@@ -67,36 +71,23 @@ export default function ProjectCard({
         />
       </div>
 
-      {/* Project Anchor Tag */}
-      <a
-        href={project.url === "null" ? undefined : project.url}
-        rel="noopener noreferrer"
-        target="_blank"
-        className={`border-t border-gray-100 dark:border-gray-900 p-4 space-y-2 flex-1 flex flex-col justify-between ${
-          project.url === "null" ? "pointer-events-none" : "cursor-pointer"
-        }`}
-      >
-        <div className="space-y-2">
-          <h3
-            className={cn(
-              "text-foreground",
-              titleClassName,
-            )}
-          >
-            {project.title}
-          </h3>
-          <p
-            className={cn(
-              "text-muted-foreground line-clamp-2",
-              descriptionClassName,
-            )}
-          >
-            {project.description}
-          </p>
-        </div>
-
-        {/* Tech Badges Block */}
-        <div className="pt-4 sm:pt-8">
+      {/* Main Content */}
+      <div className="border-t border-gray-100 dark:border-gray-900 flex-1 flex flex-col justify-between">
+        <div className="flex flex-col p-4 space-y-4 gap-2 sm:gap-4">
+          <div className="space-y-2">
+            <h3 className={cn("text-foreground font-bold", titleClassName)}>
+              {project.title}
+            </h3>
+            <p
+              className={cn(
+                "text-muted-foreground line-clamp-2 text-sm",
+                descriptionClassName,
+              )}
+            >
+              {project.description}
+            </p>
+          </div>
+          {/* Tech Badges */}
           <div className="flex flex-wrap gap-2">
             {project.tech.map((t) => {
               const icon = techIconMap[t];
@@ -134,7 +125,34 @@ export default function ProjectCard({
             })}
           </div>
         </div>
-      </a>
+        {/* Footer Links */}
+        {hasLinks && (
+          <div className="border-t border-gray-100 dark:border-gray-900 px-4 py-3 flex gap-2">
+            {project.code && project.code !== "null" && (
+              <a
+                href={project.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 sm:gap-1.5 border border-gray-100 dark:border-gray-900 rounded-sm px-2.5 py-1 text-xs"
+              >
+                <CodeXml className="w-3.5 h-3.5" />
+                Code
+              </a>
+            )}
+            {project.url && project.url !== "null" && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 sm:gap-1.5 border border-gray-100 dark:border-gray-900 rounded-sm px-2.5 py-1 text-xs"
+              >
+                <ExternalLink className="w-3 h-3" />
+                Live
+              </a>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

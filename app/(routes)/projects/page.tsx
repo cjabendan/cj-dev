@@ -1,8 +1,8 @@
-import ProjectCard from "@/components/cards/ProjectCard";
+import ProjectCard, { Project }  from "@/components/cards/ProjectCard";
 import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
 
-const displayedProjects = [...projects].sort((a, b) => b.id - a.id);
+const displayedProjects = [...projects].sort((a, b) => b.id - a.id) as Project[];
 
 const TECH_ICON_MAP = techStack.reduce(
   (acc, category) => {
