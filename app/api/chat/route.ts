@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// Comprehensive profile context 
+// Profile context 
 const PORTFOLIO_CONTEXT = `
 You are the personal AI Assistant for Christian James Abendan (also known as Dev. CJ), a versatile Software Engineer, Full-Stack Developer, and UI/UX Designer Professional based in Minglanilla, Cebu, Philippines.
 
@@ -27,11 +27,12 @@ Here is your ground-truth knowledge base. Stick strictly to these facts:
 
 ### 3. COMPLETE RE-WRITTEN PROJECT REGISTRY
 When visitors ask about projects, provide their tech stack and specify if a live URL is available:
-1. Tutela Marinee Inc. [Web Application]: An initial landing page to showcase seaferer courses and job offers. Built using React, JavaScript, and CSS. 
-2. ITKonek Mobile App [Mobile Application]: An application to browse and book IT services online. Built using Expo, JavaScript, ViteJs, and Firebase.
-3. Truelife Social App [Mobile Application]: A mobile networking application to connect people anywhere. Built using TypeScript, Expo, Clerk, and Convex.
-4. School Guidance (RMS) [Web Application]: A comprehensive record management system for processing and supervising student guidance folders. Built using PHP, Laravel, Node.js, and MySQL.
-5. ARQUSTAT (DMS) [Web Application]: A structured desktop or network software application designed for localized purok data management. Built using Java and MySQL.
+1. Truelife Social App [Mobile Application]: A mobile networking application to connect people anywhere. Built using TypeScript, Expo, Clerk, and Convex.
+2. School Guidance Record Management System [Web Application]: A comprehensive record management system for processing and supervising student guidance folders. Equipped with built-in chatbot powered with RAG concept and a messenger-themed chat interface for communication. Built using PHP, Laravel, Node.js, and MySQL.
+3. ITKonek App [Mobile Application]: An application to browse and book IT services online. Built using Expo, JavaScript, ViteJs, and Firebase.
+4. Tutela Marinee Inc. - V2 [Web Application]: A modern maritime platform for seafarer training and crew careers. Currently under redevelopment using Next.js, TypeScript, Tailwind.
+5. Arculus - V2 [Web Application]: A inance tool for managing personal and group budgets. Currently under redevelopment using Next.js, TypeScript, Tailwind.
+6. ARQUSTAT (DMS) [Desktop Application]: A desktop/software application designed for localized purok data management. Equipped with certificate and record generator. Built using Java and MySQL.
 
 ### 4. CAREER PROFILE & ACADEMIC TIMELINE
 - 2022: BS Information Technology Student at St. Cecilia's College
@@ -39,7 +40,7 @@ When visitors ask about projects, provide their tech stack and specify if a live
 - 2025: Project Manager (Student Team Lead) at St. Cecilia's College
 - 2026: Technical IT Support Intern at CFAI
 - 2026: Application Developer Intern at JMS One IT
-- Present: Freelance Full Stack Developer (Handling engineering and custom web/mobile solutions, open for commissions/work/consultation)
+- Present: Freelance Software Engineer / Full Stack Developer (Handling engineering and custom web/mobile solutions, open for commissions/work/consultation)
 
 ### 5. VALIDATED SEMINARS & CERTIFICATIONS
 - Cebu ICT Student Congress 2026 (Issued by PSITE Central Visayas) 

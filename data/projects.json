@@ -4,19 +4,19 @@
     "title": "ARQUSTAT (DMS)",
     "description": "A software application for purok data management system.",
     "image": "/images/projects/purok-sync-v1.png",
-    "type": "Web Application",
+    "type": "Desktop Application",
     "tech": ["Java", "MySQL"],
     "code": "https://github.com/cjabendan/PurokLink-BDMS",
     "url": "null"
   },
   {
     "id": 2,
-    "title": "Arculus",
+    "title": "Arculus - V2",
     "description": "A finance tool for managing personal and group budgets.",
     "image": "/images/projects/arculus.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind", "Supabase"],
-     "code": "https://github.com/cjabendan/Arculus",
+     "code": "https://github.com/cjabendan/arculus-v2",
     "url": "null"
   },
   {
