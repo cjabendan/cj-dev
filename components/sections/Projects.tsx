@@ -23,7 +23,7 @@ export default function Projects() {
   return (
     <section className="flex flex-col gap-6 p-4" id="projects">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg sm:text-xl font-bold">Recent Projects</h2>
+        <h2 className="text-lg sm:text-xl font-bold">Featured Projects</h2>
         <Link
           href="/projects"
           className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors"
@@ -42,6 +42,7 @@ export default function Projects() {
             className="max-w-[340px] md:max-w-none md:w-[calc(50%-0.5rem)] xl:w-full shrink-0 snap-center"
             titleClassName="font-semibold text-base"
             descriptionClassName="text-sm"
+             iconClassName="w-3.5 h-3.5"
           />
         ))}
       </div>

@@ -9,19 +9,8 @@
     "code": "https://github.com/cjabendan/PurokLink-BDMS",
     "url": "null"
   },
-
   {
     "id": 2,
-    "title": "Truelife Social App",
-    "description": "A mobile application to share stories and connect with others.",
-    "image": "/images/projects/truelife-mob.png",
-    "type": "Mobile Application",
-    "tech": ["Expo", "TypeScript", "Clerk", "Convex"],
-    "code": "https://github.com/cjabendan/TrueLife",
-    "url": "null"
-  },
-  {
-    "id": 3,
     "title": "Arculus",
     "description": "A finance tool for managing personal and group budgets.",
     "image": "/images/projects/arculus.png",
@@ -31,7 +20,27 @@
     "url": "null"
   },
   {
+    "id": 3,
+    "title": "TMI - V2",
+    "description": "A modern maritime platform for seafarer training and crew careers.",
+    "image": "/images/projects/tmi-v2.png",
+    "type": "Web Application",
+    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "code": "https://github.com/cjabendan/tmi-v2",
+    "url": "https://tutelamarineinc.vercel.app/"
+  },
+  {
     "id": 4,
+    "title": "ITKonek App",
+    "description": "An application to browse and book IT services online.",
+    "image": "/images/projects/itkonek-mob.png",
+    "type": "Web Application",
+    "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
+    "code": "https://github.com/DavidSailas/ITKonek",
+    "url": "null"
+  },
+   {
+    "id": 5,
     "title": "School Guidance (RMS)",
     "description": "A comprehensive system for managing student guidance records.",
     "image": "/images/projects/thesis-v1.png",
@@ -41,23 +50,13 @@
     "url": "null"
   },
   {
-    "id": 5,
-    "title": "ITKonek Mobile App",
-    "description": "An application to browse and book IT services online.",
-    "image": "/images/projects/itkonek-mob.png",
-    "type": "Web Application",
-    "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
-    "code": "https://github.com/DavidSailas/ITKonek",
-    "url": "null"
-  },
-  {
     "id": 6,
-    "title": "TMI - V2",
-    "description": "A modern maritime platform for seafarer training and crew careers.",
-    "image": "/images/projects/tmi-v2.png",
-    "type": "Web Application",
-    "tech": ["Next.js", "TypeScript", "Tailwind"],
-    "code": "https://github.com/cjabendan/tmi-v2",
-    "url": "https://tutelamarineinc.vercel.app/"
+    "title": "Truelife Social App",
+    "description": "A mobile application to share stories and connect with others.",
+    "image": "/images/projects/truelife-mob.png",
+    "type": "Mobile Application",
+    "tech": ["Expo", "TypeScript", "Clerk", "Convex"],
+    "code": "https://github.com/cjabendan/TrueLife",
+    "url": "null"
   }
 ]
