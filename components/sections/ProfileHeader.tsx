@@ -8,14 +8,19 @@ import {
   VerifiedIcon,
   ChevronRight,
   Mail,
+  LucideIcon,
 } from "lucide-react";
 import ThemeToggle from "../ui/ThemeToggle";
 import Button from "../ui/Button";
+import contactData from "@/data/contact.json";
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  Mail: Mail,
+  Calendar: Calendar,
+};
 
 export default function ProfileHeader() {
-  const handleScheduleCall = () => {
-    window.open("https://zcal.co/cjabendan", "_blank");
-  };
+  const sortedContacts = [...contactData].sort((a, b) => b.id - a.id);
 
   const handleViewResume = () => {
     window.open("/assets/resume.pdf", "_blank");
@@ -67,25 +72,53 @@ export default function ProfileHeader() {
               <span className="block max-[490px]:hidden">Minglanilla, </span>
               Cebu, Philippines
             </p>
-            <div className="flex items-center flex-wrap py-1 sm:py-2">
-              <p className="text-[10px] sm:text-base font-medium">
+            <div className="flex truncate py-1.5 sm:py-2">
+              <p className="text-[11px] sm:text-base font-medium">
                 <span>Aspiring Software Engineer</span>
                 <span className="text-gray-400 mx-1">\</span>
                 <span>Web & Mobile Developer</span>
               </p>
             </div>
-            <div className="flex flex-col items-start min-[437px]:flex-row gap-1 sm:gap-2 mt-1 md:mt-2">
-              <Button
-                variant="primary"
-                icon={<Calendar className="w-3 h-3 sm:w-4 sm:h-4" />}
-                onClick={handleScheduleCall}
-              >
-                Schedule a Call
-              </Button>
-              <div className="hidden sm:block">
-                <Button variant="secondary" icon={<Mail className="w-4 h-4" />}>
-                  Send Email
-                </Button>
+            <div className="flex flex-col items-start sm:flex-row gap-1 sm:gap-2 mt-1 md:mt-2">
+              <div className="flex gap-1.5 sm:gap-2">
+                {sortedContacts.map((contact) => {
+                  const Icon = ICON_MAP[contact.icon];
+
+                  return (
+                    <a
+                      key={contact.id}
+                      href={contact.link}
+                      target={
+                        contact.link.startsWith("http") ? "_blank" : "_self"
+                      }
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant={
+                          (contact.variant as "primary" | "secondary") ||
+                          "secondary"
+                        }
+                        icon={
+                          Icon ? (
+                            <Icon className="w-3 h-3 sm:w-4 sm:h-4" />
+                          ) : null
+                        }
+                      >
+                        {contact.btnMarkup ? (
+                          contact.btnMarkup.map((item, idx) => (
+                            <span key={idx} className={item.className}>
+                              {item.text}
+                            </span>
+                          ))
+                        ) : (
+                          <span className="hidden min-[350px]:inline">
+                            {contact.platform}
+                          </span>
+                        )}
+                      </Button>
+                    </a>
+                  );
+                })}
               </div>
               <Button
                 variant="default"

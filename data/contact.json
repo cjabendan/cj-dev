@@ -2,14 +2,28 @@
   {
     "id": 1,
     "platform": "Email",
+    "variant": "secondary",
+    "ctaLabel": "Email",
+    "subLabel": "cjamesabendan@gmail.com",
     "link": "mailto:cjamesabendan@gmail.com",
-    "icon": "Mail"
-  
+    "icon": "Mail",
+    "btnMarkup": [
+      { "text": "Email", "className": "hidden min-[360px]:inline sm:hidden" },
+      { "text": "Send Email", "className": "hidden sm:inline" }
+    ]
   },
   {
     "id": 2,
-    "platform": "Let's talk",
+    "platform": "Zcal",
+    "variant": "primary",
+    "ctaLabel": "Let's Talk",
+    "subLabel": "Schedule a Call",
     "link": "https://zcal.co/cjabendan",
-    "icon": "Calendar"
+    "icon": "Calendar",
+    "btnMarkup": [
+      { "text": "Schedule ", "className": "inline" },
+      { "text": "a ", "className": "hidden sm:inline" },
+      { "text": "Call", "className": "inline" }
+    ]
   }
 ]
