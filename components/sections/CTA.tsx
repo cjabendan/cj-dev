@@ -10,9 +10,6 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
     | React.ElementType<LucideProps>
     | undefined;
 
-  const subLabel =
-    item.platform === "Email" ? "cjamesabendan@gmail.com" : "Schedule a Call";
-
   return (
     <a
       href={item.link}
@@ -22,9 +19,9 @@ const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2 text-sm font-medium">
           {Icon && <Icon className="h-4 w-4 text-foreground/80" />}
-          <h3>{item.platform}</h3>
+          <h3>{item.ctaLabel}</h3>
         </div>
-        <span className="text-xs text-gray-400 pl-6">{subLabel}</span>
+        <span className="text-xs text-gray-400 pl-6">{item.subLabel}</span>
       </div>
       <LucideIcons.ChevronRight className="h-4 w-4 text-gray-400" />
     </a>
