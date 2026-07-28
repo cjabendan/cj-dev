@@ -16,7 +16,7 @@ export default function TechStack() {
       <div className="flex items-center justify-between">
         <h2 className="text-lg sm:text-xl font-bold">Tech Stack</h2>
         <Link
-          href="/tech-stack"
+          href="/tech"
           className="flex items-center gap-1 text-xs text-foreground/70 hover:text-foreground transition-colors"
         >
           View All

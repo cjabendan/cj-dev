@@ -13,7 +13,8 @@ export default function PagesLayout({
   const router = useRouter();
 
   const getPageTitle = (path: string) => {
-    if (path.includes("/tech-stack")) return "Tech Stack";
+    if (path.includes("/experiences")) return "Experiences";
+    if (path.includes("/tech")) return "Tech Stack";
     if (path.includes("/certifications")) return "Certifications";
     if (path.includes("/projects")) return "Projects";
     if (path.includes("/recommend")) return "Recommend";
@@ -21,7 +22,8 @@ export default function PagesLayout({
   };
 
   const getFallbackHref = (path: string) => {
-    if (path.includes("/tech-stack")) return "/#skills";
+
+    if (path.includes("/tech")) return "/#skills";
     if (path.includes("/certifications")) return "/#certs";
     if (path.includes("/projects")) return "/#projects";
     return "/";
