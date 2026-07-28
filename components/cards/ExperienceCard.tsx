@@ -50,7 +50,7 @@ export default function ExperienceCard({ exp, hasMultipleRoles }: ExperienceCard
           </p>
         )}
         {exp.skills && exp.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 pt-2">
+          <div className="flex flex-wrap gap-1.5 pt-4">
             {exp.skills.map((skill, idx) => (
               <span
                 key={idx}

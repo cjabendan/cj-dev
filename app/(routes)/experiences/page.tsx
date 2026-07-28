@@ -64,7 +64,7 @@ export default function ExperiencesPage() {
 
                 {/* Roles Container */}
                 <div
-                  className={`flex flex-col gap-8 ${
+                  className={`flex flex-col gap-8 sm:gap-10 ${
                     hasMultipleRoles
                       ? "border-l border-gray-200/60 dark:border-gray-800 pl-6"
                       : ""
