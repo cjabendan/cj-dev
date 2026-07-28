@@ -3,32 +3,33 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Banner() {
   return (
-    <div className="w-full px-4 py-2 animate-fade-in">
+    <div className="w-full px-4 pt-2 sm:pt-3 animate-fade-in">
       <a
         href="#contact"
-        className="group relative flex flex-col gap-2 p-3 rounded-sm border border-emerald-500/30 bg-emerald-500/5 hover:bg-emerald-500/10 transition-all duration-200"
+        className="group relative flex flex-col gap-1.5 sm:gap-2 p-3.5 rounded-sm bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-700 hover:from-violet-600 hover:via-purple-600 hover:to-fuchsia-700 text-white shadow-lg shadow-purple-950/20 transition-all duration-300 overflow-hidden"
       >
-        {/* Top Row: Availability Badge + Direct Action */}
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <span className="relative flex h-2 w-2 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 tracking-wide">
-              AVAILABLE FOR HIRE
-            </span>
-          </div>
+        {/* Grid Overlay */}
+        <div
+          className="absolute inset-0 opacity-8 pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+            backgroundSize: "12px 12px",
+          }}
+        />
 
-          <div className="flex items-center gap-1 text-[11px] font-medium text-emerald-600 dark:text-emerald-400 group-hover:underline">
-            <span>Let&apos;s Talk</span>
+        {/* Ambient Top Right Glow */}
+        <div className="absolute -top-10 -right-10 w-28 h-28 bg-fuchsia-400/25 rounded-full blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
+        <div className="relative z-10 flex items-center justify-between">
+          <span className="text-sm font-bold tracking-wider text-violet-100 uppercase">
+            AVAILABLE FOR HIRE
+          </span>
+          <div className="flex items-center gap-1 text-xs font-semibold text-violet-100 group-hover:text-white group-hover:underline">
+            <span className="block sm:hidden">Let&apos;s Talk</span>
             <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </div>
         </div>
-
-        {/* Middle Row: Value Proposition */}
-        <p className="text-xs text-foreground/80 leading-snug">
-          Open for freelance projects, full-stack web/mobile apps.
+        <p className="relative z-10 text-xs text-violet-100/90 font-normal leading-snug">
+          I&apos;m open for freelance projects, full-stack web/mobile apps.
         </p>
       </a>
     </div>

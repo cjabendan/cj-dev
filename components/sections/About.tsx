@@ -4,7 +4,7 @@ import TechStack from "./TechStack";
 import Experience from "./Experience";
 import Certifications from "./Certifications";
 import AccessCard from "../cards/AccessCard";
-// import Banner from "../ui/Banner";
+import Banner from "../ui/Banner";
 
 export default function About() {
   const aboutText = (
@@ -24,7 +24,7 @@ export default function About() {
   return (
     <section>
       {/* DESKTOP LAYOUT*/}
-      <div className="hidden md:grid grid-cols-6 gap-2">
+      <div className="hidden md:grid grid-cols-6">
         <div className="col-span-4 flex flex-col gap-2">
           {aboutText}
           <TechStack />
@@ -32,7 +32,7 @@ export default function About() {
         </div>
         <div className="col-span-2 flex flex-col gap-2 animate-fade-in animation-delay-200">
           <AccessCard />
-          {/* <Banner /> */}
+          <Banner />
           <Experience />
         </div>
       </div>
@@ -43,9 +43,9 @@ export default function About() {
         <div className="mt-2 animate-fade-in animation-delay-200">
           <AccessCard />
         </div>
-        {/* <div className="mt-2 animate-fade-in animation-delay-200">
+        <div className="mt-2 animate-fade-in animation-delay-200">
            <Banner />
-        </div> */}
+        </div>
         <div className="animate-fade-in animation-delay-200">
           <Experience />
         </div>
