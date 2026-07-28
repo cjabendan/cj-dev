@@ -22,7 +22,7 @@ export default function PagesLayout({
   };
 
   const getFallbackHref = (path: string) => {
-
+    if (path.includes("/experiences")) return "/#experience";
     if (path.includes("/tech")) return "/#skills";
     if (path.includes("/certifications")) return "/#certs";
     if (path.includes("/projects")) return "/#projects";

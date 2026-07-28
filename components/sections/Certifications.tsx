@@ -27,7 +27,7 @@ export default function Certifications() {
             href={cert.url == "null" ? undefined : cert.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex flex-col gap-1 border border-gray-100 dark:border-gray-900 rounded-sm py-3 px-4 hover:bg-bg-card transition-colors ${
+            className={`flex flex-col gap-1 border border-gray-200/60 dark:border-gray-900 rounded-sm py-3 px-4 hover:bg-bg-card transition-colors ${
               cert.url === "null" || !cert.url
                 ? "pointer-events-none"
                 : "cursor-pointer"

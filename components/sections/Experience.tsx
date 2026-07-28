@@ -8,7 +8,7 @@ export default function Experience() {
     .slice(0, 4);
 
   return (
-    <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-200">
+    <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-200" id="experience">
       <div className="flex items-center justify-between">
         <h2 className="text-lg sm:text-xl font-bold">Experience</h2>
         <Link
@@ -21,7 +21,7 @@ export default function Experience() {
       </div>
 
       <div className="flex flex-col relative gap-6 mt-5.5">
-        <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-200 dark:bg-gray-800 z-0"></div>
+        <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-200/60 dark:bg-gray-800 z-0"></div>
 
         {sortedExperiences.map((exp, index) => (
           <div key={exp.id} className="relative pl-7 z-10">
