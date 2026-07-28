@@ -33,7 +33,7 @@ export default function Certifications() {
                 : "cursor-pointer"
             }`}
           >
-            <span className="text-sm font-medium leading-tight">
+            <span className="text-sm font-semibold leading-tight">
               {cert.title}
             </span>
             <div className="flex justify-between items-center">

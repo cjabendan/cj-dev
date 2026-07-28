@@ -100,7 +100,7 @@ export default function ProfileHeader() {
                         }
                         icon={
                           Icon ? (
-                            <Icon className="w-3 h-3 sm:w-4 sm:h-4" />
+                            <Icon className="w-2.5 h-2.5 sm:w-4 sm:h-4" />
                           ) : null
                         }
                       >
