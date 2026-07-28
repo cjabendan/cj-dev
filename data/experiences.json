@@ -24,7 +24,7 @@
     "end": "NOV 2025",
     "duration": "6 mos",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Architected full-stack web applications, integrating modern React front-ends with server-side logic and databases.",
+    "description": "Architected full-stack web applications, integrating blade views for front-ends with server-side logic and databases.",
     "skills": ["Laravel", "AI Chat-bot", "RAG Pipeline", "Ollama", "Pinecone", "Livewire", "Real Time", "SQL"]
   },
   {
@@ -38,8 +38,8 @@
     "end": "NOV 2025",
     "duration": "6 mos",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Led capstone development teams in planning, feature scoping, and executing software projects from concept to deployment.",
-    "skills": ["Project Management", "Agile", "Reseacher"]
+    "description": "Led capstone development teams in planning, feature scoping, and executing software projects from concept to development.",
+    "skills": ["Project Management", "Agile", "SDLC", "Reseacher"]
   },
   {
     "id": 4,
@@ -63,11 +63,11 @@
     "logo": "JMS",
     "year": "2026",
     "start": "JAN 2026",
-    "end": "MAR 2026",
-    "duration": "3 mos",
+    "end": "APR 2026",
+    "duration": "4 mos",
     "location": "Cebu, Philippines",
-    "description": "Developed web and mobile application features, optimizing UI performance and collaborating with senior developers.",
-    "skills": ["React Native", "TypeScript", "Tailwind CSS"]
+    "description": "Developed web and mobile application features, optimizing UI performance and collaborating with other intern developers.",
+    "skills": ["React Native", "TypeScript", "Tailwind CSS", "Git", "UI/UX"]
   },
   {
     "id": 6,
@@ -78,7 +78,7 @@
     "year": "2026",
     "start": "AUG 2026",
     "end": "PRESENT",
-    "duration": "Ongoing",
+    "duration": "",
     "location": "Lapu-Lapu, Cebu, Philippines",
     "description": "Building custom web applications, mobile apps, and full-stack solutions for enterprise client projects.",
     "skills": ["Full-Stack Development", "React", "Next.js", "Tailwind CSS"]
@@ -92,7 +92,7 @@
     "year": "2026",
     "start": "AUG 2026",
     "end": "PRESENT",
-    "duration": "Ongoing",
+    "duration": "",
     "location": "Minglanilla, Cebu, Philippines",
     "description": "Teaching IT courses in Intro to Computing, C Programming Fundamentals, and Fundamentals of Computer, guiding students in core logic and hardware concepts.",
     "skills": [
