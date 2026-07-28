@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "role": "Fuul Stack Developer",
+    "role": "Full Stack Developer",
     "type": "Student",
     "company": "St. Cecilia's College",
     "logo": "SCC",
-    "year": "2023",
+    "year": "2024",
     "start": "SEP 2024",
     "end": "DEC 2024",
     "duration": "4 mos",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Worked on foundational web development projects, developing core front-end layouts and application logic.",
-    "skills": ["HTML/CSS", "JavaScript"]
+    "description": "Worked on foundational software application, developing core front-end layouts and application logic.",
+    "skills": ["Software Development", "Java", "MySQL", "Netbeans", "System Design"]
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
     "duration": "6 mos",
     "location": "Minglanilla, Cebu, Philippines",
     "description": "Architected full-stack web applications, integrating modern React front-ends with server-side logic and databases.",
-    "skills": ["React", "Node.js", "SQL"]
+    "skills": ["Laravel", "AI Chat-bot", "RAG Pipeline", "Ollama", "Pinecone", "Livewire", "Real Time", "SQL"]
   },
   {
     "id": 3,
@@ -38,8 +38,8 @@
     "end": "NOV 2025",
     "duration": "6 mos",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Led student development teams in planning, feature scoping, and executing software projects from concept to deployment.",
-    "skills": ["Project Management", "Agile"]
+    "description": "Led capstone development teams in planning, feature scoping, and executing software projects from concept to deployment.",
+    "skills": ["Project Management", "Agile", "Reseacher"]
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
     "duration": "4 mos",
     "location": "Cebu, Philippines",
     "description": "Provided hardware diagnostics, system troubleshooting, network setup, and technical maintenance support.",
-    "skills": ["IT Support", "Hardware Diagnostic", "Networking"]
+    "skills": ["IT Support", "Hardware Diagnostics", "Networking"]
   },
   {
     "id": 5,
@@ -64,23 +64,42 @@
     "year": "2026",
     "start": "JAN 2026",
     "end": "MAR 2026",
-    "duration": "6 mos",
+    "duration": "3 mos",
     "location": "Cebu, Philippines",
     "description": "Developed web and mobile application features, optimizing UI performance and collaborating with senior developers.",
     "skills": ["React Native", "TypeScript", "Tailwind CSS"]
   },
   {
     "id": 6,
-    "role": "Software Engineer",
-    "type": "Freelance",
-    "company": "Contract / On-Call",
-    "logo": "SE",
+    "role": "Application Developer",
+    "type": "Part Time",
+    "company": "JMS One IT",
+    "logo": "JMS",
     "year": "2026",
-    "start": "MAY 2026",
-    "end": "Present",
+    "start": "AUG 2026",
+    "end": "PRESENT",
     "duration": "Ongoing",
-    "location": "Remote",
-    "description": "Building custom web applications, mobile apps, and full-stack solutions for client projects.",
+    "location": "Lapu-Lapu, Cebu, Philippines",
+    "description": "Building custom web applications, mobile apps, and full-stack solutions for enterprise client projects.",
     "skills": ["Full-Stack Development", "React", "Next.js", "Tailwind CSS"]
+  },
+  {
+    "id": 7,
+    "role": "IT College Instructor",
+    "type": "Part Time",
+    "company": "St. Cecilia's College",
+    "logo": "SCC",
+    "year": "2026",
+    "start": "AUG 2026",
+    "end": "PRESENT",
+    "duration": "Ongoing",
+    "location": "Minglanilla, Cebu, Philippines",
+    "description": "Teaching IT courses in Intro to Computing, C Programming Fundamentals, and Fundamentals of Computer, guiding students in core logic and hardware concepts.",
+    "skills": [
+      "C Programming",
+      "Computer Fundamentals",
+      "Programming Logic",
+      "Curriculum Delivery"
+    ]
   }
 ]
