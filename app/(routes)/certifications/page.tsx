@@ -5,7 +5,7 @@ export default function CertificationsPage() {
 
   return (
     <div className="space-y-6 animate-fade-in mb-auto">
-      <h1 className="text-xl sm:text-2xl font-bold">All Certifications</h1>
+      <h1 className="text-xl sm:text-2xl font-bold">Certifications</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-14">
         {allCertifications.map((cert) => (

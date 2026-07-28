@@ -1,44 +1,86 @@
 [
   {
     "id": 1,
-    "role": "Developer",
+    "role": "Fuul Stack Developer",
     "type": "Student",
     "company": "St. Cecilia's College",
-    "year": "2023"
+    "logo": "SCC",
+    "year": "2023",
+    "start": "SEP 2024",
+    "end": "DEC 2024",
+    "duration": "4 mos",
+    "location": "Minglanilla, Cebu, Philippines",
+    "description": "Worked on foundational web development projects, developing core front-end layouts and application logic.",
+    "skills": ["HTML/CSS", "JavaScript"]
   },
   {
     "id": 2,
     "role": "Full Stack Developer",
     "type": "Student",
     "company": "St. Cecilia's College",
-    "year": "2025"
+    "logo": "SCC",
+    "year": "2025",
+    "start": "JUN 2025",
+    "end": "NOV 2025",
+    "duration": "6 mos",
+    "location": "Minglanilla, Cebu, Philippines",
+    "description": "Architected full-stack web applications, integrating modern React front-ends with server-side logic and databases.",
+    "skills": ["React", "Node.js", "SQL"]
   },
   {
     "id": 3,
     "role": "Project Manager",
     "type": "Student",
     "company": "St. Cecilia's College",
-    "year": "2025"
+    "logo": "SCC",
+    "year": "2025",
+    "start": "JUN 2025",
+    "end": "NOV 2025",
+    "duration": "6 mos",
+    "location": "Minglanilla, Cebu, Philippines",
+    "description": "Led student development teams in planning, feature scoping, and executing software projects from concept to deployment.",
+    "skills": ["Project Management", "Agile"]
   },
   {
     "id": 4,
     "role": "Technical IT Support",
     "type": "Intern",
     "company": "CFAI",
-    "year": "2026"
+    "logo": "CFAI",
+    "year": "2026",
+    "start": "JAN 2026",
+    "end": "APR 2026",
+    "duration": "4 mos",
+    "location": "Cebu, Philippines",
+    "description": "Provided hardware diagnostics, system troubleshooting, network setup, and technical maintenance support.",
+    "skills": ["IT Support", "Hardware Diagnostic", "Networking"]
   },
   {
     "id": 5,
     "role": "Application Developer",
     "type": "Intern",
     "company": "JMS One IT",
-    "year": "2026"
+    "logo": "JMS",
+    "year": "2026",
+    "start": "JAN 2026",
+    "end": "MAR 2026",
+    "duration": "6 mos",
+    "location": "Cebu, Philippines",
+    "description": "Developed web and mobile application features, optimizing UI performance and collaborating with senior developers.",
+    "skills": ["React Native", "TypeScript", "Tailwind CSS"]
   },
-    {
+  {
     "id": 6,
     "role": "Software Engineer",
     "type": "Freelance",
-    "company": "Contract/On-Call",
-    "year": "Present"
+    "company": "Contract / On-Call",
+    "logo": "SE",
+    "year": "2026",
+    "start": "MAY 2026",
+    "end": "Present",
+    "duration": "Ongoing",
+    "location": "Remote",
+    "description": "Building custom web applications, mobile apps, and full-stack solutions for client projects.",
+    "skills": ["Full-Stack Development", "React", "Next.js", "Tailwind CSS"]
   }
 ]
