@@ -21,7 +21,7 @@ export default function Experience() {
       </div>
 
       <div className="flex flex-col relative gap-6 mt-5.5">
-        <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-200/50 dark:bg-gray-800 z-0"></div>
+        <div className="absolute left-[6px] top-3 bottom-0 w-[1px] bg-gray-200 dark:bg-gray-800 z-0"></div>
 
         {sortedExperiences.map((exp, index) => (
           <div key={exp.id} className="relative pl-7 z-10">

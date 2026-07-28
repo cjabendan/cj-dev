@@ -43,7 +43,7 @@ export default function ExperiencesPage() {
             <div key={group.company} className="relative flex gap-4 sm:gap-6">
               {/* Left Column: Logo & Vertical Line */}
               <div className="relative flex flex-col items-center shrink-0 self-stretch">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-sm bg-[var(--background)] dark:bg-[var(--foreground)] border border-gray-300 dark:border-gray-700 flex items-center justify-center text-xs text-accent sm:text-sm font-semibold z-10">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-sm bg-[var(--background)] border border-gray-300 dark:border-gray-700 flex items-center justify-center text-xs  sm:text-sm font-semibold text-black dark:text-white z-10">
                   {group.logo || group.company.slice(0, 2).toUpperCase()}
                 </div>
                 {!isLast && (
@@ -52,21 +52,21 @@ export default function ExperiencesPage() {
               </div>
 
               {/* Right Column: Experience Details */}
-              <div className="flex flex-col gap-4 pb-8 flex-1">
+              <div className="flex flex-col gap-6 pb-8 flex-1">
                 <div>
                   <h2 className="text-base sm:text-lg font-bold">
                     {group.company}
                   </h2>
-                  <div className="flex items-center gap-2 text-xs text-zinc-400 dark:text-zinc-800">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm text-zinc-400 dark:text-zinc-500">
                     {group.location && <span>{group.location}</span>}
                   </div>
                 </div>
 
                 {/* Roles Container */}
                 <div
-                  className={`flex flex-col gap-6 ${
+                  className={`flex flex-col gap-8 ${
                     hasMultipleRoles
-                      ? "border-l border-gray-200 dark:border-gray-800 pl-6"
+                      ? "border-l border-gray-200/60 dark:border-gray-800 pl-6"
                       : ""
                   }`}
                 >
