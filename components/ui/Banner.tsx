@@ -5,7 +5,8 @@ export default function Banner() {
   return (
     <div className="w-full px-4 pt-2 sm:pt-3 animate-fade-in">
       <a
-        href="#contact"
+        href="https://zcal.co/cjabendan"
+        target="_blank"
         className="group relative flex flex-col gap-1.5 sm:gap-2 p-3.5 rounded-sm bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-700 hover:from-violet-600 hover:via-purple-600 hover:to-fuchsia-700 text-white shadow-lg shadow-purple-950/20 transition-all duration-300 overflow-hidden"
       >
         {/* Grid Overlay */}

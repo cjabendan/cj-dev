@@ -41,17 +41,17 @@ export default function ExperiencesPage() {
 
           return (
             <div key={group.company} className="relative flex gap-4 sm:gap-6">
-              {/* Left Column: Logo & Vertical Line */}
+              {/* Left Column */}
               <div className="relative flex flex-col items-center shrink-0 self-stretch">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-sm bg-[var(--background)] border border-gray-300 dark:border-gray-700 flex items-center justify-center text-xs  sm:text-sm font-semibold text-black dark:text-white z-10">
                   {group.logo || group.company.slice(0, 2).toUpperCase()}
                 </div>
                 {!isLast && (
-                  <div className="absolute bg-gray-200 dark:bg-gray-800 w-[1px] top-0 bottom-0 left-1/2 -translate-x-1/2 z-0" />
+                  <div className="absolute bg-gray-300 dark:bg-gray-700 w-[0.5px] top-0 bottom-0 left-1/2 -translate-x-1/2 z-0" />
                 )}
               </div>
 
-              {/* Right Column: Experience Details */}
+              {/* Right Column */}
               <div className="flex flex-col gap-6 pb-8 flex-1">
                 <div>
                   <h2 className="text-base sm:text-lg font-bold">
@@ -66,7 +66,7 @@ export default function ExperiencesPage() {
                 <div
                   className={`flex flex-col gap-8 sm:gap-10 ${
                     hasMultipleRoles
-                      ? "border-l border-gray-200/60 dark:border-gray-800 pl-6"
+                      ? "border-l border-gray-200 dark:border-gray-800 pl-6"
                       : ""
                   }`}
                 >

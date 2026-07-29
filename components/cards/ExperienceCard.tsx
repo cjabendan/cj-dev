@@ -19,7 +19,10 @@ interface ExperienceCardProps {
   hasMultipleRoles: boolean;
 }
 
-export default function ExperienceCard({ exp, hasMultipleRoles }: ExperienceCardProps) {
+export default function ExperienceCard({
+  exp,
+  hasMultipleRoles,
+}: ExperienceCardProps) {
   return (
     <div className="relative flex flex-col gap-4">
       {hasMultipleRoles && (
@@ -27,14 +30,18 @@ export default function ExperienceCard({ exp, hasMultipleRoles }: ExperienceCard
       )}
 
       {/* Role & Duration */}
-      <div>
-        <h3 className="text-sm sm:text-base font-bold">
-          {exp.role}
-        </h3>
-        {/* <div className="text-xs text-zinc-400 tracking-wider uppercase">{exp.type}</div> */}
+      <div className="flex flex-col gap-[2px]">
+        <h3 className="text-sm sm:text-base font-bold">{exp.role}</h3>
+        <div className="block sm:hidden text-xs text-zinc-400 dark:text-zinc-500  tracking-wider uppercase">
+          {exp.type}
+        </div>
         <div className="flex gap-1 sm:gap-1.5 text-xs text-zinc-400 dark:text-zinc-500 tracking-wider">
+          <div className="hidden sm:block text-xs tracking-wider uppercase">
+            {exp.type}
+          </div>
+          <div className="hidden sm:block text-zinc-300 dark:text-zinc-700 ">|</div>
           <div className="uppercase">{exp.start}</div>
-          <div>-</div>
+          <div className="text-zinc-300 dark:text-zinc-700">-</div>
           <div className="uppercase">{exp.end}</div>
           {exp.duration && (
             <div className="lowercase">{`· ${exp.duration}`}</div>
