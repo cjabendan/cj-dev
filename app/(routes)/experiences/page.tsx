@@ -31,7 +31,7 @@ export default function ExperiencesPage() {
     }, []);
 
   return (
-    <div className="max-w-3xl space-y-8 animate-fade-in mb-14">
+    <div className="space-y-6 animate-fade-in mb-14">
       <h1 className="text-xl sm:text-2xl font-bold">Experience</h1>
 
       <div className="flex flex-col">

@@ -71,21 +71,7 @@
   },
   {
     "id": 6,
-    "role": "Application Developer",
-    "type": "Part Time",
-    "company": "JMS One IT",
-    "logo": "JMS",
-    "year": "Present",
-    "start": "AUG 2026",
-    "end": "Present",
-    "duration": "",
-    "location": "Lapu-Lapu, Cebu, Philippines",
-    "description": "Building custom web applications, mobile apps, and full-stack solutions for enterprise client projects.",
-    "skills": ["Full-Stack Development", "React", "Next.js", "Tailwind CSS"]
-  },
-  {
-    "id": 7,
-    "role": "IT College Instructor",
+    "role": "IT Instructor",
     "type": "Part Time",
     "company": "St. Cecilia's College",
     "logo": "SCC",

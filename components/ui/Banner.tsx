@@ -21,10 +21,10 @@ export default function Banner() {
         {/* Ambient Top Right Glow */}
         <div className="absolute -top-10 -right-10 w-28 h-28 bg-fuchsia-400/25 rounded-full blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
         <div className="relative z-10 flex items-center justify-between">
-          <span className="text-sm font-bold tracking-wider text-violet-100 uppercase">
+          <span className="text-sm font-bold tracking-wider text-white/90 uppercase">
             AVAILABLE FOR HIRE
           </span>
-          <div className="flex items-center gap-1 text-xs font-semibold text-violet-100 group-hover:text-white group-hover:underline">
+          <div className="flex items-center gap-1 text-xs font-semibold text-white/90 group-hover:text-white group-hover:underline">
             <span className="block sm:hidden">Let&apos;s Talk</span>
             <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </div>
