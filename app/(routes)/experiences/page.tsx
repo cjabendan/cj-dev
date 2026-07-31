@@ -31,10 +31,10 @@ export default function ExperiencesPage() {
     }, []);
 
   return (
-    <div className="space-y-6 animate-fade-in mb-14">
+    <div className="space-y-6 animate-fade-in mb-auto">
       <h1 className="text-xl sm:text-2xl font-bold">Experience</h1>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mb-14">
         {groupedExperiences.map((group, index) => {
           const isLast = index === groupedExperiences.length - 1;
           const hasMultipleRoles = group.roles.length > 1;
