@@ -7,7 +7,8 @@
     "type": "Desktop Application",
     "tech": ["Java", "MySQL"],
     "code": "https://github.com/cjabendan/PurokLink-BDMS",
-    "url": "null"
+    "url": "null",
+    "feature": "false"
   },
   {
     "id": 2,
@@ -16,8 +17,9 @@
     "image": "/images/projects/arculus.png",
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind", "Supabase"],
-     "code": "https://github.com/cjabendan/arculus-v2",
-    "url": "null"
+    "code": "https://github.com/cjabendan/arculus-v2",
+    "url": "null",
+     "feature": "false"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "type": "Web Application",
     "tech": ["Next.js", "TypeScript", "Tailwind"],
     "code": "https://github.com/cjabendan/tmi-v2",
-    "url": "https://tutelamarineinc.vercel.app/"
+    "url": "https://tutelamarineinc.vercel.app/",
+    "feature": "false"
   },
   {
     "id": 4,
@@ -37,9 +40,10 @@
     "type": "Web Application",
     "tech": ["Expo", "JavaScript", "ViteJs", "Firebase"],
     "code": "https://github.com/DavidSailas/ITKonek",
-    "url": "null"
+    "url": "null",
+    "feature": "true"
   },
-   {
+  {
     "id": 5,
     "title": "School Guidance (RMS)",
     "description": "A comprehensive system for managing student guidance records.",
@@ -47,7 +51,8 @@
     "type": "Web Application",
     "tech": ["Laravel", "PHP", "Node.js", "MySQL"],
     "code": "https://github.com/cjabendan/School-Guidance-Record-Management-System-SGRMS-",
-    "url": "null"
+    "url": "null",
+    "feature": "true"
   },
   {
     "id": 6,
@@ -57,6 +62,7 @@
     "type": "Mobile Application",
     "tech": ["Expo", "TypeScript", "Clerk", "Convex"],
     "code": "https://github.com/cjabendan/TrueLife",
-    "url": "null"
+    "url": "null",
+    "feature": "true"
   }
 ]

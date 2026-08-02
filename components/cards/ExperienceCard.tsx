@@ -26,13 +26,13 @@ export default function ExperienceCard({
   return (
     <div className="relative flex flex-col gap-4">
       {hasMultipleRoles && (
-        <div className="absolute -left-[30.3px] top-1.5 w-3 h-3 bg-[var(--background)] border-1 border-gray-300 dark:border-gray-700 transition-colors rounded-full " />
+        <div className="absolute -left-[30.3px] top-1.5 w-3 h-3 bg-[var(--background)] border-1 border-gray-400 dark:border-gray-700 transition-colors rounded-full " />
       )}
 
       {/* Role & Duration */}
       <div className="flex flex-col gap-[2px]">
         <h3 className="text-sm sm:text-base font-bold">{exp.role}</h3>
-        <div className="block sm:hidden text-xs text-zinc-400 dark:text-zinc-500  tracking-wider uppercase">
+        <div className="block sm:hidden text-xs text-zinc-400 dark:text-zinc-500 tracking-wider uppercase">
           {exp.type}
         </div>
         <div className="flex gap-1 sm:gap-1.5 text-xs text-zinc-400 dark:text-zinc-500 tracking-wider">

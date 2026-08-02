@@ -47,7 +47,7 @@ export default function Recommendations() {
 
   return (
     <section className="flex flex-col gap-6 p-4">
-      <div className="flex items-center justify-between pb-7 border-b border-gray-200 dark:border-gray-800">
+      <div className="flex items-center justify-between pb-7 border-b border-gray-200/60 dark:border-gray-800">
         <h2 className="text-lg sm:text-xl font-bold">Recommendations</h2>
         <a
           href="https://www.linkedin.com/in/christian-james-abendan-2218a640a/details/recommendations/"
@@ -78,7 +78,7 @@ export default function Recommendations() {
                 ),
               )}
             </div>
-            <div className="flex flex-col border-l border-gray-200 dark:border-gray-700 pl-4 space-y-2">
+            <div className="flex flex-col border-l border-gray-200/60 dark:border-gray-800/60 pl-4 space-y-2">
               <Skeleton className="h-5 w-24" />
               <Skeleton className="h-4 w-16" />
             </div>

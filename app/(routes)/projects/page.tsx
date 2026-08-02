@@ -17,7 +17,7 @@ const TECH_ICON_MAP = techStack.reduce(
 export default function Projects() {
   return (
     <div className="space-y-6 animate-fade-in mb-auto">
-      <h1 className="text-xl sm:text-2xl font-bold">All Projects</h1>
+      <h1 className="text-xl sm:text-2xl font-bold">Projects</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24">
         {displayedProjects.map((project, index) => (

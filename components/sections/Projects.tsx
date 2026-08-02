@@ -5,7 +5,9 @@ import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
 import ProjectCard from "../cards/ProjectCard";
 
-const SORTED_PROJECTS = [...projects].sort((a, b) => b.id - a.id);
+const FEATURED_PROJECTS = projects
+  .filter((project) => project.feature === "true")
+  .sort((a, b) => b.id - a.id);
 
 const TECH_ICON_MAP = techStack.reduce(
   (acc, category) => {
@@ -18,7 +20,7 @@ const TECH_ICON_MAP = techStack.reduce(
 );
 
 export default function Projects() {
-  const displayedProjects = SORTED_PROJECTS.slice(0, 3);
+  const displayedProjects = FEATURED_PROJECTS.slice(0, 3);
 
   return (
     <section className="flex flex-col gap-6 p-4" id="projects">

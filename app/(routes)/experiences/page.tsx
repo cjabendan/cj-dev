@@ -32,7 +32,7 @@ export default function ExperiencesPage() {
 
   return (
     <div className="space-y-6 animate-fade-in mb-auto">
-      <h1 className="text-xl sm:text-2xl font-bold">Experience</h1>
+      <h1 className="text-xl sm:text-2xl font-bold">Experiences</h1>
 
       <div className="flex flex-col mb-14">
         {groupedExperiences.map((group, index) => {
@@ -43,7 +43,7 @@ export default function ExperiencesPage() {
             <div key={group.company} className="relative flex gap-4 sm:gap-6">
               {/* Left Column */}
               <div className="relative flex flex-col items-center shrink-0 self-stretch">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-sm bg-[var(--background)] border border-gray-300 dark:border-gray-700 flex items-center justify-center text-xs  sm:text-sm font-semibold text-black dark:text-white z-10">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-sm bg-[var(--background)] border border-gray-400 dark:border-gray-700 flex items-center justify-center text-xs  sm:text-sm font-semibold text-black dark:text-white z-10">
                   {group.logo || group.company.slice(0, 2).toUpperCase()}
                 </div>
                 {!isLast && (
