@@ -48,7 +48,7 @@ export default function ProjectCard({
   return (
     <div
       className={cn(
-        "flex flex-col w-full border border-gray-200/60 dark:border-gray-800/60 rounded-sm overflow-hidden",
+        "flex flex-col w-full border border-gray-200/60 dark:border-gray-800/80 rounded-sm overflow-hidden",
         className,
       )}
     >
@@ -96,7 +96,7 @@ export default function ProjectCard({
               return (
                 <span
                   key={t}
-                  className="relative flex items-center justify-center p-2 border border-gray-200/60 dark:border-gray-800/60 rounded-sm hover:bg-bg-card transition-all"
+                  className="relative flex items-center justify-center p-2 border border-gray-200/60 dark:border-gray-800/80 rounded-sm hover:bg-bg-card transition-all"
                 >
                   {isIconLoading && (
                     <Skeleton className="absolute inset-1 rounded-sm" />
@@ -127,13 +127,13 @@ export default function ProjectCard({
         </div>
         {/* Footer Links */}
         {hasLinks && (
-          <div className="border-t border-gray-200/60 dark:border-gray-800/60 px-4 py-3 flex gap-2">
+          <div className="border-t border-gray-200/60 dark:border-gray-800/80 px-4 py-3 flex gap-2">
             {project.code && project.code !== "null" && (
               <a
                 href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 sm:gap-1.5 border border-gray-200/60 dark:border-gray-800/60 rounded-sm px-2.5 py-1 text-sm"
+                className="flex items-center gap-1 sm:gap-1.5 border border-gray-200/60 dark:border-gray-800/80 rounded-sm px-2.5 py-1 text-sm"
               >
                 <CodeXml className="w-3.5 h-3.5" />
                 Code
@@ -144,7 +144,7 @@ export default function ProjectCard({
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 sm:gap-1.5 border border-gray-200/60 dark:border-gray-800/60 rounded-sm px-2.5 py-1 text-sm"
+                className="flex items-center gap-1 sm:gap-1.5 border border-gray-200/60 dark:border-gray-800/80 rounded-sm px-2.5 py-1 text-sm"
               >
                 <ExternalLink className="w-3 h-3" />
                 Live

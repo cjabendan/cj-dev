@@ -57,7 +57,7 @@ export default function ExperiencesPage() {
                   <h2 className="text-base sm:text-lg font-bold">
                     {group.company}
                   </h2>
-                  <div className="flex items-center gap-2 text-xs sm:text-sm text-zinc-400 dark:text-zinc-500">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
                     {group.location && <span>{group.location}</span>}
                   </div>
                 </div>

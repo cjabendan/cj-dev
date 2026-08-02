@@ -32,10 +32,10 @@ export default function ExperienceCard({
       {/* Role & Duration */}
       <div className="flex flex-col gap-[2px]">
         <h3 className="text-sm sm:text-base font-bold">{exp.role}</h3>
-        <div className="block sm:hidden text-xs text-zinc-400 dark:text-zinc-500 tracking-wider uppercase">
+        <div className="block sm:hidden text-xs text-gray-400 tracking-wider uppercase">
           {exp.type}
         </div>
-        <div className="flex gap-1 sm:gap-1.5 text-xs text-zinc-400 dark:text-zinc-500 tracking-wider">
+        <div className="flex gap-1 sm:gap-1.5 text-xs text-gray-400 tracking-wider">
           <div className="hidden sm:block text-xs tracking-wider uppercase">
             {exp.type}
           </div>
@@ -61,7 +61,7 @@ export default function ExperienceCard({
             {exp.skills.map((skill, idx) => (
               <span
                 key={idx}
-                className="text-[11px] sm:text-xs px-3 py-1 rounded-sm border border-gray-200 dark:border-gray-800"
+                className="text-[11px] sm:text-xs px-3 py-1 rounded-sm border border-gray-200 dark:border-gray-700"
               >
                 {skill}
               </span>
