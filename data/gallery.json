@@ -1,9 +1,8 @@
 [
-  { "id": 1, "src": "bgrad-solo3.jpg", "alt": "Graduation Pictorial" },
-  { "id": 2, "src": "capstone.jpg", "alt": "Capstone Project Expo" },
-  { "id": 3, "src": "ringhop-famv1.jpg", "alt": "Ringhop Awarding" },
-  { "id": 4, "src": "ringhop1.jpg", "alt": "After a Successful Ringhop" },
-  { "id": 5, "src": "grad-fam.jpg", "alt": "After Graduation Pic with Family" },
-  { "id": 6, "src": "gradpic.jpg", "alt": "Graduation Day" },
-  { "id": 7, "src": "facultymeet.jpg", "alt": "1st Faculty Meeting" }
+  { "id": 1, "src": "capstone.jpg", "alt": "Capstone Project Expo" },
+  { "id": 2, "src": "ringhop-famv1.jpg", "alt": "Ringhop Awarding" },
+  { "id": 3, "src": "ringhop1.jpg", "alt": "After a Successful Ringhop" },
+  { "id": 4, "src": "grad-fam.jpg", "alt": "After Graduation Pic with Family" },
+  { "id": 5, "src": "gradpic1.jpg", "alt": "Graduation Day" },
+  { "id": 6, "src": "facultymeet.jpg", "alt": "1st Faculty Meeting" }
 ]
