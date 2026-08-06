@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://cjabendan.is-a.dev";
 
   
-  const routes = ["", "/certifications", "/recommend", "/tech-stack"];
+  const routes = ["", "/certifications", "/recommend", "/tech", "/experiences", "/projects"];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
