@@ -4,8 +4,8 @@
     "platform": "Email",
     "variant": "secondary",
     "ctaLabel": "Email",
-    "subLabel": "cjamesabendan@gmail.com",
-    "link": "mailto:cjamesabendan@gmail.com",
+    "subLabel": "cjabendan@stcecilia.edu.ph",
+    "link": "mailto:cjabendan@stcecilia.edu.ph",
     "icon": "Mail",
     "btnMarkup": [
       { "text": "Email", "className": "hidden min-[360px]:inline sm:hidden" },
