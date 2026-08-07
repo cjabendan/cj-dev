@@ -30,7 +30,7 @@ export default function ProfileHeader() {
     <section className="mb-8 animate-fade-in">
       <div className="flex items-center gap-4 sm:gap-6">
         <Image
-          src="/images/gallery/newPFP.JPG"
+          src="/images/gallery/Pfp.png"
           alt="Christian James Abendan"
           width={160}
           height={160}
