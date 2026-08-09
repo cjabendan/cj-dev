@@ -10,7 +10,7 @@ export interface ExperienceItem {
   end: string;
   duration?: string;
   location?: string;
-  description?: string;
+  description?: string[];
   skills?: string[];
 }
 
@@ -26,7 +26,7 @@ export default function ExperienceCard({
   return (
     <div className="relative flex flex-col gap-4">
       {hasMultipleRoles && (
-        <div className="absolute -left-[30.3px] top-1.5 w-3 h-3 bg-[var(--background)] border-1 border-gray-400 dark:border-gray-700 transition-colors rounded-full " />
+        <div className="absolute -left-[30.3px] top-1.5 w-3 h-3 bg-[var(--background)] border-1 border-gray-300 dark:border-gray-700 transition-colors rounded-full " />
       )}
 
       {/* Role & Duration */}
@@ -39,9 +39,9 @@ export default function ExperienceCard({
           <div className="hidden sm:block text-xs tracking-wider uppercase">
             {exp.type}
           </div>
-          <div className="hidden sm:block text-zinc-300 dark:text-zinc-700 ">|</div>
+          <div className="hidden sm:block text-zinc-300">|</div>
           <div className="uppercase">{exp.start}</div>
-          <div className="text-zinc-300 dark:text-zinc-700">-</div>
+          <div className="text-zinc-300">-</div>
           <div className="uppercase">{exp.end}</div>
           {exp.duration && (
             <div className="lowercase">{`· ${exp.duration}`}</div>
@@ -50,18 +50,20 @@ export default function ExperienceCard({
       </div>
 
       {/* Description & Skill Badges */}
-      <div>
-        {exp.description && (
-          <p className="text-xs sm:text-sm leading-relaxed">
-            {exp.description}
-          </p>
+      <div className="flex flex-col">
+        {exp.description && exp.description.length > 0 && (
+          <ul className="flex flex-col gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+            {exp.description.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
         )}
         {exp.skills && exp.skills.length > 0 && (
           <div className="flex flex-wrap gap-1.5 pt-4">
             {exp.skills.map((skill, idx) => (
               <span
                 key={idx}
-                className="text-[11px] sm:text-xs px-3 py-1 rounded-sm border border-gray-200 dark:border-gray-700"
+                className="text-[11px] sm:text-xs px-3 py-1 rounded-sm text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-700"
               >
                 {skill}
               </span>

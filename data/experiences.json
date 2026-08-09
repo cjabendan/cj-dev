@@ -10,7 +10,11 @@
     "end": "DEC 2024",
     "duration": "4 mos",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Worked on foundational software application, developing core front-end layouts and application logic.",
+    "description": [
+      "Pioneered the preliminary capstone desktop application architecture to deliver streamlined record management for community (purok) stakeholders.",
+      "Engineered full-stack Java applications integrated with MySQL relational databases in NetBeans. Standardized backend data persistence using optimized SQL queries, while implementing Swing-based user interfaces to handle concurrent data input workflows.",
+      "Architected an automated record system that replaced manual record-keeping processes in the community. Integrated a document generator feature to facilitate the creation of standardized documents and certifications."
+    ],
     "skills": [
       "Software Development",
       "Java",
@@ -30,7 +34,13 @@
     "end": "NOV 2025",
     "duration": "6 mos",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Architected full-stack web applications, integrating blade views for front-ends with server-side logic and databases.",
+    "description": [
+      "Pioneered the overall development of our capstone project, School Guidance Record Management System (SGRMS) for MASCI's guidance office.",
+      "Architected full-stack web application, utilizing Laravel and Blade templating engines backed by relational database (MySQL) architectures. Hardened application security by integrating google's auth, One-Time Passwords (OTP) and Role-Based Access Controls (RBAC), while optimizing the system performance for high-concurrency workloads.",
+      "Designed and integrated a guidance assistant (Gabby) leveraging a Retrieval-Augmented Generation (RAG) pipeline powered by Ollama and Pinecone vector stores. Automated context ingestion from institutional documents (txt/pdf) to deliver real-time, context-aware responses related to student inquiries, significantly lowering support desk response times.",
+      "Implemented a real-time chat interface for the system users, enabling students and parents to interact with the guidance staff through a responsive web interface. Integrated WebSocket communications via Laravel Echo alongside dynamic Livewire components to enable instant messaging and real-time content updates, significantly enhancing user engagement.",
+      "Assisted co-developers with their tasks and provided guidance on best practices for utilizing codebase structures effectively. Led as the main quality assurance personnel to ensure the delivery of high-quality software components."
+    ],
     "skills": [
       "Laravel",
       "AI Chat-bot",
@@ -52,7 +62,11 @@
     "end": "NOV 2025",
     "duration": "6 mos",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Led capstone development teams in planning, feature scoping, and executing software projects from concept to development.",
+    "description": [
+      "Pioneered the student engineering project delivery framework to drive structured Agile execution across capstone development cycles for our capstone project.",
+      "Directed cross-functional development and research teams through feature scoping, sprint planning, and backlog refinement. Formulated complete Software Requirements Specifications (SRS), system architecture flowcharts, and SDLC roadmaps while conducting daily standups with the development team to identify operational risks and mitigate technical bottlenecks.",
+      "Lead the successful delivery of final capstone software projects from ideation to production-ready deployment. Managed feedback loops with capstone and faculty advisors and quality feedbacks, achieving 100% on-time milestone delivery aligned with institutional standards."
+    ],
     "skills": [
       "Project Management",
       "Agile",
@@ -63,17 +77,27 @@
   },
   {
     "id": 4,
-    "role": "Technical IT Support",
+    "role": "IT Support",
     "type": "Intern",
     "company": "CFAI",
     "logo": "CFAI",
     "year": "2026",
     "start": "JAN 2026",
-    "end": "APR 2026",
-    "duration": "4 mos",
-    "location": "Cebu, Philippines",
-    "description": "Provided hardware diagnostics, system troubleshooting, network setup, and technical maintenance support.",
-    "skills": ["IT Support", "Hardware Diagnostics", "Networking"]
+    "end": "MAR 2026",
+    "duration": "3 mos",
+    "location": "Guadalupe, Cebu, Philippines",
+    "description": [
+      "Pioneered hardware audit and maintenance workflows to stabilize IT infrastructure across administrative offices and computer laboratories.",
+      "Executed preventive hardware diagnostics, component repairs, OS reformatting, and system driver installations. Diagnosed network infrastructure failures and reconfigured Access Point (AP) devices and IP address tables to restore network connectivity across staff workstations.",
+      "Restored unserviceable workstation units back to full production readiness through deep cleaning and system overhauls, expanding operational lab capacity and streamlining physical IT asset tracking."
+    ],
+    "skills": [
+      "IT Support",
+      "Hardware Diagnostics",
+      "Networking",
+      "System Reformatting",
+      "Maintenance"
+    ]
   },
   {
     "id": 5,
@@ -85,11 +109,16 @@
     "start": "JAN 2026",
     "end": "APR 2026",
     "duration": "4 mos",
-    "location": "Cebu, Philippines",
-    "description": "Developed web and mobile application features, optimizing UI performance and collaborating with other intern developers.",
+    "location": "Lapu-Lapu, Cebu, Philippines",
+    "description": [
+      "Pioneered cross-platform mobile and web application architectures to drive scalable software development across client projects.",
+      "Engineered responsive web interfaces and mobile applications utilizing React, React Native, and TypeScript. Configured an npm monorepo workspace to centralize shared component libraries, utility functions, and design tokens across web and mobile builds. Standardized team Git workflows including feature branching, pull request reviews, and merge conflict resolutions.",
+      "Architected and deployed the core UI components for 'IT Konek' as well as an official responsive landing page for Tutela Marine Inc. leveraged in client project proposals, resulting in standardized design systems and enhanced cross-platform developer velocity."
+    ],
     "skills": [
       "React",
       "React Native",
+      "Monorepo",
       "TypeScript",
       "Tailwind CSS",
       "Git",
@@ -99,7 +128,7 @@
   {
     "id": 6,
     "role": "IT Instructor",
-    "type": "Part Time",
+    "type": "Part- Time",
     "company": "St. Cecilia's College",
     "logo": "SCC",
     "year": "Present",
@@ -107,7 +136,15 @@
     "end": "Present",
     "duration": "",
     "location": "Minglanilla, Cebu, Philippines",
-    "description": "Teaching IT courses in introduction to computing, programming fundamentals, and fundamentals of computer, guiding students in core logic and hardware concepts.",
-    "skills": ["Computer Basics", "IT Fundamentals", "Programming Logic"]
+    "description": [
+      "Delivering curriculum and hands-on laboratory instruction for foundational IT courses.",
+      "Directing core instruction across computer hardware architectures, software applications, and structured programming logic. Establishing structured technical consultation hours to mentor students through debugging and computational problem-solving.",
+      "Deploying a practical, lab-first teaching strategy designed to bridge theoretical computing concepts with real-world software engineering practices, driving student engagement and code literacy from day one."
+    ],
+    "skills": [
+      "Computer Basics",
+      "IT Fundamentals",
+      "Programming Logic"
+    ]
   }
 ]
