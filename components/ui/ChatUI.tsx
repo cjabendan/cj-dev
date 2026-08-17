@@ -75,7 +75,7 @@ export default function ChatUI() {
   };
 
   return (
-    <div className="flex flex-col h-full w-full bg-white dark:bg-black text-white font-sans overflow-hidden">
+    <div className="flex flex-col h-full w-full bg-white dark:bg-[#111111] text-white font-sans overflow-hidden">
       {/* Scrollable Message History Pane */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4 text-sm custom-scrollbar">
         {messages.map((msg, idx) => (
@@ -101,8 +101,8 @@ export default function ChatUI() {
               <div
                 className={`p-3 rounded-sm leading-relaxed text-[13px] ${
                   msg.role === "user"
-                    ? "bg-black dark:bg-white max-w-[85%] text-white dark:text-black break-words"
-                    : "bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-black dark:text-white"
+                    ? "bg-[#111111] dark:bg-white max-w-[85%] text-white dark:text-black break-words"
+                    : "bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 text-black dark:text-white"
                 }`}
               >
                 {msg.text}
@@ -132,7 +132,7 @@ export default function ChatUI() {
       {/* Form Input */}
       <form
         onSubmit={handleSendMessage}
-        className="p-4 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-black flex flex-col gap-2"
+        className="p-4 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-[#111111] flex flex-col gap-2"
       >
         <div className="flex gap-2 items-stretch">
           <input
@@ -149,7 +149,7 @@ export default function ChatUI() {
             disabled={
               isLoading || !input.trim() || input.length > MAX_CHAR_LIMIT
             }
-            className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-600 flex items-center justify-center px-4 rounded-sm disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer transition-colors"
+            className="bg-[#111111] dark:bg-white text-white dark:text-black hover:bg-zinc-600 flex items-center justify-center px-4 rounded-sm disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer transition-colors"
             aria-label="Send message"
           >
             <SendIcon size={14} />

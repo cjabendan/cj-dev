@@ -11,7 +11,7 @@ export default function BotWidget() {
   return (
     <>
       <button
-        className="fixed z-[100] bottom-4 right-4 bg-black dark:bg-white text-white dark:text-black px-4 sm:px-6 py-3 rounded-sm 
+        className="fixed z-[100] bottom-4 right-4 bg-[#111111] dark:bg-white text-white dark:text-black px-4 sm:px-6 py-3 rounded-sm 
         shadow-[0_2px_6px_rgba(0,0,0,0.1)] hover:opacity-90 transition-all flex items-center gap-2 group cursor-pointer"
         onClick={() => setIsOpen((prev) => !prev)}
       >
@@ -25,13 +25,13 @@ export default function BotWidget() {
       </button>
       {/* Chat UI Container */}
       <div
-        className={`fixed z-[100] bg-white dark:bg-black bottom-20 right-4 w-[calc(100vw-32px)] sm:w-96 h-[620px] max-h-[70vh] border border-gray-200 dark:border-gray-800 rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden transition-all duration-200 ${
+        className={`fixed z-[100] bg-white dark:bg-[#111111] bottom-20 right-4 w-[calc(100vw-32px)] sm:w-96 h-[620px] max-h-[70vh] border border-gray-200 dark:border-gray-800 rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden transition-all duration-200 ${
           isOpen
             ? "opacity-100 scale-100 pointer-events-auto block"
             : "opacity-0 scale-95 pointer-events-none hidden"
         }`}
       >
-        <div className="flex justify-between gap-3 p-4 items-center bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 text-zinc-800 dark:text-zinc-200">
+        <div className="flex justify-between gap-3 p-4 items-center bg-white dark:bg-[#111111] border-b border-gray-200 dark:border-gray-800 text-zinc-800 dark:text-zinc-200">
           <div className="flex items-center gap-2.5">
             <Image
               src="/images/gallery/cb.jpg"
