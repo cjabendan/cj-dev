@@ -68,7 +68,7 @@ export default function ExperiencesPage() {
                 <div
                   className={`flex flex-col gap-8 sm:gap-10 ${
                     hasMultipleRoles
-                      ? "border-l border-gray-200/60 dark:border-gray-800 pl-6"
+                      ? "border-l border-gray-200/80 dark:border-gray-700 pl-6"
                       : ""
                   }`}
                 >

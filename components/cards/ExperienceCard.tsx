@@ -31,7 +31,7 @@ export default function ExperienceCard({
 
       {/* Role & Duration */}
       <div className="flex flex-col gap-[2px]">
-        <h3 className="text-sm sm:text-base font-bold">{exp.role}</h3>
+        <h3 className="text-sm sm:text-base font-semibold">{exp.role}</h3>
         <div className="block sm:hidden text-xs text-gray-400 tracking-wider uppercase">
           {exp.type}
         </div>
@@ -44,7 +44,7 @@ export default function ExperienceCard({
           <div className="text-zinc-300">-</div>
           <div className="uppercase">{exp.end}</div>
           {exp.duration && (
-            <div className="lowercase">{`· ${exp.duration}`}</div>
+            <div className="lowercase" >{`· ${exp.duration}`}</div>
           )}
         </div>
       </div>

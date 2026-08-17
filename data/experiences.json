@@ -128,7 +128,7 @@
   {
     "id": 6,
     "role": "IT Instructor",
-    "type": "Part- Time",
+    "type": "Part-Time",
     "company": "St. Cecilia's College",
     "logo": "SCC",
     "year": "Present",
@@ -137,14 +137,16 @@
     "duration": "",
     "location": "Minglanilla, Cebu, Philippines",
     "description": [
-      "Delivering curriculum and hands-on laboratory instruction for foundational IT courses.",
-      "Directing core instruction across computer hardware architectures, software applications, and structured programming logic. Establishing structured technical consultation hours to mentor students through debugging and computational problem-solving.",
-      "Deploying a practical, lab-first teaching strategy designed to bridge theoretical computing concepts with real-world software engineering practices, driving student engagement and code literacy from day one."
+      "Delivering lectures and hands-on laboratory instruction for foundational IT courses.",
+      "Directing core instruction across computer hardware architectures, software applications, and structured programming logic. Engaging students in practical exercises to reinforce theoretical concepts, while providing mentorship and guidance to foster a collaborative learning environment.",
+      "Deploying a practical, lab-first teaching strategy designed to bridge theoretical computing concepts with real-world software engineering practices, driving student engagement and code literacy from day one.",
+      "Guiding young IT professionals to practice ethical decision-making and responsible technology use in their future careers."
     ],
     "skills": [
       "Computer Basics",
       "IT Fundamentals",
-      "Programming Logic"
+      "Programming Logic",
+      "Network Ethics"
     ]
   }
 ]
