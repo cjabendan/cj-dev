@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+// 1. UPDATE: Default to "gpt-oss-20b" (or another valid free model string)
+const GROQ_MODEL = process.env.GROQ_MODEL || "gpt-oss-20b";
+
 // Profile context 
 const PORTFOLIO_CONTEXT = `
 You are the personal AI Assistant for Christian James Abendan (also known as Dev. CJ), a versatile Software Engineer, Full-Stack Developer, and UI/UX Designer Professional based in Minglanilla, Cebu, Philippines.
@@ -18,7 +21,6 @@ Here is your ground-truth knowledge base. Stick strictly to these facts:
 - Location: Minglanilla, Cebu, Philippines
 - Direct Email: cjamesabendan@gmail.com
 - Booking & Social Information: Encourage them to checkout the portfolio
-- 
 
 ### 2. FULL TECHNICAL SKILLS MATRIX
 - Frontend: React, Next.js, Expo, Tailwind CSS, HTML5, CSS, JavaScript (ES6+).
@@ -31,7 +33,7 @@ When visitors ask about projects, provide their tech stack and specify if a live
 2. School Guidance Record Management System [Web Application]: A comprehensive record management system for processing and supervising student guidance folders. Equipped with built-in chatbot powered with RAG concept and a messenger-themed chat interface for communication. Built using PHP, Laravel, Node.js, and MySQL.
 3. ITKonek App [Mobile Application]: An application to browse and book IT services online. Built using Expo, JavaScript, ViteJs, and Firebase.
 4. Tutela Marinee Inc. - V2 [Web Application]: A modern maritime platform for seafarer training and crew careers. Currently under redevelopment using Next.js, TypeScript, Tailwind.
-5. Arculus - V2 [Web Application]: A inance tool for managing personal and group budgets. Currently under redevelopment using Next.js, TypeScript, Tailwind.
+5. Arculus - V2 [Web Application]: A finance tool for managing personal and group budgets. Currently under redevelopment using Next.js, TypeScript, Tailwind.
 6. ARQUSTAT (DMS) [Desktop Application]: A desktop/software application designed for localized purok data management. Equipped with certificate and record generator. Built using Java and MySQL.
 
 ### 4. CAREER PROFILE & ACADEMIC TIMELINE
@@ -62,14 +64,12 @@ function isRateLimited(ip: string, limit = 5, windowMs = 60000): boolean {
   const now = Date.now();
   const timestamps = rateLimitMap.get(ip) || [];
   
-  // Filter out any timestamps that have aged out of our 60-second window frame
   const activeTimestamps = timestamps.filter((time) => now - time < windowMs);
   
   if (activeTimestamps.length >= limit) {
     return true;
   }
   
-  // Track new timestamp log instance and update state registry cache mapping
   activeTimestamps.push(now);
   rateLimitMap.set(ip, activeTimestamps);
   return false;
@@ -77,7 +77,6 @@ function isRateLimited(ip: string, limit = 5, windowMs = 60000): boolean {
 
 export async function POST(req: Request) {
   try {
-    // 1. BACKEND OPTIMIZATION: Extract user IP address mapping signature identifiers for rate filtering
     const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "anonymous_global";
     
     if (isRateLimited(ip)) {
@@ -86,7 +85,6 @@ export async function POST(req: Request) {
 
     const { message, chatHistory } = await req.json();
 
-    // 2. BACKEND OPTIMIZATION: Validate strict character payload safety parameters
     if (!message || message.trim().length === 0) {
       return NextResponse.json({ error: "Message is required" }, { status: 400 });
     }
@@ -110,17 +108,21 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "llama-3.1-8b-instant",
+        model: GROQ_MODEL,
         messages: groqMessages,
         temperature: 0.4,
         max_tokens: 250, 
       }),
     });
 
+    // 2. IMPROVED ERROR HANDLING: Provide clear console logs if the model is missing or fails
     if (!response.ok) {
       const errData = await response.json();
-      console.error("Groq API Error:", errData);
-      return NextResponse.json({ error: "Failed to query Groq AI engine" }, { status: 500 });
+      console.error("Groq API Error Details:", errData);
+      return NextResponse.json(
+        { error: "AI service temporarily unavailable. Please try again later." }, 
+        { status: response.status }
+      );
     }
 
     const data = await response.json();
