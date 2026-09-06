@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { CodeXml, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 import Skeleton from "@/components/ui/Skeleton";
 import { cn } from "@/lib/utils";
 
@@ -41,9 +41,7 @@ export default function ProjectCard({
   const [isMainImageLoading, setIsMainImageLoading] = useState(true);
   const [loadedIcons, setLoadedIcons] = useState<Record<string, boolean>>({});
 
-  const hasLinks =
-    (project.code && project.code !== "null") ||
-    (project.url && project.url !== "null");
+  const hasLinks = (project.code && project.code !== "null") || (project.url && project.url !== "null");
 
   return (
     <div
@@ -54,9 +52,7 @@ export default function ProjectCard({
     >
       {/* Main Image Block & Skeleton Overlay */}
       <div className="relative w-full h-[180px] bg-gray-50 dark:bg-gray-900">
-        {isMainImageLoading && (
-          <Skeleton className="absolute inset-0 w-full h-full rounded-none z-10" />
-        )}
+        {isMainImageLoading && <Skeleton className="absolute inset-0 w-full h-full rounded-none z-10" />}
         <Image
           src={project.image}
           alt={project.title}
@@ -75,15 +71,8 @@ export default function ProjectCard({
       <div className="border-t border-gray-100 dark:border-gray-900 flex-1 flex flex-col justify-between">
         <div className="flex flex-col p-4 space-y-4 gap-2 sm:gap-4">
           <div className="space-y-2">
-            <h3 className={cn("text-foreground font-bold", titleClassName)}>
-              {project.title}
-            </h3>
-            <p
-              className={cn(
-                "text-muted-foreground line-clamp-2 text-sm",
-                descriptionClassName,
-              )}
-            >
+            <h3 className={cn("text-foreground font-bold", titleClassName)}>{project.title}</h3>
+            <p className={cn("text-muted-foreground line-clamp-2 text-sm", descriptionClassName)}>
               {project.description}
             </p>
           </div>
@@ -98,9 +87,7 @@ export default function ProjectCard({
                   key={t}
                   className="relative flex items-center justify-center p-2 border border-gray-200/60 dark:border-gray-800/80 rounded-sm hover:bg-bg-card transition-all"
                 >
-                  {isIconLoading && (
-                    <Skeleton className="absolute inset-1 rounded-sm" />
-                  )}
+                  {isIconLoading && <Skeleton className="absolute inset-1 rounded-sm" />}
 
                   {icon && (
                     <Image
@@ -109,9 +96,7 @@ export default function ProjectCard({
                       width={16}
                       height={16}
                       loading="lazy"
-                      onLoad={() =>
-                        setLoadedIcons((prev) => ({ ...prev, [t]: true }))
-                      }
+                      onLoad={() => setLoadedIcons((prev) => ({ ...prev, [t]: true }))}
                       className={cn(
                         "opacity-80 hover:opacity-100 object-contain transition-opacity duration-200",
                         t === "Expo" && "dark:invert",

@@ -1,4 +1,4 @@
-import ProjectCard, { Project }  from "@/components/cards/ProjectCard";
+import ProjectCard, { type Project } from "@/components/cards/ProjectCard";
 import projects from "@/data/projects.json";
 import techStack from "@/data/tech-stack.json";
 

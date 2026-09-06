@@ -1,11 +1,9 @@
-import certData from "@/data/certifications.json";
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
+import certData from "@/data/certifications.json";
 
 export default function Certifications() {
-  const sortedCertifications = [...certData]
-    .sort((a, b) => b.id - a.id)
-    .slice(0, 4);
+  const sortedCertifications = [...certData].sort((a, b) => b.id - a.id).slice(0, 4);
 
   return (
     <div className="p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in animation-delay-300" id="certs">
@@ -24,22 +22,16 @@ export default function Certifications() {
         {sortedCertifications.map((cert) => (
           <a
             key={cert.id}
-            href={cert.url == "null" ? undefined : cert.url}
+            href={cert.url === "null" ? undefined : cert.url}
             target="_blank"
             rel="noopener noreferrer"
             className={`flex flex-col gap-1 border border-gray-200/60 dark:border-gray-800/80 rounded-sm py-3 px-4 hover:bg-bg-card transition-colors ${
-              cert.url === "null" || !cert.url
-                ? "pointer-events-none"
-                : "cursor-pointer"
+              cert.url === "null" || !cert.url ? "pointer-events-none" : "cursor-pointer"
             }`}
           >
-            <span className="text-sm font-semibold leading-tight">
-              {cert.title}
-            </span>
+            <span className="text-sm font-semibold leading-tight">{cert.title}</span>
             <div className="flex justify-between items-center">
-              <span className="text-[10px] text-muted-foreground">
-                {cert.issuer}
-              </span>
+              <span className="text-[10px] text-muted-foreground">{cert.issuer}</span>
             </div>
           </a>
         ))}
