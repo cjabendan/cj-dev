@@ -1,18 +1,10 @@
 "use client";
 
+import { Calendar, Check, ChevronRight, type LucideIcon, Mail, MapPin, VerifiedIcon } from "lucide-react";
 import Image from "next/image";
-import {
-  Check,
-  MapPin,
-  Calendar,
-  VerifiedIcon,
-  ChevronRight,
-  Mail,
-  LucideIcon,
-} from "lucide-react";
-import ThemeToggle from "../ui/ThemeToggle";
-import Button from "../ui/Button";
 import contactData from "@/data/contact.json";
+import Button from "../ui/Button";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const ICON_MAP: Record<string, LucideIcon> = {
   Mail: Mail,
@@ -42,25 +34,13 @@ export default function ProfileHeader() {
             <div className="flex items-center gap-1 sm:gap-2">
               <h1 className="text-base sm:text-lg font-bold truncate">
                 <span className="min-[360px]:hidden">CJ</span>
-                <span className="hidden min-[360px]:inline min-[430px]:hidden">
-                  Christian
-                </span>
-                <span className="hidden min-[430px]:inline min-[560px]:hidden">
-                  Christian Abendan
-                </span>
-                <span className="hidden min-[560px]:inline">
-                  Christian James A. Abendan
-                </span>
+                <span className="hidden min-[360px]:inline min-[430px]:hidden">Sir. CJ</span>
+                <span className="hidden min-[430px]:inline min-[560px]:hidden">Christian Abendan</span>
+                <span className="hidden min-[560px]:inline">Christian James A. Abendan</span>
               </h1>
               <div className="relative">
-                <VerifiedIcon
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 fill-blue-500"
-                  strokeWidth={0}
-                />
-                <Check
-                  className="absolute top-1 left-1 w-2 h-2 sm:w-3 sm:h-3 text-white"
-                  strokeWidth={3}
-                />
+                <VerifiedIcon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 fill-blue-500" strokeWidth={0} />
+                <Check className="absolute top-1 left-1 w-2 h-2 sm:w-3 sm:h-3 text-white" strokeWidth={3} />
               </div>
             </div>
             <ThemeToggle />
@@ -74,7 +54,9 @@ export default function ProfileHeader() {
             </p>
             <div className="flex truncate py-1.5 sm:py-2">
               <p className="text-[11px] sm:text-base font-medium">
-                <span>Aspiring Software Engineer</span>
+                <span>
+                  IT <span className="hidden min-[430px]:inline">College </span>Instructor
+                </span>
                 <span className="text-gray-400 mx-1">\</span>
                 <span>Web & Mobile Developer</span>
               </p>
@@ -88,32 +70,21 @@ export default function ProfileHeader() {
                     <a
                       key={contact.id}
                       href={contact.link}
-                      target={
-                        contact.link.startsWith("http") ? "_blank" : "_self"
-                      }
+                      target={contact.link.startsWith("http") ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                     >
                       <Button
-                        variant={
-                          (contact.variant as "primary" | "secondary") ||
-                          "secondary"
-                        }
-                        icon={
-                          Icon ? (
-                            <Icon className="w-2.5 h-2.5 sm:w-4 sm:h-4" />
-                          ) : null
-                        }
+                        variant={(contact.variant as "primary" | "secondary") || "secondary"}
+                        icon={Icon ? <Icon className="w-2.5 h-2.5 sm:w-4 sm:h-4" /> : null}
                       >
                         {contact.btnMarkup ? (
-                          contact.btnMarkup.map((item, idx) => (
-                            <span key={idx} className={item.className}>
+                          contact.btnMarkup.map((item) => (
+                            <span key={item.text} className={item.className}>
                               {item.text}
                             </span>
                           ))
                         ) : (
-                          <span className="hidden min-[350px]:inline">
-                            {contact.platform}
-                          </span>
+                          <span className="hidden min-[350px]:inline">{contact.platform}</span>
                         )}
                       </Button>
                     </a>

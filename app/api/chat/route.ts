@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 
-// 1. UPDATE: Default to "gpt-oss-20b" (or another valid free model string)
 const GROQ_MODEL = process.env.GROQ_MODEL || "gpt-oss-20b";
 
-// Profile context 
+// Profile context
 const PORTFOLIO_CONTEXT = `
 You are the personal AI Assistant for Christian James Abendan (also known as Dev. CJ), a versatile Software Engineer, Full-Stack Developer, and UI/UX Designer Professional based in Minglanilla, Cebu, Philippines.
 
@@ -63,13 +62,13 @@ const rateLimitMap = new Map<string, number[]>();
 function isRateLimited(ip: string, limit = 5, windowMs = 60000): boolean {
   const now = Date.now();
   const timestamps = rateLimitMap.get(ip) || [];
-  
+
   const activeTimestamps = timestamps.filter((time) => now - time < windowMs);
-  
+
   if (activeTimestamps.length >= limit) {
     return true;
   }
-  
+
   activeTimestamps.push(now);
   rateLimitMap.set(ip, activeTimestamps);
   return false;
@@ -78,7 +77,7 @@ function isRateLimited(ip: string, limit = 5, windowMs = 60000): boolean {
 export async function POST(req: Request) {
   try {
     const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "anonymous_global";
-    
+
     if (isRateLimited(ip)) {
       return NextResponse.json({ error: "Too many requests. Please slow down." }, { status: 429 });
     }
@@ -89,13 +88,18 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Message is required" }, { status: 400 });
     }
     if (message.length > 500) {
-      return NextResponse.json({ error: "Payload contents exceed allowable structural maximum limits." }, { status: 400 });
+      return NextResponse.json(
+        {
+          error: "Payload contents exceed allowable structural maximum limits.",
+        },
+        { status: 400 },
+      );
     }
 
     const groqMessages = [
       { role: "system", content: PORTFOLIO_CONTEXT },
-      ...(chatHistory || []).slice(-6).map((msg: { role: "user" | "model"; text: string }) => ({ 
-        role: msg.role === "user" ? "user" : "assistant", 
+      ...(chatHistory || []).slice(-6).map((msg: { role: "user" | "model"; text: string }) => ({
+        role: msg.role === "user" ? "user" : "assistant",
         content: msg.text,
       })),
       { role: "user", content: message },
@@ -104,24 +108,26 @@ export async function POST(req: Request) {
     const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
+        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         model: GROQ_MODEL,
         messages: groqMessages,
         temperature: 0.4,
-        max_tokens: 250, 
+        max_tokens: 250,
       }),
     });
 
-    // 2. IMPROVED ERROR HANDLING: Provide clear console logs if the model is missing or fails
+    // Error Log
     if (!response.ok) {
       const errData = await response.json();
       console.error("Groq API Error Details:", errData);
       return NextResponse.json(
-        { error: "AI service temporarily unavailable. Please try again later." }, 
-        { status: response.status }
+        {
+          error: "AI service temporarily unavailable. Please try again later.",
+        },
+        { status: response.status },
       );
     }
 

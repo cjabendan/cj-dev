@@ -1,20 +1,20 @@
 "use client";
 
+import type { LucideProps } from "lucide-react";
+import * as LucideIcons from "lucide-react";
 import contactData from "@/data/contact.json";
 import Socials from "../ui/Socials";
-import { LucideProps } from "lucide-react";
-import * as LucideIcons from "lucide-react";
 
 const ContactItem = ({ item }: { item: (typeof contactData)[0] }) => {
-  const Icon = LucideIcons[item.icon as keyof typeof LucideIcons] as
-    | React.ElementType<LucideProps>
-    | undefined;
+  // biome-ignore lint/performance/noDynamicNamespaceImportAccess: Dynamic icon resolution for contact options
+  const Icon = LucideIcons[item.icon as keyof typeof LucideIcons] as React.ElementType<LucideProps> | undefined;
 
   return (
     <a
       href={item.link}
       target="_blank"
       className="flex items-center justify-between group transition-all duration-200"
+      rel="noopener"
     >
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2 text-sm font-medium">
@@ -33,16 +33,14 @@ export default function CTA() {
     <section className="flex mt-2 gap-6 p-4 mb-14" id="contact">
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
         <div className="md:col-span-3 flex flex-col gap-6">
-          <h2 className="text-lg sm:text-xl font-bold tracking-tight">
-            Let&apos;s Work Together
-          </h2>
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight">Let&apos;s Work Together</h2>
           <p className="text-sm text-foreground/70 leading-relaxed">
-            I&apos;m always looking for new opportunities and collaborations to
-            build clean, efficient, and scalable applications.
+            I&apos;m always looking for new opportunities and collaborations to build clean, efficient, and scalable
+            applications.
             <br />
             <br />
-            Feel free to reach out if you need help with consulting, web
-            development, mobile apps, or custom software solutions.
+            Feel free to reach out if you need help with consulting, web development, mobile apps, or custom software
+            solutions.
           </p>
           <Socials />
         </div>

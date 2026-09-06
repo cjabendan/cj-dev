@@ -1,5 +1,5 @@
-import techData from "@/data/tech-stack.json";
 import Image from "next/image";
+import techData from "@/data/tech-stack.json";
 
 export default function TechStackPage() {
   return (
@@ -25,15 +25,9 @@ export default function TechStackPage() {
                     width={24}
                     height={24}
                     className={`opacity-80 hover:opacity-100 object-contain 
-                     w-4 h-4 ${
-                       skill.name === "GitHub" || skill.name === "Expo"
-                         ? "dark:invert"
-                         : ""
-                     }`}
+                    					 w-4 h-4 ${skill.name === "GitHub" || skill.name === "Expo" ? "dark:invert" : ""}`}
                   />
-                  <span className="text-xs sm:text-sm font-medium">
-                    {skill.name}
-                  </span>
+                  <span className="text-xs sm:text-sm font-medium">{skill.name}</span>
                 </div>
               ))}
             </div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface ExperienceItem {
   id: number;
   role: string;
@@ -19,10 +17,7 @@ interface ExperienceCardProps {
   hasMultipleRoles: boolean;
 }
 
-export default function ExperienceCard({
-  exp,
-  hasMultipleRoles,
-}: ExperienceCardProps) {
+export default function ExperienceCard({ exp, hasMultipleRoles }: ExperienceCardProps) {
   return (
     <div className="relative flex flex-col gap-4">
       {hasMultipleRoles && (
@@ -32,38 +27,32 @@ export default function ExperienceCard({
       {/* Role & Duration */}
       <div className="flex flex-col gap-[2px]">
         <h3 className="text-sm sm:text-base font-semibold">{exp.role}</h3>
-        <div className="block sm:hidden text-xs text-gray-400 tracking-wider uppercase">
-          {exp.type}
-        </div>
+        <div className="block sm:hidden text-xs text-gray-400 tracking-wider uppercase">{exp.type}</div>
         <div className="flex gap-1 sm:gap-1.5 text-xs text-gray-400 tracking-wider">
-          <div className="hidden sm:block text-xs tracking-wider uppercase">
-            {exp.type}
-          </div>
+          <div className="hidden sm:block text-xs tracking-wider uppercase">{exp.type}</div>
           <div className="hidden sm:block text-zinc-300">|</div>
           <div className="uppercase">{exp.start}</div>
           <div className="text-zinc-300">-</div>
           <div className="uppercase">{exp.end}</div>
-          {exp.duration && (
-            <div className="lowercase" >{`· ${exp.duration}`}</div>
-          )}
+          {exp.duration && <div className="lowercase">{`· ${exp.duration}`}</div>}
         </div>
       </div>
 
       {/* Description & Skill Badges */}
       <div className="flex flex-col">
         {exp.description && exp.description.length > 0 && (
-          <ul className="flex flex-col gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-            {exp.description.map((item, idx) => (
-              <li key={idx}>{item}</li>
+          <ul className="flex flex-col gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-200 leading-relaxed">
+            {exp.description.map((item) => (
+              <li key={item}>{item}</li>
             ))}
           </ul>
         )}
         {exp.skills && exp.skills.length > 0 && (
           <div className="flex flex-wrap gap-1.5 pt-4">
-            {exp.skills.map((skill, idx) => (
+            {exp.skills.map((skill) => (
               <span
-                key={idx}
-                className="text-[11px] sm:text-xs px-3 py-1 rounded-sm text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-700"
+                key={skill}
+                className="text-[11px] sm:text-xs px-3 py-1 rounded-sm text-gray-600 dark:text-gray-200 border border-gray-300 dark:border-gray-700"
               >
                 {skill}
               </span>

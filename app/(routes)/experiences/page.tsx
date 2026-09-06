@@ -1,7 +1,5 @@
+import ExperienceCard, { type ExperienceItem } from "@/components/cards/ExperienceCard";
 import expData from "@/data/experiences.json";
-import ExperienceCard, {
-  ExperienceItem,
-} from "@/components/cards/ExperienceCard";
 
 interface GroupedCompany {
   company: string;
@@ -56,9 +54,7 @@ export default function ExperiencesPage() {
               {/* Right Column */}
               <div className="flex flex-col gap-6 pb-8 flex-1">
                 <div>
-                  <h2 className="text-base sm:text-lg font-bold">
-                    {group.company}
-                  </h2>
+                  <h2 className="text-base sm:text-lg font-bold">{group.company}</h2>
                   <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
                     {group.location && <span>{group.location}</span>}
                   </div>
@@ -67,17 +63,11 @@ export default function ExperiencesPage() {
                 {/* Roles Container */}
                 <div
                   className={`flex flex-col gap-8 sm:gap-10 ${
-                    hasMultipleRoles
-                      ? "border-l border-gray-200/80 dark:border-gray-700 pl-6"
-                      : ""
+                    hasMultipleRoles ? "border-l border-gray-200/80 dark:border-gray-700 pl-6" : ""
                   }`}
                 >
                   {group.roles.map((exp) => (
-                    <ExperienceCard
-                      key={exp.id}
-                      exp={exp}
-                      hasMultipleRoles={hasMultipleRoles}
-                    />
+                    <ExperienceCard key={exp.id} exp={exp} hasMultipleRoles={hasMultipleRoles} />
                   ))}
                 </div>
               </div>

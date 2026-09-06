@@ -7,8 +7,7 @@ export default function AccessCard() {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!cardRef.current) return;
-    const { left, top, width, height } =
-      cardRef.current.getBoundingClientRect();
+    const { left, top, width, height } = cardRef.current.getBoundingClientRect();
 
     const x = (e.clientX - left) / width - 0.5;
     const y = (e.clientY - top) / height - 0.5;
@@ -16,10 +15,7 @@ export default function AccessCard() {
     cardRef.current.style.setProperty("--rx", `${y * -25}deg`);
     cardRef.current.style.setProperty("--ry", `${x * 25}deg`);
 
-    cardRef.current.style.setProperty(
-      "--mx",
-      `${((e.clientX - left) / width) * 100}%`,
-    );
+    cardRef.current.style.setProperty("--mx", `${((e.clientX - left) / width) * 100}%`);
   };
 
   const handleMouseLeave = () => {
@@ -30,6 +26,7 @@ export default function AccessCard() {
 
   return (
     <div className="flex justify-center mb-2">
+      {/* biome-ignore lint/a11y/noStaticElementInteractions: Mouse events are  3D tilt visual effect */}
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -41,13 +38,11 @@ export default function AccessCard() {
       >
         {/* Subtle Static Glow */}
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_70%)]" />
-
         {/* Laser Shine Effect */}
         <div
           className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           style={{
-            backgroundImage:
-              "linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%)",
+            backgroundImage: "linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%)",
             backgroundPosition: "var(--mx, 50%) 0",
             backgroundSize: "200% 100%",
             backgroundRepeat: "no-repeat",
@@ -62,9 +57,7 @@ export default function AccessCard() {
           </div>
           <div className="mt-auto flex items-end justify-between gap-6">
             <div className="min-w-0">
-              <div className="truncate text-xs font-black uppercase tracking-[2px] text-white">
-                Cj Abendan
-              </div>
+              <div className="truncate text-xs font-black uppercase tracking-[2px] text-white">Cj Abendan</div>
               <div className="my-1.5 flex items-center whitespace-nowrap text-[9px] uppercase text-gray-300 opacity-80">
                 SOFTWARE ENGINEER
               </div>
